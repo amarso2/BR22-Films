@@ -1,0 +1,23 @@
+from django.db import models
+
+# Create your models here.
+class Services(models.Model):
+    service_name = models.CharField(max_length=100)
+    description = models.TextField(max_length=250, blank=True, null=True)
+    price1 = models.DecimalField(max_digits=10, decimal_places=2)
+    price2 = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
+    image = models.ImageField(upload_to='photo/services/', blank=True, null=True)
+    stock = models.BooleanField(default=True)
+    is_available = models.BooleanField(default=True)
+    created_date = models.DateTimeField(auto_now_add=True)
+    modified_date = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'services'
+        verbose_name_plural = 'services'
+
+
+    def __str__(self):
+        return self.service_name
+    
+    

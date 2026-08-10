@@ -1,0 +1,625 @@
+
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<style>
+.portfolio-slider {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.portfolio-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item {
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+/* Images */
+.portfolio-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+/* < > Buttons */
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #d4af37;
+    color: #000;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease;
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+    background: #fff;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .portfolio-item {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .portfolio-item {
+        flex: 0 0 100%;
+    }
+
+    .portfolio-item img {
+        height: 350px;
+    }
+
+    .prev-btn,
+    .next-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+}
+</style>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true">
+      <video class="hero-video is-active" autoplay muted loop playsinline>
+        <source src="{% static 'images/video/fornt.mp4' %}" type="video/mp4">
+      </video>
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="{% static 'images/video/check.mp4' %}" type="video/mp4">
+      </video>
+    </div>
+    <button class="hero-video-control hero-video-control-left" type="button" aria-label="Previous video">
+      <i class="fa-solid fa-greater-than"></i>
+    </button>
+    <button class="hero-video-control hero-video-control-right" type="button" aria-label="Next video">
+      <i class="fas fa-angle-right"></i>
+    </button>
+    <div class="container hero-content">
+      <p class="badge badge-gold">India's Premium Photography & Videography Booking Platform</p>
+      <h1>Capture Every Moment with Perfection</h1>
+      <p>Book trusted photographers and videographers across India for weddings, pre-weddings, birthdays, corporate events, maternity shoots, and more.</p>
+      <div class="hero-actions">
+        <a href="#portfolio" class="btn btn-gold">Explore Portfolio</a>
+        <a href="#contact" class="btn btn-soft">Book Now</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span>10,000+</span><small>Happy Clients</small></div>
+        <div class="hero-stat"><span>500+</span><small>Professional Photographers</small></div>
+        <div class="hero-stat"><span>25,000+</span><small>Events Covered</small></div>
+      </div>
+      <!-- <div class="booking-card mt-5">
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label class="text-muted">Event Type</label>
+              <select class="custom-select">
+                <option>Wedding</option>
+                <option>Pre-Wedding</option>
+                <option>Birthday</option>
+                <option>Corporate</option>
+              </select>
+            </div>
+            <div class="form-group col-md-3">
+              <label class="text-muted">City</label>
+              <input list="city-list" name="city" class="form-control city-input" placeholder="Select or type city">
+              <datalist id="city-list">
+                <option value="Bettiah"></option>
+                <option value="Motihari"></option>
+                <option value="Areraj"></option>
+                <option value="Muzafferpur"></option>
+                <option value="Other"></option>
+              </datalist>
+            </div>
+            <div class="form-group col-md-4">
+              <label class="text-muted">Event Date</label>
+              <input type="date" class="form-control">
+            </div>
+            <div class="form-group col-md-2 d-flex align-items-end">
+              <button type="submit" class="btn btn-gold btn-block">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div> -->
+  </section>
+
+  <section class="container padding-y-lg" id="services">
+    <header class="text-center">
+      <h2 class="section-title">Our Signature Services</h2>
+      <p class="section-subtitle">Premium wedding, cinematic, and event coverage designed for unforgettable moments.</p>
+    </header>
+    <div class="row">
+      {% for service in services|slice:":9" %}
+      <div class="col-lg-4 mb-4">
+        <article class="service-card glass-panel">
+          <img src="{{ service.image.url }}" class="card-img-top" alt="{{ service.service_name }}">
+          <div class="card-body">
+            <h3 class="service-title">{{ service.service_name }}</h3>
+            <p>{{ service.description }}</p>
+            <p class="service-price">Starting <del>₹ {{ service.price1|floatformat:0 }}</del>    ₹ {{ service.price2|floatformat:0 }}</p>
+            <a href="#portfolio" class="btn btn-soft btn-sm">View Details</a>
+          </div>
+        </article>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="container padding-y-lg" id="portfolio">
+    <header class="text-center">
+      <h2 class="section-title">Featured Portfolio</h2>
+      <p class="section-subtitle">A luxurious collection of wedding, cinematic, and editorial captures.</p>
+    </header>
+    <div class="portfolio-grid">
+      <article class="portfolio-card">
+       <div class="portfolio-slider">
+        <button class="prev-btn">&lt;</button>
+
+        <div class="portfolio-track">
+           <div class="portfolio-item"><img src="{% static 'images/items/1.jpg' %}" alt=""></div>
+           <div class="portfolio-item"><img src="{% static 'images/items/2.jpg' %}" alt=""></div>
+           <div class="portfolio-item"><img src="{% static 'images/items/3.jpg' %}" alt=""></div> 
+          </div>
+
+        <button class="next-btn">&gt;</button>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="badge badge-gold">Wedding</span>
+          <h5>Golden Ceremony</h5>
+          <small>Mumbai • 15 Feb 2026</small>
+          <a href="#" class="btn btn-soft btn-sm mt-3">View Gallery</a>
+        </div>
+      </article>
+     
+      
+    </div>
+  </section>
+
+  <section class="container padding-y-lg" id="videos">
+    <header class="text-center">
+      <h2 class="section-title">Demo Videos</h2>
+      <p class="section-subtitle">Watch cinematic stories and highlights from our best productions.</p>
+    </header>
+    <div class="video-carousel">
+      <article class="video-card">
+        <div class="video-thumb">
+          <img src="{% static 'images/items/1.jpg' %}" alt="Wedding Highlight">
+          <div class="play-circle"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="video-body">
+          <small class="video-meta">4:12 • Wedding Highlight</small>
+          <h5 class="video-title">Wedding Highlight</h5>
+        </div>
+      </article>
+      <article class="video-card">
+        <div class="video-thumb">
+          <img src="{% static 'images/items/2.jpg' %}" alt="Cinematic Film">
+          <div class="play-circle"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="video-body">
+          <small class="video-meta">5:18 • Cinematic Film</small>
+          <h5 class="video-title">Cinematic Film</h5>
+        </div>
+      </article>
+      <article class="video-card">
+        <div class="video-thumb">
+          <video loop muted autoplay ="autoplay" src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}" width="100%"></video>
+          <div class="play-circle"><i class="fas fa-play"></i></div>
+        </div>
+        <div class="video-body">
+          <small class="video-meta">3:05 • Drone Reel</small>
+          <h5 class="video-title">Drone Reel</h5>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="container padding-y-lg" id="why-us">
+    <header class="text-center">
+      <h2 class="section-title">Why Choose Us</h2>
+      <p class="section-subtitle">Carefully curated service pillars for modern couples and brands.</p>
+    </header>
+    <div class="feature-list">
+      <article class="feature-card">
+        <i class="fas fa-user-tie"></i>
+        <h6>Professional Team</h6>
+        <p>Experienced photographers, directors, and creative leads.</p>
+      </article>
+      <article class="feature-card">
+        <i class="fas fa-wallet"></i>
+        <h6>Affordable Packages</h6>
+        <p>Transparent pricing with premium value at every tier.</p>
+      </article>
+      <article class="feature-card">
+        <i class="fas fa-bolt"></i>
+        <h6>Instant Booking</h6>
+        <p>Fast availability checks and confirmed slots instantly.</p>
+      </article>
+      <article class="feature-card">
+        <i class="fas fa-lock"></i>
+        <h6>Secure Payments</h6>
+        <p>Safe transactions with trusted payment partners.</p>
+      </article>
+    </div>
+    <div class="feature-list mt-4">
+      <article class="feature-card">
+        <i class="fas fa-highlighter"></i>
+        <h6>High Resolution Delivery</h6>
+        <p>Premium image and video delivery in crisp, color-graded formats.</p>
+      </article>
+      <article class="feature-card">
+        <i class="fas fa-hourglass-half"></i>
+        <h6>Fast Editing</h6>
+        <p>Quick turnaround with expert retouching.</p>
+      </article>
+      <article class="feature-card">
+        <i class="fas fa-cloud-upload-alt"></i>
+        <h6>Cloud Gallery</h6>
+        <p>Instant online sharing and luxury delivery experience.</p>
+      </article>
+      <article class="feature-card">
+        <i class="fas fa-headset"></i>
+        <h6>24/7 Support</h6>
+        <p>A dedicated concierge for planning and event execution.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="container padding-y-lg" id="packages">
+    <header class="text-center">
+      <h2 class="section-title">Pricing Packages</h2>
+      <p class="section-subtitle">Select the ideal package for your celebration.</p>
+    </header>
+    <div class="pricing-grid">
+      <article class="pricing-card">
+        <h4>Basic</h4>
+        <div class="price"><del>₹24,999</del> 19,999</div>
+
+        <ul>
+          <li>Wedding Coverage</li>
+          <li>1 Photographer</li>
+          <li>1 Videographer</li>
+          <li>High-Resolution Photos</li>
+          <li>Approx 2 Hour Video</li>
+          <li>Digital Gallery</li>
+          <li><br></li>
+          <li><br></li>
+        </ul>
+        <a href="#contact" class="btn btn-soft btn-block">View Details</a>
+        <a href="#contact" class="btn btn-gold btn-block mt-3">Book Now</a>
+      </article>
+      <article class="pricing-card highlight">
+        <h4>Premium</h4>
+        <div class="price"><del>₹49,999</del> 39,999</div>
+        <ul>
+          <li>2 Photographers</li>
+          <li>1 Videographers</li>
+          <li>1 Cinematic Video</li>
+          <li>Drone Coverage</li>
+          <li>3 Highlight Reel & 2 Hour Video </li>
+          <li>Luxury Album</li>
+          <li>Digital Gallery</li>
+          <li><br></li>
+          
+        </ul>
+        <a href="#contact" class="btn btn-soft btn-block">View Details</a>
+        <a href="#contact" class="btn btn-gold btn-block mt-3">Book Now</a>
+      </article>
+      <article class="pricing-card">
+        <h4>Luxury</h4>
+        <div class="price">₹<del>₹89,999</del> 69,999</div>
+        <ul>
+          <li>Complete Coverage</li>
+          <li>Multi-Camera Team</li>
+          <li>Premium Album</li>
+          <li>Live Streaming</li>
+          <li>High Quality Videos</li>
+          <li>All Most Every Things Covered</li>
+          <li><br></li>
+          <li><br></li>
+        </ul>
+        <a href="#contact" class="btn btn-soft btn-block">View Details</a>
+        <a href="#contact" class="btn btn-gold btn-block mt-3">Book Now</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="container padding-y-lg" id="reviews">
+    <header class="text-center">
+      <h2 class="section-title">Customer Reviews</h2>
+      <p class="section-subtitle">Trusted by couples, families, and brands across India.</p>
+    </header>
+    <div class="testimonials">
+      <article class="review-card">
+        <div class="review-author">
+          <div class="author-img"><img src="{% static 'images/avatars/1.jpg' %}" alt="Client"></div>
+          <div class="author-meta"><h6>Ananya & Rohit</h6><small>Wedding • Bettiah</small></div>
+        </div>
+        <div class="stars mt-3 mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="review-body">"BR 22 films turned our wedding into a cinematic masterpiece. Every frame feels like a luxury magazine spread."</p>
+      </article>
+      <article class="review-card">
+        <div class="review-author">
+          <div class="author-img"><img src="{% static 'images/avatars/2.jpg' %}" alt="Client"></div>
+          <div class="author-meta"><h6>Neha Kapoor</h6><small>Engagement • Bettiah</small></div>
+        </div>
+        <div class="stars mt-3 mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="review-body">"Seamless booking, attentive team, and breathtaking photos. Highly recommended."</p>
+      </article>
+      <article class="review-card">
+        <div class="review-author">
+          <div class="author-img"><img src="{% static 'images/avatars/3.jpg' %}" alt="Client"></div>
+          <div class="author-meta"><h6>Riya & Vivek</h6><small>Cinematic Film • Chanptiya</small></div>
+        </div>
+        <div class="stars mt-3 mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="review-body">"A perfect blend of storytelling and luxury visuals. The film was elegant and emotional."</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="container padding-y-lg" id="gallery">
+    <header class="text-center">
+      <h2 class="section-title">Gallery Preview</h2>
+      <p class="section-subtitle">Explore our curated collection across weddings, couples, and cinematic moments.</p>
+    </header>
+    <div class="gallery-preview">
+      <article class="gallery-card" data-label="Wedding"><img src="{% static 'images/items/4.jpg' %}" alt="Wedding"></article>
+      <article class="gallery-card" data-label="Couple"><img src="{% static 'images/items/5.jpg' %}" alt="Couple"></article>
+      <article class="gallery-card" data-label="Reception"><img src="{% static 'images/items/12.jpg' %}" alt="Reception"></article>
+      <article class="gallery-card" data-label="Drone"><img src="{% static 'images/items/7.jpg' %}" alt="Drone"></article>
+      <article class="gallery-card" data-label="Candid"><img src="{% static 'images/items/8.jpg' %}" alt="Candid"></article>
+      <article class="gallery-card" data-label="Family"><img src="{% static 'images/items/9.jpg' %}" alt="Family"></article>
+    </div>
+    <div class="text-center mt-4">
+      <a href="#" class="btn btn-gold">View Complete Gallery</a>
+    </div>
+  </section>
+
+  <section class="container padding-y-lg" id="process">
+    <header class="text-center">
+      <h2 class="section-title">Booking Process</h2>
+      <p class="section-subtitle">A seamless, five-step luxury booking experience.</p>
+    </header>
+    <div class="timeline">
+      <article class="timeline-step"><i class="fas fa-camera-retro"></i><h6>Choose Service</h6></article>
+      <article class="timeline-step"><i class="fas fa-box-open"></i><h6>Select Package</h6></article>
+      <article class="timeline-step"><i class="fas fa-calendar-check"></i><h6>Pick Date</h6></article>
+      <article class="timeline-step"><i class="fas fa-check-circle"></i><h6>Confirm Booking</h6></article>
+      <article class="timeline-step"><i class="fas fa-glass-cheers"></i><h6>Enjoy Your Event</h6></article>
+    </div>
+  </section>
+
+  <section class="container padding-y-lg" id="faq">
+    <header class="text-center">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Everything you need to know before booking with BR 22 films.</p>
+    </header>
+    <div class="accordion" id="faqAccordion">
+      <div class="card faq-card">
+        <div class="card-header" id="faq1">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapse1" aria-expanded="true">How to book?</button>
+        </div>
+        <div id="collapse1" class="collapse show" data-parent="#faqAccordion">
+          <div class="card-body">Choose your service, select a package, pick a date, and confirm your booking with our concierge team.</div>
+        </div>
+      </div>
+      <div class="card faq-card">
+        <div class="card-header" id="faq2">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2">Payment process</button>
+        </div>
+        <div id="collapse2" class="collapse" data-parent="#faqAccordion">
+          <div class="card-body">We support secure online payments, UPI, cards, and wallets. Payment is collected at booking confirmation.</div>
+        </div>
+      </div>
+      <div class="card faq-card">
+        <div class="card-header" id="faq3">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3">Cancellation policy</button>
+        </div>
+        <div id="collapse3" class="collapse" data-parent="#faqAccordion">
+          <div class="card-body">Cancellations are allowed with a refund window subject to package terms and event date proximity.</div>
+        </div>
+      </div>
+      <div class="card faq-card">
+        <div class="card-header" id="faq4">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4">Delivery time</button>
+        </div>
+        <div id="collapse4" class="collapse" data-parent="#faqAccordion">
+          <div class="card-body">Photos are delivered within 10-14 days, and edited videos arrive within 21 days after the event.</div>
+        </div>
+      </div>
+      <div class="card faq-card">
+        <div class="card-header" id="faq5">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5">Album options</button>
+        </div>
+        <div id="collapse5" class="collapse" data-parent="#faqAccordion">
+          <div class="card-body">We offer premium leather, linen, and handcrafted albums with customization and fast delivery.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container padding-y-lg contact-section" id="contact">
+    <div class="row align-items-start">
+      <div class="col-lg-5">
+        <div class="contact-card">
+          <h3>Contact Information</h3>
+          <p>Our team is available around the clock to support your booking and shoot planning.</p>
+          <p><strong>Email</strong><br><a href="br22films@gmail.com">br22films@gmail.com</a></p>
+          <p><strong>Phone</strong><br><a href="7520254879">+91 7520254879</a></p>
+          <p><strong>Address</strong><br>BR 22 Films Pipra Chowk Bettiah, Word No 44, Bihar 845438</p>
+          <p><strong>Working Hours</strong><br>Mon - Sun: 9:00 AM - 9:00 PM</p>
+        </div>
+      </div>
+      <div class="col-lg-7 mt-4 mt-lg-0">
+        <div class="contact-card contact-form">
+          <h3>Send a Message</h3>
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6"><label>Name</label><input class="form-control" type="text"></div>
+              <div class="form-group col-md-6"><label>Phone</label><input class="form-control" type="tel"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6"><label>Email</label><input class="form-control" type="email"></div>
+              <div class="form-group col-md-6"><label>Event Type</label><select class="custom-select"><option>Wedding</option><option>Corporate</option><option>Birthday</option></select></div>
+            </div>
+            <div class="form-row">
+             
+             <div class="form-group col-md-6">
+              <label> City</label>
+              <input list="city-list" name="city" class="form-control city-input" placeholder="Select or type city">
+              <datalist id="city-list">
+                <option value="Bettiah"></option>
+                <option value="Motihari"></option>
+                <option value="Areraj"></option>
+                <option value="Muzafferpur"></option>
+                <option value="Other"></option>
+              </datalist>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Event Date</label>
+              <input type="date" class="form-control">
+            </div>
+
+          </div>
+            <div class="form-group"><label>Message</label><textarea class="form-control" rows="5"></textarea></div>
+            <button type="submit" class="btn btn-gold">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="glass-panel mt-4" style="min-height: 260px; border-radius: 22px; border: 1px solid rgba(255,255,255,0.1);">
+      <div class="p-4 text-center">
+        <h4 class="mb-3">Google Map Placeholder</h4>
+        <p class="text-muted">Map feature will display your selected venue location here.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const videos = document.querySelectorAll('.hero-video');
+  const prevBtn = document.querySelector('.hero-video-control-left');
+  const nextBtn = document.querySelector('.hero-video-control-right');
+  if (videos.length < 2) return;
+
+  let currentIndex = 0;
+
+  function showVideo(index) {
+    videos.forEach((video, videoIndex) => {
+      video.classList.toggle('is-active', videoIndex === index);
+    });
+    currentIndex = index;
+  }
+
+  function goToNextVideo() {
+    showVideo((currentIndex + 1) % videos.length);
+  }
+
+  function goToPreviousVideo() {
+    showVideo((currentIndex - 1 + videos.length) % videos.length);
+  }
+
+  setInterval(goToNextVideo, 8000);
+
+  if (prevBtn) prevBtn.addEventListener('click', goToPreviousVideo);
+  if (nextBtn) nextBtn.addEventListener('click', goToNextVideo);
+});
+
+  const track = document.querySelector(".portfolio-track");
+  const items = document.querySelectorAll(".portfolio-item");
+  const prevPortfolioBtn = document.querySelector(".prev-btn");
+  const nextPortfolioBtn = document.querySelector(".next-btn");
+
+  if (track && items.length > 0 && prevPortfolioBtn && nextPortfolioBtn) {
+    let currentIndex = 0;
+
+    function updateSlider() {
+      const itemWidth = items[0].offsetWidth;
+      const gap = 20;
+      track.style.transform = `translateX(-${currentIndex * (itemWidth + gap)}px)`;
+    }
+
+    function showNextSlide() {
+      if (currentIndex < items.length - 1) {
+        currentIndex += 1;
+      } else {
+        currentIndex = 0;
+      }
+      updateSlider();
+    }
+
+    function showPrevSlide() {
+      if (currentIndex > 0) {
+        currentIndex -= 1;
+      } else {
+        currentIndex = items.length - 1;
+      }
+      updateSlider();
+    }
+
+    nextPortfolioBtn.addEventListener("click", showNextSlide);
+    prevPortfolioBtn.addEventListener("click", showPrevSlide);
+
+    window.addEventListener("resize", () => {
+      currentIndex = 0;
+      updateSlider();
+    });
+
+    updateSlider();
+  }
+</script>
+</script>
+
+</body>
+</html>
+
+{% endblock %}

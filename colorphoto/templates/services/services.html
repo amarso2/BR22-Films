@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+
+
+
+{% block content %}
+
+  </section>
+  <section class="container padding-y-lg" id="services-list">
+    <header class="text-center mb-5">
+      <h2 class="section-title">Complete Service Offerings</h2>
+      <a href="#services-list" class="btn btn-gold">Explore Services</a>
+      <!-- <p class="section-subtitle" text-center>From intimate ceremonies to grand celebrations, our service suite delivers unforgettable coverage.</p>   -->
+    </header>
+    <div class="row">
+      {% for service in services %}
+      <div class="col-lg-4 mb-4">
+        <article class="service-card glass-panel">
+          <img src="{{ service.image.url }}" class="card-img-top" alt="{{ service.name }}">
+          <div class="card-body">
+            <h3 class="service-title">{{ service.service_name }}</h3>
+            <p>{{ service.description }}</p>
+            <p class="service-price">From ₹ <del>{{service.price1}}</del> {{service.price2}}</p>
+            <a href="lensbharat-packages.html" class="btn btn-block btn-primary">Booking</a>
+            <a href="lensbharat-packages.html" class="btn btn-block btn-gold">View Packages</a>
+          </div>
+        </article>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  
+ 
+{%endblock %}
