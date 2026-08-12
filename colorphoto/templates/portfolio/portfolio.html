@@ -1,0 +1,223 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<style>
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.portfolio-card {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.portfolio-slider {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.portfolio-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item {
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+/* Images */
+.portfolio-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+/* < > Buttons */
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #d4af37;
+    color: #000;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease;
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+    background: #fff;
+}
+
+/* Tablet */
+ @media (max-width: 992px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .portfolio-track {
+        gap: 0;
+    }
+
+    .portfolio-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .portfolio-item img {
+        height: 320px;
+    }
+
+    .prev-btn,
+    .next-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+} 
+</style>
+
+
+
+    <header class="text-center mb-5">
+      
+     <div class="container hero-content text-center">
+      <h1>Moments That Define Your Story</h1>
+      <span class="badge badge-gold">Curated Portfolio</span>
+      <h2 class="section-title">Portfolio Collections</h2>
+     </div>
+    </header>
+
+
+    <div class="portfolio-grid">
+      {% for portfolio in portfolios %}
+      <article class="portfolio-card">
+        <div class="portfolio-slider">
+          <button class="prev-btn" type="button" aria-label="Previous image">&lt;</button>
+          <div class="portfolio-track">
+            {% if portfolio.image1 %}
+            <div class="portfolio-item"><img src="{{ portfolio.image1.url }}" alt="{{ portfolio.title }}"></div>
+            {% endif %}
+            {% if portfolio.image2 %}
+            <div class="portfolio-item"><img src="{{ portfolio.image2.url }}" alt="{{ portfolio.title }}"></div>
+            {% endif %}
+            {% if portfolio.image3 %}
+            <div class="portfolio-item"><img src="{{ portfolio.image3.url }}" alt="{{ portfolio.title }}"></div>
+            {% endif %}
+          </div>
+          <button class="next-btn" type="button" aria-label="Next image">&gt;</button>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="badge badge-gold">{{ portfolio.heading }}</span>
+          <h5>{{ portfolio.title }}</h5>
+          <small>{{ portfolio.city }} • {{ portfolio.date|date:"d M Y" }}</small>
+          
+          <h5 class="btn btn-soft btn-soft">{{ portfolio.description }}</h5>
+        </div>
+      </article>
+      {% empty %}
+      <div class="col-12 text-center text-muted">No portfolio items available yet.</div>
+      {% endfor %}
+    </div>
+
+
+
+    <script>
+        document.querySelectorAll(".portfolio-slider").forEach((slider) => {
+    const track = slider.querySelector(".portfolio-track");
+    const items = slider.querySelectorAll(".portfolio-item");
+    const prevPortfolioBtn = slider.querySelector(".prev-btn");
+    const nextPortfolioBtn = slider.querySelector(".next-btn");
+
+    if (!track || items.length <= 1 || !prevPortfolioBtn || !nextPortfolioBtn) {
+      return;
+    }
+
+    let currentIndex = 0;
+
+    function updateSlider() {
+      const isMobile = window.innerWidth <= 600;
+      const itemWidth = isMobile ? slider.clientWidth : items[0].getBoundingClientRect().width;
+      const gap = isMobile ? 0 : 20;
+      track.style.transform = `translateX(-${currentIndex * (itemWidth + gap)}px)`;
+    }
+
+    function showNextSlide() {
+      if (currentIndex < items.length - 1) {
+        currentIndex += 1;
+      } else {
+        currentIndex = 0;
+      }
+      updateSlider();
+    }
+
+    function showPrevSlide() {
+      if (currentIndex > 0) {
+        currentIndex -= 1;
+      } else {
+        currentIndex = items.length - 1;
+      }
+      updateSlider();
+    }
+
+    nextPortfolioBtn.addEventListener("click", showNextSlide);
+    prevPortfolioBtn.addEventListener("click", showPrevSlide);
+
+    window.addEventListener("resize", () => {
+      currentIndex = 0;
+      updateSlider();
+    });
+
+    updateSlider();
+  });
+
+    </script>
+
+{% endblock %}

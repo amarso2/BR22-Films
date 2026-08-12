@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<style>
+  .video-preview {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .video-preview .gallery-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .video-preview video {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .video-dis {
+    background-color: black;
+    text-align: center;
+  }
+
+  .video-video-dis .video-meta,
+  .video-video-dis .video-title {
+    
+    padding: 10px 12px 0;
+  }
+
+  @media (max-width: 992px) {
+    .video-preview {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 576px) {
+    .video-preview {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+.gallery-card {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.gallery-video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    background: #000;
+}
+
+.video-dis {
+    padding: 10px 4px;
+}
+
+.video-meta {
+    color: #888;
+}
+
+.video-title {
+    margin: 4px 0 0;
+}
+
+@media (max-width: 576px) {
+    .video-wrapper {
+        aspect-ratio: 16 / 9;
+        border-radius: 10px;
+    }
+}
+
+
+</style>
+
+
+<div class="container hero-content text-center">
+      
+      <h1>Elegant Image Grid</h1>
+      
+    </div>
+    <div class="text-center mt-4">
+      <h1 class="btn btn-gold">Preview Gallery</h1>
+      <p>Preview a refined selection of our most beautiful wedding and cinematic captures.</p>
+    </div>
+
+  <!-- <div class="gallery-preview">
+    {% if galleries %}
+      {% for gallery in galleries %}
+      <article class="gallery-card" data-label">
+        <img src="{{ gallery.image.url }}" alt="{{ gallery.title }}">
+        <div class="gallery-meta">
+          <h5>{{ gallery.title }}</h5>
+          <small>{{ gallery.created_at|date:"F j, Y" }}</small>
+        </div>
+      </article>
+      {% endfor %}
+    {% else %}
+      <div class="text-center text-muted">No gallery images have been added yet.</div>
+    {% endif %}
+  </div> -->
+
+  <div class="gallery-preview">
+      {% if galleries %}
+        {% for gallery in galleries %}
+        <article class="gallery-card" data-label="{{ gallery.title|default:'Gallery' }}">
+          <img src="{{ gallery.image.url }}" alt="{{ gallery.title }}">
+        </article>
+        {% endfor %}
+      {% else %}
+        <!-- <div class="text-center text-muted">No gallery images are available yet.</div> -->
+      {% endif %}
+    </div>
+    
+   <!-- <div class="video-preview">
+       {% if videos %}
+        {% for video in videos %}
+   <article class="gallery-card">
+          <a href="{{ video.video_file.url }}" target="_blank" rel="noopener noreferrer">
+            <video muted preload="metadata" playsinline>
+              <source src="{{ video.video_file.url }}" type="video/mp4">
+            </video>
+            <div class="play-circle"><i class="fas fa-play"></i></div>
+          </a>
+          <div class="video-dis" >
+            <small class="video-meta">{{ video.created_at|date:"M d, Y" }}</small>
+            <h5 class="video-title">{{ video.title }}</h5>
+          </div>
+        </article>
+   {% endfor %}
+
+   {% else %}
+        
+      {% endif %}
+    </div> -->
+
+
+
+
+<div class="gallery-preview">
+    {% if videos %}
+        {% for video in videos %}
+        <article class="gallery-card">
+
+            <div class="video-wrapper">
+                <video
+                    class="gallery-video"
+                    muted
+                    playsinline
+                    preload="metadata"
+                    controls
+                    controlsList="nodownload noplaybackrate"
+                    disablePictureInPicture
+                    oncontextmenu="return false;"
+                >
+                    <source src="{{ video.video_file.url }}" type="video/mp4">
+                    Your browser does not support video playback.
+                </video>
+            </div>
+
+            <div class="video-dis">
+                <small class="video-meta">
+                    {{ video.created_at|date:"M d, Y" }}
+                </small>
+
+                <h5 class="video-title">
+                    {{ video.title }}
+                </h5>
+            </div>
+
+        </article>
+        {% endfor %}
+    {% endif %}
+</div>
+
+
+
+
+
+
+
+    
+{% endblock %}
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    document.querySelectorAll(".gallery-video").forEach(function (video) {
+
+        // Prevent right-click
+        video.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        });
+
+    });
+
+});
+</script>

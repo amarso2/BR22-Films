@@ -7,6 +7,18 @@
 {% block content %}
 
 <style>
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.portfolio-card {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
 .portfolio-slider {
     position: relative;
     width: 100%;
@@ -79,20 +91,30 @@
 }
 
 /* Tablet */
-@media (max-width: 992px) {
-    .portfolio-item {
-        flex: 0 0 calc(50% - 10px);
+ @media (max-width: 992px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .portfolio-track {
+        gap: 0;
+    }
+
     .portfolio-item {
         flex: 0 0 100%;
+        max-width: 100%;
     }
 
     .portfolio-item img {
-        height: 350px;
+        height: 320px;
     }
 
     .prev-btn,
@@ -101,7 +123,7 @@
         height: 40px;
         font-size: 22px;
     }
-}
+} 
 </style>
 
 <main>
@@ -126,7 +148,7 @@
       <p>Book trusted photographers and videographers across India for weddings, pre-weddings, birthdays, corporate events, maternity shoots, and more.</p>
       <div class="hero-actions">
         <a href="#portfolio" class="btn btn-gold">Explore Portfolio</a>
-        <a href="#contact" class="btn btn-soft">Book Now</a>
+        <a href="{% url 'services' %}" class="btn btn-soft">Book Now</a>
       </div>
       <div class="hero-stats">
         <div class="hero-stat"><span>10,000+</span><small>Happy Clients</small></div>
@@ -183,7 +205,7 @@
             <h3 class="service-title">{{ service.service_name }}</h3>
             <p>{{ service.description }}</p>
             <p class="service-price">Starting <del>₹ {{ service.price1|floatformat:0 }}</del>    ₹ {{ service.price2|floatformat:0 }}</p>
-            <a href="#portfolio" class="btn btn-soft btn-sm">View Details</a>
+            <a href="{% url 'service_detail' service.id %}" class="btn btn-soft btn-sm">View Details</a>
           </div>
         </article>
       </div>
@@ -197,27 +219,34 @@
       <p class="section-subtitle">A luxurious collection of wedding, cinematic, and editorial captures.</p>
     </header>
     <div class="portfolio-grid">
+      {% for portfolio in portfolios|slice:":3" %}
       <article class="portfolio-card">
-       <div class="portfolio-slider">
-        <button class="prev-btn">&lt;</button>
-
-        <div class="portfolio-track">
-           <div class="portfolio-item"><img src="{% static 'images/items/1.jpg' %}" alt=""></div>
-           <div class="portfolio-item"><img src="{% static 'images/items/2.jpg' %}" alt=""></div>
-           <div class="portfolio-item"><img src="{% static 'images/items/3.jpg' %}" alt=""></div> 
+        <div class="portfolio-slider">
+          <button class="prev-btn" type="button" aria-label="Previous image">&lt;</button>
+          <div class="portfolio-track">
+            {% if portfolio.image1 %}
+            <div class="portfolio-item"><img src="{{ portfolio.image1.url }}" alt="{{ portfolio.title }}"></div>
+            {% endif %}
+            {% if portfolio.image2 %}
+            <div class="portfolio-item"><img src="{{ portfolio.image2.url }}" alt="{{ portfolio.title }}"></div>
+            {% endif %}
+            {% if portfolio.image3 %}
+            <div class="portfolio-item"><img src="{{ portfolio.image3.url }}" alt="{{ portfolio.title }}"></div>
+            {% endif %}
           </div>
-
-        <button class="next-btn">&gt;</button>
+          <button class="next-btn" type="button" aria-label="Next image">&gt;</button>
         </div>
         <div class="portfolio-overlay">
-          <span class="badge badge-gold">Wedding</span>
-          <h5>Golden Ceremony</h5>
-          <small>Mumbai • 15 Feb 2026</small>
-          <a href="#" class="btn btn-soft btn-sm mt-3">View Gallery</a>
+          <span class="badge badge-gold">{{ portfolio.heading }}</span>
+          <h5>{{ portfolio.title }}</h5>
+          <small>{{ portfolio.city }} • {{ portfolio.date|date:"d M Y" }}</small>
+          
+          <h5 class="btn btn-soft btn-soft">{{ portfolio.description }}</h5>
         </div>
       </article>
-     
-      
+      {% empty %}
+      <div class="col-12 text-center text-muted">No portfolio items available yet.</div>
+      {% endfor %}
     </div>
   </section>
 
@@ -316,57 +345,28 @@
       <h2 class="section-title">Pricing Packages</h2>
       <p class="section-subtitle">Select the ideal package for your celebration.</p>
     </header>
+
     <div class="pricing-grid">
+      {% for package in packages|slice:":3" %}
       <article class="pricing-card">
-        <h4>Basic</h4>
-        <div class="price"><del>₹24,999</del> 19,999</div>
+        <h4>{{ package.title }}</h4>
+        <div class="price"><del>₹{{ package.price1|floatformat:2 }}</del> ₹{{ package.price2|floatformat:2 }}</div>
 
         <ul>
-          <li>Wedding Coverage</li>
-          <li>1 Photographer</li>
-          <li>1 Videographer</li>
-          <li>High-Resolution Photos</li>
-          <li>Approx 2 Hour Video</li>
-          <li>Digital Gallery</li>
+          <li>{{ package.t1 }}</li>
+          <li>{{ package.t2 }}</li>
+          <li>{{ package.t3 }}</li>
+          <li>{{ package.t4 }}</li>
+          <li>{{ package.t5 }}</li>
+          <li>{{ package.t6 }}</li>
+          <li>{{ package.t7 }}</li>
           <li><br></li>
           <li><br></li>
         </ul>
         <a href="#contact" class="btn btn-soft btn-block">View Details</a>
         <a href="#contact" class="btn btn-gold btn-block mt-3">Book Now</a>
       </article>
-      <article class="pricing-card highlight">
-        <h4>Premium</h4>
-        <div class="price"><del>₹49,999</del> 39,999</div>
-        <ul>
-          <li>2 Photographers</li>
-          <li>1 Videographers</li>
-          <li>1 Cinematic Video</li>
-          <li>Drone Coverage</li>
-          <li>3 Highlight Reel & 2 Hour Video </li>
-          <li>Luxury Album</li>
-          <li>Digital Gallery</li>
-          <li><br></li>
-          
-        </ul>
-        <a href="#contact" class="btn btn-soft btn-block">View Details</a>
-        <a href="#contact" class="btn btn-gold btn-block mt-3">Book Now</a>
-      </article>
-      <article class="pricing-card">
-        <h4>Luxury</h4>
-        <div class="price">₹<del>₹89,999</del> 69,999</div>
-        <ul>
-          <li>Complete Coverage</li>
-          <li>Multi-Camera Team</li>
-          <li>Premium Album</li>
-          <li>Live Streaming</li>
-          <li>High Quality Videos</li>
-          <li>All Most Every Things Covered</li>
-          <li><br></li>
-          <li><br></li>
-        </ul>
-        <a href="#contact" class="btn btn-soft btn-block">View Details</a>
-        <a href="#contact" class="btn btn-gold btn-block mt-3">Book Now</a>
-      </article>
+      {% endfor %}
     </div>
   </section>
 
@@ -405,19 +405,76 @@
 
   <section class="container padding-y-lg" id="gallery">
     <header class="text-center">
-      <h2 class="section-title">Gallery Preview</h2>
+      <h2 class="section-title">Photo Gallery Preview</h2>
       <p class="section-subtitle">Explore our curated collection across weddings, couples, and cinematic moments.</p>
     </header>
+    
     <div class="gallery-preview">
-      <article class="gallery-card" data-label="Wedding"><img src="{% static 'images/items/4.jpg' %}" alt="Wedding"></article>
-      <article class="gallery-card" data-label="Couple"><img src="{% static 'images/items/5.jpg' %}" alt="Couple"></article>
-      <article class="gallery-card" data-label="Reception"><img src="{% static 'images/items/12.jpg' %}" alt="Reception"></article>
-      <article class="gallery-card" data-label="Drone"><img src="{% static 'images/items/7.jpg' %}" alt="Drone"></article>
-      <article class="gallery-card" data-label="Candid"><img src="{% static 'images/items/8.jpg' %}" alt="Candid"></article>
-      <article class="gallery-card" data-label="Family"><img src="{% static 'images/items/9.jpg' %}" alt="Family"></article>
+      {% if galleries %}
+        {% for gallery in galleries|slice:":6" %}
+        <article class="gallery-card" data-label="{{ gallery.title|default:'Gallery' }}">
+          <img src="{{ gallery.image.url }}" alt="{{ gallery.title }}">
+        </article>
+        {% endfor %}
+      {% else %}
+        <div class="text-center text-muted">No gallery images are available yet.</div>
+      {% endif %}
     </div>
+
     <div class="text-center mt-4">
-      <a href="#" class="btn btn-gold">View Complete Gallery</a>
+      <a href="{% url 'gallery' %}" class="btn btn-gold">View Complete Gallery</a>
+    </div>
+  </section>
+
+  <section class="container padding-y-lg" id="videos">
+    <header class="text-center">
+      <h2 class="section-title">Video Gallery Preview</h2>
+      <p class="section-subtitle">Capture the magic of your special moments.</p>
+    </header>
+
+
+    
+    <!-- <div class="video-preview">
+       {% if videos %}
+        {% for video in videos %}
+   <article class="gallery-card">
+          <a href="{{ video.video_file.url }}" target="_blank" rel="noopener noreferrer">
+            <video muted preload="metadata" playsinline>
+              <source src="{{ video.video_file.url }}" type="video/mp4">
+            </video>
+            <div class="play-circle"><i class="fas fa-play"></i></div>
+          </a>
+          <div class="gallery-card">
+            <small class="video-meta">{{ video.created_at|date:"M d, Y" }}</small>
+            <h5 class="video-title">{{ video.title }}</h5>
+          </div>
+        </article>
+   {% endfor %}
+
+   {% else %}
+        <div class="text-center text-muted">No videos are available yet.</div>
+      {% endif %}
+    </div> -->
+
+
+    <div class="gallery-preview">
+      {% if videos %}
+        {% for video in videos|slice:":6" %}
+        <article class="gallery-card" data-label="{{ video.title }}">
+        <video class="hero-video is-active" autoplay muted loop playsinline>
+        <source src="{{ video.video_file.url }}" type="video/mp4">
+      </video>
+        </article>
+        {% endfor %}
+      {% else %}
+        <div class="text-center text-muted">No gallery images are available yet.</div>
+      {% endif %}
+    </div>
+   
+     
+   
+    <div class="text-center mt-4">
+      <a href="{% url 'video' %}" class="btn btn-gold">View Complete Video Gallery</a>
     </div>
   </section>
 
@@ -574,17 +631,22 @@ document.addEventListener('DOMContentLoaded', function () {
   if (nextBtn) nextBtn.addEventListener('click', goToNextVideo);
 });
 
-  const track = document.querySelector(".portfolio-track");
-  const items = document.querySelectorAll(".portfolio-item");
-  const prevPortfolioBtn = document.querySelector(".prev-btn");
-  const nextPortfolioBtn = document.querySelector(".next-btn");
+  document.querySelectorAll(".portfolio-slider").forEach((slider) => {
+    const track = slider.querySelector(".portfolio-track");
+    const items = slider.querySelectorAll(".portfolio-item");
+    const prevPortfolioBtn = slider.querySelector(".prev-btn");
+    const nextPortfolioBtn = slider.querySelector(".next-btn");
 
-  if (track && items.length > 0 && prevPortfolioBtn && nextPortfolioBtn) {
+    if (!track || items.length <= 1 || !prevPortfolioBtn || !nextPortfolioBtn) {
+      return;
+    }
+
     let currentIndex = 0;
 
     function updateSlider() {
-      const itemWidth = items[0].offsetWidth;
-      const gap = 20;
+      const isMobile = window.innerWidth <= 600;
+      const itemWidth = isMobile ? slider.clientWidth : items[0].getBoundingClientRect().width;
+      const gap = isMobile ? 0 : 20;
       track.style.transform = `translateX(-${currentIndex * (itemWidth + gap)}px)`;
     }
 
@@ -615,8 +677,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     updateSlider();
-  }
-</script>
+  });
+
 </script>
 
 </body>

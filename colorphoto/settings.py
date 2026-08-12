@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'services',
     'accounts',
     'portfolio',
+    'package',
+    'gallery',
+    'video',
+    'service_details'
     
 ]
 

@@ -1,7 +1,7 @@
  {% load static %}
  <header class="site-header">
   <nav class="navbar navbar-expand-lg navbar-dark container">
-    <a class="navbar-brand" href="#">BR 22 Films</a>
+    <a class="navbar-brand" href="#">BR 22 <span class="text-danger fs-4">Films</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,9 +9,9 @@
       <ul class="navbar-nav mx-auto">
         <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#packages">Packages</a></li>
-        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'package' %}">Packages</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'gallery' %}">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>

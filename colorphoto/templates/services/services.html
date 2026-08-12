@@ -6,7 +6,7 @@
 
 {% block content %}
 
-  </section>
+ 
   <section class="container padding-y-lg" id="services-list">
     <header class="text-center mb-5">
       <h2 class="section-title">Complete Service Offerings</h2>
@@ -22,8 +22,9 @@
             <h3 class="service-title">{{ service.service_name }}</h3>
             <p>{{ service.description }}</p>
             <p class="service-price">From ₹ <del>{{service.price1}}</del> {{service.price2}}</p>
-            <a href="lensbharat-packages.html" class="btn btn-block btn-primary">Booking</a>
-            <a href="lensbharat-packages.html" class="btn btn-block btn-gold">View Packages</a>
+            <a href="{% url 'package' %}" class="btn btn-block btn-primary">Booking</a>
+            <a href="{% url 'service_detail' service.id %}" class="btn btn-block btn-gold">View Packages</a>
+            <!-- <a href="{% url 'service_detail' service.id %}" class="btn btn-block btn-secondary">View Details</a> -->
           </div>
         </article>
       </div>

@@ -1,0 +1,14 @@
+from django.db import models
+
+# Create your models here.
+class Gallery(models.Model):
+    title = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='photos/gallery') 
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'gallery'
+        verbose_name_plural = 'galleries'
+
+    def __str__(self):
+        return self.title
