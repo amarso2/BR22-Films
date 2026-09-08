@@ -15,9 +15,23 @@ class Services(models.Model):
     class Meta:
         verbose_name = 'services'
         verbose_name_plural = 'services'
+    def __str__(self):
+            return self.service_name
 
+class Services_details(models.Model):
+    title =models.CharField()
+    image1 = models.ImageField(upload_to='photos/services_details/')
+    image2 = models.ImageField(upload_to='photos/services_details/', blank=True, null=True)
+    image3 = models.ImageField(upload_to='photos/services_details/', blank=True, null=True)
+    about =models.TextField(max_length=500)
+    cover =models.TextField(max_length=500)
+    photographer = models.TextField(max_length=500)
+    videographer = models.TextField(max_length=500)
+    drone = models.TextField(max_length=500)
+    Deliverables = models.TextField(max_length=500)
+    created_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.service_name
+        return self.title
     
     

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<section class="container" style="padding: 6rem 0 4rem;">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        
+        <div class="glass-panel p-5">
+          {% include 'includes/alerts.html' %}
+          <h2 class="mb-4">Create Your Account</h2>
+          <p class="text-muted">Join BR 22 films to manage bookings, view galleries, and book photographers instantly.</p>
+          <form action="{% url 'accounts:register' %}" method="post">
+            {% csrf_token %}
+
+            <div class="form-row mt-4">
+              <div class="form-group col-md-6"><label>First Name</label>{{ form.first_name }}</div>
+              <div class="form-group col-md-6"><label>Last Name</label>{{ form.last_name }}</div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6"><label>Email</label>{{ form.email }}</div>
+              <div class="form-group col-md-6"><label>Phone</label>{{ form.phone_number }}</div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6"><label>Password</label>{{ form.password }}</div>
+              <div class="form-group col-md-6"><label>Confirm Password</label>{{ form.confirm_password }}</div>
+            </div>
+            <button type="submit" class="btn btn-gold btn-block">Create Account</button>
+            <!-- {% if form.errors %}
+<div class="alert alert-danger">
+    {{ form.errors }}
+</div>
+{% endif %} -->
+
+            {{ form.email.errors }}
+            {{ form.non_field_errors }}
+          </form>
+          <p class="text-center text-muted mt-4">Already have an account? <a href="{% url 'accounts:login' %}" class="text-gold">Login here</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+ 
+
+  {% endblock %}

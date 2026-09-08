@@ -106,3 +106,6 @@ $(function(){
 });
 // jquery end
 
+// setTimeout(function(){
+//     $('message').fedOut('slow')
+// },4000)

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Services
+from .models import Services, Services_details
 
 # Register your models here.
 class ServicesAdmin(admin.ModelAdmin):
@@ -9,3 +9,9 @@ class ServicesAdmin(admin.ModelAdmin):
     ordering = ('service_name',)
 
 admin.site.register(Services, ServicesAdmin)
+
+class Services_detailsAdmin(admin.ModelAdmin):
+    list_display = ('title', 'image1', 'image2', 'image2', 'about', 'cover', 'photographer', 'videographer', 'drone', 'Deliverables', 'created_date')
+    search_fields = ('title','created_date')
+    ordering = ('title',)
+admin.site.register(Services_details, Services_detailsAdmin)

@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Online Payment</title>
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<style>
+body{
+    background:#0f0f0f;
+    color:white;
+}
+.payment-card{
+    max-width:650px;
+    margin:60px auto;
+    background:#181818;
+    border:1px solid rgba(212,175,55,.35);
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+}
+.btn-gold{
+    background:#D4AF37;
+    color:black;
+    font-weight:bold;
+}
+.price{
+    font-size:40px;
+    color:#D4AF37;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="payment-card">
+
+<h2>BR22 FILMS</h2>
+
+<p>{{ booking.selected_item }}</p>
+
+<p>Booking ID: {{ booking.booking_id }}</p>
+
+<div class="price">₹{{ booking.advance_price }}</div>
+
+<p>Advance Payment</p>
+
+<button type="button"
+        id="pay-btn"
+        class="btn btn-gold btn-block mt-4 py-3">
+    Pay Now
+</button>
+
+</div>
+
+</div>
+
+<script>
+document.getElementById("pay-btn").onclick = function () {
+
+    var options = {
+        key: "{{ key }}",
+        amount: "{{ booking.advance_price|floatformat:0 }}00",
+        currency: "INR",
+
+        name: "BR22 FILMS",
+        description: "{{ booking.selected_item }}",
+
+        prefill: {
+            name: "{{ booking.full_name }}",
+            email: "{{ booking.email }}",
+            contact: "{{ booking.phone }}"
+        },
+
+        theme: {
+            color: "#D4AF37"
+        },
+
+        handler: function (response) {
+
+            window.location.href =
+            "{% url 'payment_success' booking.booking_id %}" +
+            "?payment_id=" + response.razorpay_payment_id;
+        }
+    };
+
+    var rzp = new Razorpay(options);
+    rzp.open();
+};
+</script>
+
+</body>
+</html>

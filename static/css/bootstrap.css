@@ -2016,6 +2016,14 @@ textarea.form-control {
   margin-bottom: 1.2rem;
 }
 
+.event-select option {
+    background: #fff;
+}
+
+.event-select option:hover {
+    background: #d4af37; /* Gold on hover (browser support limited) */
+}
+
 .form-text {
   display: block;
   margin-top: 0.25rem;

@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<title>Select Payment Method | BR22 FILMS</title>
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+<style>
+body{
+    background:#0f0f0f;
+    color:white;
+}
+
+.payment-card{
+    max-width:700px;
+    margin:60px auto;
+    background:#181818;
+    border:1px solid rgba(212,175,55,.35);
+    border-radius:20px;
+    padding:35px;
+}
+
+.gold{color:#D4AF37;}
+
+.option{
+    background:#242424;
+    border:2px solid transparent;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.option:hover{
+    border-color:#D4AF37;
+}
+
+.btn-gold{
+    background:#D4AF37;
+    color:black;
+    font-weight:bold;
+}
+</style>
+
+<div class="container">
+
+<div class="payment-card">
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-danger" role="alert">{{ message }}</div>
+    {% endfor %}
+{% endif %}
+
+<h2 class="text-center gold mb-4">
+Choose Payment Method
+</h2>
+
+<div class="mb-4">
+
+<h5>{{ booking.selected_item }}</h5>
+
+<p>Booking ID: {{ booking.booking_id }}</p>
+
+<p>Total Price: ₹{{ booking.total_price }}</p>
+
+<h4 class="gold">
+Advance Payment: ₹{{ booking.advance_price }}
+</h4>
+
+</div>
+
+<form id="payment-form">
+    <label class="option d-block">
+        <input type="radio" name="payment_method" value="online" required>
+        <strong>Online Payment</strong>
+    </label>
+
+    <label class="option d-block">
+        <input type="radio" name="payment_method" value="offline">
+        <strong>Offline Payment</strong>
+    </label>
+
+    <button type="button" id="continue-btn" class="btn btn-gold btn-block mt-3">
+        Continue
+    </button>
+    <div id="payment-error" class="alert alert-danger mt-3" role="alert" style="display: none;"></div>
+</form>
+
+</div>
+
+</div>
+
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+document.getElementById("continue-btn").addEventListener("click", function () {
+
+    const selected = document.querySelector('input[name="payment_method"]:checked');
+
+    if (!selected) {
+        alert("Please select a payment method.");
+        return;
+    }
+
+    if (selected.value === "offline") {
+        window.location.href = "{% url 'offline_payment' booking.booking_id %}";
+        return;
+    }
+
+    const paymentError = document.getElementById("payment-error");
+    const showPaymentError = function (message) {
+        paymentError.textContent = message;
+        paymentError.style.display = "block";
+    };
+
+    const options = {
+        key: "{{ key }}",
+        amount: "{{ amount_paise }}",
+        currency: "INR",
+        order_id: "{{ booking.razorpay_order_id }}",
+        callback_url: "{{ callback_url|escapejs }}",
+        redirect: true,
+
+        name: "BR22 FILMS",
+        description: "{{ booking.selected_item|escapejs }}",
+
+        prefill: {
+            name: "{{ booking.full_name|escapejs }}",
+            email: "{{ booking.email|escapejs }}",
+            contact: "{{ booking.phone|escapejs }}"
+        },
+
+        theme: {
+            color: "#D4AF37"
+        },
+
+        modal: {
+            ondismiss: function () {
+                showPaymentError("Payment was cancelled. Your booking is still pending.");
+            }
+        }
+    };
+
+    const rzp = new Razorpay(options);
+    rzp.on("payment.failed", function () {
+        showPaymentError("Payment failed. Your booking is still pending. Please try again.");
+    });
+    rzp.open();
+});
+</script>
+{% endblock %}

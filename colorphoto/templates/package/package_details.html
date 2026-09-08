@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="container-fluid py-4">
+    <div class="row g-4 align-items-start">
+        <div class="col-md-6">
+            <article class="glass-panel p-4">
+                <br>
+                {% if package_detail and package_detail.image1 %}
+                    <img src="{{ package_detail.image1.url }}" class="img-fluid mb-3 rounded" alt="{{ package.title }}">
+                {% elif package_detail and package_detail.image2 %}
+                    <img src="{{ package_detail.image2.url }}" class="img-fluid mb-3 rounded" alt="{{ package.title }}">
+                {% endif %}
+            </article>
+        </div>
+
+        <div class="col-md-6">
+            <article class="glass-panel p-4">
+                <h2>{{ package.title }}</h2>
+
+                {% if package_detail %}
+                    <p class="text-muted">{{ package_detail.about }}</p>
+
+                    {% if cover_items %}
+                        <h3 class="mt-4">What We Cover</h3>
+                        <ul class="list-unstyled text-muted">
+                            {% for item in cover_items %}
+                                <li>• {{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% if photographer_items %}
+                        <h3 class="mt-4">Photography</h3>
+                        <ul class="list-unstyled text-muted">
+                            {% for item in photographer_items %}
+                                <li>• {{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% if videographer_items %}
+                        <h3 class="mt-4">Videography</h3>
+                        <ul class="list-unstyled text-muted">
+                            {% for item in videographer_items %}
+                                <li>• {{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% if drone_items %}
+                        <h3 class="mt-4">Drone</h3>
+                        <ul class="list-unstyled text-muted">
+                            {% for item in drone_items %}
+                                <li>• {{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    {% if deliverables_items %}
+                        <h3 class="mt-4">Deliverables</h3>
+                        <ul class="list-unstyled text-muted">
+                            {% for item in deliverables_items %}
+                                <li>• {{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% else %}
+                    <p class="text-muted">{{ package.t1 }}</p>
+                {% endif %}
+
+                <p class="service-price mt-4">
+                    From ₹ <del>{{ package.price1 }}</del> {{ package.price2 }}
+                </p>
+
+                <div class="card-body">
+                    <a href="{% url 'package' %}" class="btn btn-block btn-gold">Back to Packages</a>
+                    <a href="{% url 'booking_page' 'package' package.id %}" class="btn btn-block btn-gold">Book Now</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

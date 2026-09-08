@@ -5,6 +5,7 @@
 
 
 <header class="text-center mb-5">
+       <br>
       <h2 class="section-title">Wedding Packages</h2>
       <p class="btn btn-gold">Relive your special day with a beautifully crafted cinematic film that tells your unique love story..</p>
 </header>
@@ -26,14 +27,16 @@
           <li><br></li>
           <li><br></li>
         </ul>
-        <a href="#contact" class="btn btn-soft btn-block">View Details</a>
-        <a href="#contact" class="btn btn-gold btn-block mt-3">Book Now</a>
+        <a href="{% url 'package_details' package.id %}" class="btn btn-soft btn-block">View Details</a>
+        <a href="{% url 'booking_page' 'package' package.id %}" class="btn btn-gold btn-block mt-3">Book Now</a>
       </article>
       {% endfor %}
     </div>
 
+    <br>
+
     <header class="text-center mb-5">
-      <h2 class="section-title">Corporate Events </h2>
+      <h2 class="section-title">Engagement Ceremony </h2>
       <p class="btn btn-gold">Relive your special day with a beautifully crafted cinematic film that tells your unique love story..</p>
     </header>
 
@@ -54,19 +57,100 @@
           <li><br></li>
           <li><br></li>
         </ul>
-        <a href="#contact" class="btn btn-soft btn-block">View Details</a>
-        <a href="#contact" class="btn btn-gold btn-block mt-3">Book Now</a>
+        <a href="{% url 'package_details' package.id %}" class="btn btn-soft btn-block">View Details</a>
+        <a href="{% url 'booking_page' 'package' package.id %}" class="btn btn-gold btn-block mt-3">Book Now</a>
+      </article>
+      {% endfor %}
+    </div>
+     <br>
+
+    <header class="text-center mb-5">
+      <h2 class="section-title">Corporate Events </h2>
+      <p class="btn btn-gold">Relive your special day with a beautifully crafted cinematic film that tells your unique love story..</p>
+    </header>
+
+    <div class="pricing-grid">
+      {% for package in packages|slice:"6:9" %}
+      <article class="pricing-card">
+        <h4>{{ package.title }}</h4>
+        <div class="price"><del>₹{{ package.price1|floatformat:2 }}</del> ₹{{ package.price2|floatformat:2 }}</div>
+
+        <ul>
+          <li>{{ package.t1 }}</li>
+          <li>{{ package.t2 }}</li>
+          <li>{{ package.t3 }}</li>
+          <li>{{ package.t4 }}</li>
+          <li>{{ package.t5 }}</li>
+          <li>{{ package.t6 }}</li>
+          <li>{{ package.t7 }}</li>
+          <li><br></li>
+          <li><br></li>
+        </ul>
+        <a href="{% url 'package_details' package.id %}" class="btn btn-soft btn-block">View Details</a>
+        <a href="{% url 'booking_page' 'package' package.id %}" class="btn btn-gold btn-block mt-3">Book Now</a>
+      </article>
+      {% endfor %}
+    </div>
+       
+    <br>
+    <header class="text-center mb-5">
+      <h2 class="section-title">Reel Shoot </h2>
+      <p class="btn btn-gold">Relive your special day with a beautifully crafted cinematic film that tells your unique love story..</p>
+    </header>
+
+    <div class="pricing-grid">
+      {% for package in packages|slice:"9:12" %}
+      <article class="pricing-card">
+        <h4>{{ package.title }}</h4>
+        <div class="price"><del>₹{{ package.price1|floatformat:2 }}</del> ₹{{ package.price2|floatformat:2 }}</div>
+
+        <ul>
+          <li>{{ package.t1 }}</li>
+          <li>{{ package.t2 }}</li>
+          <li>{{ package.t3 }}</li>
+          <li>{{ package.t4 }}</li>
+          <li>{{ package.t5 }}</li>
+          <li>{{ package.t6 }}</li>
+          <li>{{ package.t7 }}</li>
+          <li><br></li>
+          <li><br></li>
+        </ul>
+        <a href="{% url 'package_details' package.id %}" class="btn btn-soft btn-block">View Details</a>
+        <a href="{% url 'booking_page' 'package' package.id %}" class="btn btn-gold btn-block mt-3">Book Now</a>
       </article>
       {% endfor %}
     </div>
 
-    <section class="padding-y-lg" id="contact">
-      <div class="glass-panel p-4">
-        <h3>Ready to reserve your date?</h3>
-        <p class="text-muted">Reach out to our team for custom packages, destination shoots, and weekend availability.</p>
-        <a href="#" class="btn btn-gold">Contact For Customized Packages</a>
-      </div>
-    </section>
+    <br>
+    <header class="text-center mb-5">
+      <h2 class="section-title">Janeu (Sacred Thread) </h2>
+      <p class="btn btn-gold">Relive your special day with a beautifully crafted cinematic film that tells your unique love story..</p>
+    </header>
 
+    <div class="pricing-grid">
+      {% for package in packages|slice:"12:15" %}
+      <article class="pricing-card">
+        <h4>{{ package.title }}</h4>
+        <div class="price"><del>₹{{ package.price1|floatformat:2 }}</del> ₹{{ package.price2|floatformat:2 }}</div>
+
+        <ul>
+          <li>{{ package.t1 }}</li>
+          <li>{{ package.t2 }}</li>
+          <li>{{ package.t3 }}</li>
+          <li>{{ package.t4 }}</li>
+          <li>{{ package.t5 }}</li>
+          <li>{{ package.t6 }}</li>
+          <li>{{ package.t7 }}</li>
+          <li><br></li>
+          <li><br></li>
+        </ul>
+        <a href="{% url 'package_details' package.id %}" class="btn btn-soft btn-block">View Details</a>
+        <a href="{% url 'booking_page' 'package' package.id %}" class="btn btn-gold btn-block mt-3">Book Now</a>
+      </article>
+      {% endfor %}
+    </div>
+
+
+  
 
 {% endblock %}

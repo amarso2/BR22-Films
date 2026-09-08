@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+  .event-select {
+    color: #6c757d; /* Placeholder color */
+}
+
+.event-select:valid {
+    color: #212529; /* Selected option color */
+}
+
+.event-select option {
+    color: #212529;
+}
+
+.event-select option:disabled {
+    color: #6c757d;
+}
+
+.event-select option {
+    background: #fff;
+}
+
+.event-select option:hover {
+    background: #d4af37; /* Gold on hover (browser support limited) */
+}
+
+
+
+</style>
+ 
+ 
+ <section class="container padding-y-lg contact-section" id="contact">
+  <div class="row align-items-start">
+
+    <!-- Contact Information -->
+    <div class="col-lg-5">
+      <div class="contact-card">
+        <h3>Contact Information</h3>
+        <p>Our team is available around the clock to support your booking and shoot planning.</p>
+
+        <p><strong>Email</strong><br>
+          <a href="mailto:br22films@gmail.com">br22films@gmail.com</a>
+        </p>
+
+        <p><strong>Founder Phone</strong><br>
+          <a href="tel:7520254879">+91 7520254879</a>
+        </p>
+
+        <p><strong>Co-Founder Phone</strong><br>
+          <a href="tel:7255885533">+91 7255885533</a>
+        </p>
+
+        <p><strong>Address</strong><br>
+          <a href="https://maps.app.goo.gl/xcEzGCovvQc7fQFQ9" target="_blank">
+            BR 22 Films, Pipra Chowk, Bettiah, Ward No. 44, Bihar - 845438
+          </a>
+        </p>
+
+        <p><strong>Working Hours</strong><br>
+          Mon - Sun: 9:00 AM - 9:00 PM
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="col-lg-7 mt-4 mt-lg-0">
+      <div class="contact-card contact-form">
+        <h3>Send a Message</h3>
+
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-success">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
+
+        <form method="POST" action="{% url 'contact' %}">
+          {% csrf_token %}
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Name</label>
+              <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>Phone</label>
+              <input type="tel" name="phone" class="form-control" maxlength="10" placeholder="10-digit phone number" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Email</label>
+              <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            
+           <div class="form-group col-md-6">
+  <label>Event Type</label>
+  <select name="event" class="custom-select event-select" required>
+    <option value="" selected disabled>Select Event</option>
+    {% for value, label in events %}
+      <option value="{{ value }}">{{ label }}</option>
+    {% endfor %}
+  </select>
+</div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>City</label>
+              <input list="city-list" name="city" class="form-control" placeholder="Select or type city" required>
+
+              <datalist id="city-list">
+                <option value="Bettiah">
+                <option value="Motihari">
+                <option value="Areraj">
+                <option value="Muzafferpur">
+                <option value="Patna">
+                <option value="Other">
+              </datalist>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>Event Date</label>
+              <input type="date" name="event_date" class="form-control" min="{{ today|date:'Y-m-d' }}" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" class="form-control" rows="5" placeholder="Tell us about your event" required></textarea>
+          </div>
+
+          <div class="mt-5 ml-4"><button type="submit" class="btn btn-gold">Submit Request</button></div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  {% endblock %}

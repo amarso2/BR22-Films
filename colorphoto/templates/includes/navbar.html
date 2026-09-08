@@ -1,10 +1,55 @@
- {% load static %}
- <header class="site-header">
-  <nav class="navbar navbar-expand-lg navbar-dark container">
-    <a class="navbar-brand" href="#">BR 22 <span class="text-danger fs-4">Films</span></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+{% load static %}
+
+<style>
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+    background: transparent;
+    transition: all .35s ease;
+    padding: 12px 0;
+  }
+
+  .site-header.scrolled {
+    background: rgba(10, 10, 10, .92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .35);
+    padding: 8px 0;
+  }
+
+  /* Header ke niche content hide na ho */
+  body {
+    padding-top: 80px;
+  }
+
+
+  .profile-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  .profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+
+<header class="site-header" id="siteHeader">
+  <nav class="navbar navbar-expand-xl navbar-dark container">
+    <a class="navbar-brand" href="{% url 'home' %}">BR 22 <span class="text-danger fs-4">Films</span></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav"
+      aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
@@ -12,13 +57,63 @@
         <li class="nav-item"><a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'package' %}">Packages</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'gallery' %}">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'scanner' %}" id="scannerBtn" class="btn btn-gold"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-qr-code-scan"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1v2.5a.5.5 0 0 1-1 0zm12 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0V1h-2.5a.5.5 0 0 1-.5-.5M.5 12a.5.5 0 0 1 .5.5V15h2.5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H15v-2.5a.5.5 0 0 1 .5-.5M4 4h1v1H4z" />
+              <path d="M7 2H2v5h5zM3 3h3v3H3zm2 8H4v1h1z" />
+              <path d="M7 9H2v5h5zm-4 1h3v3H3zm8-6h1v1h-1z" />
+              <path
+                d="M9 2h5v5H9zm1 1v3h3V3zM8 8v2h1v1H8v1h2v-2h1v2h1v-1h2v-1h-3V8zm2 2H9V9h1zm4 2h-1v1h-2v1h3zm-4 2v-1H8v1z" />
+              <path d="M12 9h2V8h-2z" />
+            </svg>t</a></li>
       </ul>
+      {% if user.id is None %}
       <div class="nav-actions d-flex gap-2">
-        <a href="lensbharat-signin.html" class="btn btn-soft">Login</a>
-        <a href="lensbharat-register.html" class="btn btn-gold">Register</a>
+
+        <a href="{% url 'accounts:login' %}" class="btn btn-gold mr-2">Login</a>
+        <a href="{% url 'accounts:register' %}" class="btn btn-gold">Register</a>
       </div>
+
+      {% else %}
+
+      <div class="nav-actions d-flex gap-2">
+
+        <!-- <a href="" class=" mr-2">Welcome {{user.first_name}}</a> -->
+
+        <!-- {% load gravatar %} -->
+
+        {% if user.is_authenticated %}
+        <a href="{% url 'accounts:profile' %}" class="profile-circle mr-3">
+          {% if user.profile_picture %}
+          <img src="{{ user.profile_picture.url }}" alt="Profile">
+          {% else %}
+          <img src="{% static 'images/default-profile.png' %}" alt="Profile">
+          {% endif %}
+        </a>
+        {% endif %}
+        <a href="{% url 'accounts:logout' %}" class="btn btn-gold">Logout</a>
+      </div>
+      {% endif %}
     </div>
+
+
   </nav>
 </header>
+
+
+<script>
+
+  const header = document.getElementById("siteHeader");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+</script>

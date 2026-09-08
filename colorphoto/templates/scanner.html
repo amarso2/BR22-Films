@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Scanner</title>
+
+    <script src="https://unpkg.com/html5-qrcode"></script>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#111;
+            color:#fff;
+            text-align:center;
+            margin:0;
+            padding:20px;
+        }
+        #reader{
+            max-width:360px;
+            margin:20px auto;
+            border-radius:15px;
+            overflow:hidden;
+        }
+        .back-btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:10px 20px;
+            background:#d4af37;
+            color:#000;
+            text-decoration:none;
+            border-radius:8px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Scan QR Code</h2>
+<p>Point your camera at a QR code.</p>
+
+<div id="reader"></div>
+
+<a href="/" class="back-btn">Back to Home</a>
+
+<script>
+const scanner = new Html5Qrcode("reader");
+
+scanner.start(
+    { facingMode: "environment" },
+    {
+        fps: 10,
+        qrbox: { width: 250, height: 250 }
+    },
+    function(decodedText){
+        scanner.stop().then(() => {
+            if(/^https?:\/\//i.test(decodedText)){
+                window.location.href = decodedText;
+            }else{
+                document.body.innerHTML += `<p><strong>QR Content:</strong> ${decodedText}</p>`;
+            }
+        });
+    },
+    function(errorMessage){
+        // Ignore scan errors
+    }
+).catch(function(){
+    alert("Camera permission denied or camera not available.");
+});
+</script>
+
+</body>
+</html>

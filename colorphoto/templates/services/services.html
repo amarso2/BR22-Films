@@ -9,6 +9,7 @@
  
   <section class="container padding-y-lg" id="services-list">
     <header class="text-center mb-5">
+      <br>
       <h2 class="section-title">Complete Service Offerings</h2>
       <a href="#services-list" class="btn btn-gold">Explore Services</a>
       <!-- <p class="section-subtitle" text-center>From intimate ceremonies to grand celebrations, our service suite delivers unforgettable coverage.</p>   -->
@@ -17,13 +18,13 @@
       {% for service in services %}
       <div class="col-lg-4 mb-4">
         <article class="service-card glass-panel">
-          <img src="{{ service.image.url }}" class="card-img-top" alt="{{ service.name }}">
+          <a href="{% url 'service_detail' service.id %}" ><img src="{{ service.image.url }}" class="card-img-top" alt="{{ service.name }}"> </a>
           <div class="card-body">
             <h3 class="service-title">{{ service.service_name }}</h3>
             <p>{{ service.description }}</p>
             <p class="service-price">From ₹ <del>{{service.price1}}</del> {{service.price2}}</p>
-            <a href="{% url 'package' %}" class="btn btn-block btn-primary">Booking</a>
-            <a href="{% url 'service_detail' service.id %}" class="btn btn-block btn-gold">View Packages</a>
+            <a href="{% url 'booking_page' 'service' service.id %}" class="btn btn-block btn-primary">Booking</a>
+            <a href="{% url 'service_detail' service.id %}" class="btn btn-block btn-gold">View Details</a>
             <!-- <a href="{% url 'service_detail' service.id %}" class="btn btn-block btn-secondary">View Details</a> -->
           </div>
         </article>

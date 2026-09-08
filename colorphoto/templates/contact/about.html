@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+    <div class="text-center" style="margin-top: 50px;">
+      <h2 class="section-title ">Our Vision</h2>
+      <p class=" ">To deliver premium storytelling that feels cinematic, elegant, and perfectly curated for every client.</p>
+    </div>
+  <section class="container padding-y-lg">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4">
+         <img src="{% static 'images/banners/1.jpg' %}" class="" alt="About image">
+      </div>
+      <div class="col-lg-6">
+       
+        <div class="feature-list mt-4">
+          <article class="feature-card">
+            <i class="fas fa-star"></i>
+            <h6>Expert Creatives</h6>
+            <p>Certified professionals with editorial and cinematic expertise.</p>
+          </article>
+          <article class="feature-card">
+            <i class="fas fa-hand-holding-heart"></i>
+            <h6>Concierge Support</h6>
+            <p>Dedicated guidance from booking to delivery.</p>
+          </article>
+          <article class="feature-card">
+            <i class="fas fa-tachometer-alt"></i>
+            <h6>Fast Turnaround</h6>
+            <p>Quick delivery of polished visuals and highlight films.</p>
+          </article>
+          <article class="feature-card">
+            <i class="fas fa-shield-alt"></i>
+            <h6>Secure Transactions</h6>
+            <p>Trusted payments and booking transparency.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+    <section class="padding-y-lg">
+      <div class="glass-panel p-4">
+        <h3>Our Story</h3>
+        <p class="text-muted">Founded to provide luxury photography and videography with seamless booking and curated experiences across India.</p>
+        <div class="row mt-4">
+          <div class="col-sm-6"><strong>100+</strong><p class="text-muted">Happy Clients</p></div>
+          <div class="col-sm-6"><strong>10+</strong><p class="text-muted">Professional Photographers</p></div>
+          <div class="col-sm-6"><strong>2</strong><p class="text-muted">Professional Cinematographer</p></div>
+          <div class="col-sm-6"><strong>2</strong><p class="text-muted">Traditional Videographers</p></div>     
+          <div class="col-sm-6"><strong>25+</strong><p class="text-muted">Events Covered</p></div>
+          <div class="col-sm-6"><strong>24/7</strong><p class="text-muted">Client Support</p></div>
+         
+
+        </div>
+      </div>
+    </section>
+  </section>
+
+
+{% endblock %}

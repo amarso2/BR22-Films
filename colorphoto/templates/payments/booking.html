@@ -1,0 +1,269 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    .booking-page {
+        background: #0f0f0f;
+        color: white;
+        font-family: Arial, sans-serif;
+        min-height: calc(100vh - 80px);
+        padding: 1px 0;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .booking-page .booking-wrapper {
+        width: 100%;
+        max-width: none !important;
+        padding: 32px 15px;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .booking-page .booking-card {
+        width: 100%;
+        max-width: none !important;
+        min-height: calc(100vh - 144px);
+        background: #181818;
+        border: 1px solid rgba(212, 175, 55, .35);
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .booking-page .booking-card>.row {
+        display: block;
+        margin: 0;
+    }
+
+    .booking-page .booking-card>.row>[class*="col-"] {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .booking-page .left-panel {
+        background: #151515;
+        padding: 35px;
+        height: auto;
+    }
+
+    .booking-page .right-panel {
+        padding: 35px;
+        max-width: 980px;
+        margin: 0 auto;
+    }
+
+    .booking-page .gold {
+        color: #D4AF37;
+    }
+
+    .booking-page .summary-box {
+        background: #222;
+        border-radius: 15px;
+        padding: 20px;
+        margin-top: 25px;
+    }
+
+    .booking-page .btn-gold {
+        background: #D4AF37;
+        color: black;
+        font-weight: bold;
+        border: none;
+    }
+
+    .booking-page .btn-gold:hover {
+        background: #C8A02E;
+    }
+
+    .booking-page .form-control {
+        background: #2a2a2a;
+        color: white;
+        border: 1px solid #444;
+    }
+
+    .booking-page .form-control:focus {
+        background: #2a2a2a;
+        color: white;
+        border-color: #D4AF37;
+        box-shadow: none;
+    }
+
+    .booking-page .form-control::placeholder {
+        color: #bbb;
+    }
+
+    .booking-page label {
+        color: #ddd;
+        font-weight: 600;
+    }
+
+    .booking-page .readonly-box {
+        background: #242424;
+        border: 1px solid #444;
+        border-radius: 8px;
+        padding: 10px 15px;
+        color: white;
+    }
+
+    @media(max-width:991.98px) {
+        .booking-page {
+            min-height: auto;
+        }
+
+        .booking-page .booking-wrapper {
+            padding: 25px 15px;
+        }
+
+        .booking-page .booking-card {
+            min-height: 0;
+        }
+    }
+</style>
+
+<main class="booking-page">
+    <div class="container booking-wrapper">
+
+        <div class="booking-card">
+
+            <div class="row no-gutters">
+
+                <div class="col-lg-5">
+                    <div class="left-panel">
+
+                        <h2 class="gold">{{ title }}</h2>
+
+                        <p>{{ description }}</p>
+
+                        <hr style="border-color:#444;">
+
+                        <h3 class="gold">₹{{ price }}</h3>
+
+                        <small>Booking Price</small>
+
+                        <div class="summary-box">
+
+                            <h5 class="gold">Booking Summary</h5>
+
+                            <p><strong>Type:</strong> {{ booking_type|title }}</p>
+                            <p><strong>Selected:</strong> {{ title }}</p>
+
+                            <p><strong>Total:</strong> ₹{{ price }}</p>
+
+                            <p><strong>Advance (30%):</strong> ₹{{ price|floatformat:0 }}</p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+
+                    <div class="right-panel">
+
+                        <h3 class="mb-4">Customer Details</h3>
+
+                        <form method="POST">
+
+                            {% csrf_token %}
+
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <div class="readonly-box">
+                                    {{ request.user.first_name }} {{ request.user.last_name }}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email</label>
+                                <div class="readonly-box">
+                                    {{ request.user.email }}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                {{ form.phone }}
+                            </div>
+
+                            <h4 class="gold mt-4 mb-3">Event Details</h4>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Bride Name</label>
+                                        {{ form.bride_name }}
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Groom Name</label>
+                                        {{ form.groom_name }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Event Date</label>
+                                {{ form.event_date }}
+                            </div>
+
+                            <div class="form-group">
+                                <label>Event Location</label>
+                                {{ form.event_location }}
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>City</label>
+                                        {{ form.city }}
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>State</label>
+                                        {{ form.state }}
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label>Additional Note</label>
+                                {{ form.note }}
+                            </div>
+                            <label>Note: <br> Please check the availability of dates before making any payment. Kindly
+                                contact us to confirm your booking dates first, and proceed with the payment only after
+                                verification. Payments made without confirmation will not guarantee your
+                                booking.</label>
+
+                            <div class="form-group text-center mt-4">
+                                <img src="/static/images/icons/pay-mastercard.png" alt="">
+                                <img src="/static/images/icons/pay-visa.png" alt="">
+                                <img src="/static/images/icons/pay-visa-el.png" alt="">
+                                <img src="/static/images/icons/pay-bank.png" alt="">
+                            </div>
+
+                            <button type="submit" class="btn btn-gold btn-block mt-4">
+                                Continue to Payment
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+{% endblock %}

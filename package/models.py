@@ -22,3 +22,21 @@ class Package(models.Model):
 
     def __str__(self):
         return self.title
+
+    
+
+class Package_details(models.Model):
+    title1 =models.CharField()
+    image1 = models.ImageField(upload_to='photos/package_details/')
+    image2 = models.ImageField(upload_to='photos/package_details/', blank=True, null=True)
+    image3 = models.ImageField(upload_to='photos/package_details/', blank=True, null=True)
+    about =models.TextField(max_length=500)
+    cover =models.TextField(max_length=500)
+    photographer = models.TextField(max_length=500)
+    videographer = models.TextField(max_length=500)
+    drone = models.TextField(max_length=500)
+    Deliverables = models.TextField(max_length=500)
+    created_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title1

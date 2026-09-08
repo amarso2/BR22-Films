@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+    <style>
+        body {
+            background: #111;
+            color: #fff;
+        }
+
+        .profile-card {
+            max-width: 1100px;
+            margin: 60px auto;
+            background: #1b1b1b;
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .booking-card {
+            height: 100%;
+            background: #111;
+            border: 1px solid #d4af37;
+            border-radius: 14px;
+            padding: 22px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+        }
+
+        .booking-card h5 {
+            color: #d4af37;
+        }
+
+        .booking-card strong {
+            color: #d4af37;
+        }
+
+        .booking-meta {
+            color: #ddd;
+        }
+
+        .status-paid {
+            color: #28a745;
+        }
+
+        .status-offline-pending {
+            color: #ffc107;
+        }
+
+        .status-pending {
+            color: #dc3545;
+        }
+
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #d4af37;
+        }
+
+        .btn-gold {
+            background: #d4af37;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .btn-gold:hover {
+            background: #c49b2c;
+            color: #000;
+        }
+    </style>
+
+       
+    <div class="container">
+        {% if messages %}
+            {% for message in messages %}
+                <br>
+                 <br>
+                <div class="alert alert-{{ message.tags|default:'info' }} profile-message" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <div class="profile-card text-center">
+
+            <img src="{{ user.profile_picture.url }}" class="profile-img mb-3" alt="Profile">
+
+            <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+            <p class="text-warning">{{ user.email }}</p>
+
+            <div class="text-left">
+                <p><strong>Username:</strong> {{ user.username }}</p>
+                <p><strong>First Name:</strong> {{ user.first_name }}</p>
+                <p><strong>Last Name:</strong> {{ user.last_name }}</p>
+                <p><strong>Email:</strong> {{ user.email }}</p>
+            </div>
+
+            <button class="btn btn-gold mt-3" data-toggle="collapse" data-target="#editProfile">
+                Edit Profile
+            </button>
+
+
+            <div class="collapse" id="editProfile">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <div class="form-group text-left">
+                        <label>First Name</label>
+                        {{ form.first_name }}
+                    </div>
+
+                    <div class="form-group text-left">
+                        <label>Last Name</label>
+                        {{ form.last_name }}
+                    </div>
+
+                    <div class="form-group text-left">
+                        <label>Phone Number</label>
+                        {{ form.phone_number }}
+                    </div>
+
+                    <div class="form-group text-left">
+                        <label>Profile Picture</label>
+                        {{ form.profile_picture }}
+                    </div>
+
+                    <button type="submit" class="btn btn-gold btn-block mt-3">
+                        Save Changes
+                    </button>
+            </form>
+
+            
+            </div>
+            
+
+            <a href="{% url 'home' %}" class="btn btn-outline-light mt-3">Home</a>
+<a href="{% url 'accounts:logout' %}" class="btn btn-gold mt-3">Logout</a>
+
+<!-- 👇 YAHAN SE MY BOOKINGS SECTION START KARO -->
+
+<hr class="my-5" style="border-color:#444;">
+
+<h3 class="text-center text-warning mb-4">My Bookings</h3>
+
+{% if bookings %}
+    <div class="row text-left justify-content-center">
+        {% for booking in bookings %}
+            <div class="col-md-6 mb-4">
+                <div class="booking-card">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h5 class="mb-0">{{ booking.selected_item }}</h5>
+                        <span class="small text-uppercase text-warning">{{ booking.booking_type }}</span>
+                    </div>
+
+                    <p class="booking-meta mb-2"><strong>Booking ID:</strong> {{ booking.booking_id }}</p>
+                    <p class="booking-meta mb-2"><strong>Event Date:</strong> {{ booking.event_date|date:"d M Y" }}</p>
+                    <p class="booking-meta mb-2"><strong>Event Location:</strong> {{ booking.event_location }}, {{ booking.city }}, {{ booking.state }}</p>
+
+                    {% if booking.bride_name or booking.groom_name %}
+                        <p class="booking-meta mb-2">
+                            <strong>Bride &amp; Groom:</strong>
+                            {% if booking.bride_name %}{{ booking.bride_name }}{% endif %}
+                            {% if booking.bride_name and booking.groom_name %} &amp; {% endif %}
+                            {% if booking.groom_name %}{{ booking.groom_name }}{% endif %}
+                        </p>
+                    {% endif %}
+
+                    <p class="booking-meta mb-2"><strong>Total Price:</strong> &#8377;{{ booking.total_price }}</p>
+                    <p class="booking-meta mb-2"><strong>Advance Price:</strong> &#8377;{{ booking.advance_price }}</p>
+                    <p class="booking-meta mb-2"><strong>Booking Date:</strong> {{ booking.created_at|date:"d M Y, h:i A" }}</p>
+                    <p class="mb-0">
+                        <strong>Payment Status:</strong>
+                        {% if booking.payment_status == "Paid" %}
+                            <span class="status-paid">{{ booking.payment_status }}</span>
+                        {% elif booking.payment_status == "Offline Pending" %}
+                            <span class="status-offline-pending">{{ booking.payment_status }}</span>
+                        {% else %}
+                            <span class="status-pending">{{ booking.payment_status }}</span>
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="alert alert-secondary text-center">
+        You haven't booked any package or service yet.
+    </div>
+{% endif %}
+
+</div>   <!-- profile-card ends -->
+</div>   <!-- container ends -->
+
+<script>
+    setTimeout(function () {
+        document.querySelectorAll('.profile-message').forEach(function (message) {
+            message.remove();
+        });
+    }, 6000);
+</script>
+
+      {% endblock %}
+
+

@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block title %}Offline Payment{% endblock %}
+
+{% block content %}
+{% load static %}
+
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+<style>
+
+body{
+background:#0f0f0f;
+color:white;
+}
+
+.payment-card{
+
+max-width:720px;
+
+margin:50px auto;
+
+background:#181818;
+
+border:1px solid rgba(212,175,55,.35);
+
+border-radius:22px;
+
+padding:35px;
+}
+
+.gold{
+color:#D4AF37;
+}
+
+.qr-box{
+
+background:white;
+
+padding:18px;
+
+border-radius:16px;
+
+display:inline-block;
+}
+
+.btn-gold{
+
+background:#D4AF37;
+
+color:black;
+
+font-weight:bold;
+}
+
+.bank-box{
+
+background:#222;
+
+padding:20px;
+
+border-radius:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="payment-card text-center">
+
+<h2 class="gold">
+BR22 FILMS
+</h2>
+
+<h4>
+Offline Payment
+</h4>
+
+<hr>
+
+<p>
+Booking ID:
+<strong>{{ booking.booking_id }}</strong>
+</p>
+
+<p>{{ booking.selected_item }}</p>
+
+<h3 class="gold">
+₹{{ booking.advance_price }}
+</h3>
+
+<p>Advance Payment</p>
+
+<div class="qr-box mb-4">
+
+<img src="{% static 'images/items/scanner.jpeg' %}"
+width="220">
+
+</div>
+
+<div class="bank-box text-left">
+
+<h5 class="gold">UPI</h5>
+
+<p>mr.amardip@ybl</p>
+
+<hr>
+
+<h5 class="gold">Bank Details</h5>
+
+<p>Account Name: Mr Amardip Kumar</p>
+
+<p>Account Number: 35047741366</p>
+
+<p>IFSC: SBIN0017443</p>
+
+</div>
+
+<form method="POST"
+enctype="multipart/form-data"
+class="mt-4">
+
+{% csrf_token %}
+
+<div class="text-left mb-3">
+        <label class="font-weight-bold">Upload Payment Screenshot *</label>
+        {{ form.payment_screenshot }}
+        <small class="text-muted d-block mt-1">
+            Payment successful hone ke baad screenshot upload karein.
+        </small>
+    </div>
+
+    <button type="submit" class="btn btn-gold btn-block mt-4 py-3">
+        <i class="fas fa-check-circle mr-2"></i>
+        I've Paid
+    </button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+
+{% endblock %}
