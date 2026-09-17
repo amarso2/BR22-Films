@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
 from django.core.mail import EmailMessage
 from django.contrib.sites.shortcuts import get_current_site
 from django.template.loader import render_to_string
@@ -9,6 +10,7 @@ from django.utils.encoding import force_bytes, force_str
 from django.utils import timezone
 from datetime import timedelta
 from django.urls import reverse
+import traceback
 from .models import Account, PasswordResetToken
 from .models import Account, PasswordResetToken
 from .forms import RegistrationForm, EditProfileForm
@@ -33,10 +35,9 @@ def register(request):
             
             user.save()
 
-            current_site = get_current_site(request)
             message = render_to_string('accounts/email_verification.html', {
                 'user': user,
-                'domain': current_site.domain,
+                'domain': settings.PASSWORD_RESET_DOMAIN,
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                 'token': account_activation_token.make_token(user),
             })
@@ -46,7 +47,15 @@ def register(request):
                 to=[email],
             )
             email_message.content_subtype = "html"
-            email_message.send()
+            try:
+                email_message.send(fail_silently=False)
+            except Exception as error:
+                traceback.print_exc()
+                messages.error(
+                    request,
+                    f"Your account was created, but the verification email could not be sent: {error}",
+                )
+                return redirect("accounts:login")
 
             messages.success(request, "Registration successful. Please check your email to verify your account.")
             return redirect("accounts:login")
