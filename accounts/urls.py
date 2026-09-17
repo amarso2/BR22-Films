@@ -1,6 +1,22 @@
 from django.urls import path, reverse_lazy
 from django.contrib.auth import views as auth_views
+from django.conf import settings
+from django.http import HttpResponseRedirect
 from . import views
+
+class PublicPasswordResetView(auth_views.PasswordResetView):
+    def form_valid(self, form):
+        opts = {
+            "use_https": settings.PASSWORD_RESET_PROTOCOL == "https",
+            "token_generator": self.token_generator,
+            "from_email": self.from_email,
+            "email_template_name": self.email_template_name,
+            "subject_template_name": self.subject_template_name,
+            "request": self.request,
+            "html_email_template_name": self.html_email_template_name,
+        }
+        form.save(domain_override=settings.PASSWORD_RESET_DOMAIN, **opts)
+        return HttpResponseRedirect(self.get_success_url())
 
 app_name = "accounts"
 
@@ -15,7 +31,7 @@ urlpatterns = [
     # Forgot Password
     path(
         "forgot-password/",
-        auth_views.PasswordResetView.as_view(
+        PublicPasswordResetView.as_view(
             template_name="accounts/forgot_password.html",
             email_template_name="accounts/password_reset_email.txt",
             html_email_template_name="accounts/password_reset_email.html",
