@@ -2,9 +2,9 @@ from django.urls import path, reverse_lazy
 from django.contrib.auth import views as auth_views
 from django.contrib.auth.forms import PasswordResetForm
 from django.conf import settings
-from django.core.mail import EmailMultiAlternatives
 from django.http import HttpResponseRedirect
 from django.template import loader
+import resend
 from . import views
 
 class ProjectPasswordResetForm(PasswordResetForm):
@@ -20,13 +20,15 @@ class ProjectPasswordResetForm(PasswordResetForm):
         subject = loader.render_to_string(subject_template_name, context)
         subject = "".join(subject.splitlines())
         body = loader.render_to_string(email_template_name, context)
-        email_message = EmailMultiAlternatives(subject, body, from_email, [to_email])
+        html_email = loader.render_to_string(html_email_template_name, context)
 
-        if html_email_template_name is not None:
-            html_email = loader.render_to_string(html_email_template_name, context)
-            email_message.attach_alternative(html_email, "text/html")
-
-        email_message.send(fail_silently=False)
+        resend.Emails.send({
+            "from": settings.DEFAULT_FROM_EMAIL,
+            "to": [to_email],
+            "subject": subject,
+            "text": body,
+            "html": html_email,
+        })
 
 
 class PublicPasswordResetView(auth_views.PasswordResetView):

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 from decouple import config
+import resend
 import os
 import dj_database_url
   
@@ -180,7 +181,10 @@ EMAIL_TIMEOUT = config('EMAIL_TIMEOUT', default=30, cast=int)
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')  
 
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+RESEND_API_KEY = config('RESEND_API_KEY')
+resend.api_key = RESEND_API_KEY
+
+DEFAULT_FROM_EMAIL = "BR22 FILMS <onboarding@resend.dev>"
 
 PASSWORD_RESET_DOMAIN = 'br22films.com'
 PASSWORD_RESET_PROTOCOL = 'https'

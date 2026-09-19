@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
-from django.core.mail import EmailMessage
 from django.contrib.sites.shortcuts import get_current_site
 from django.template.loader import render_to_string
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
@@ -11,6 +10,7 @@ from django.utils import timezone
 from datetime import timedelta
 from django.urls import reverse
 import traceback
+import resend
 from .models import Account, PasswordResetToken
 from .models import Account, PasswordResetToken
 from .forms import RegistrationForm, EditProfileForm
@@ -41,14 +41,13 @@ def register(request):
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                 'token': account_activation_token.make_token(user),
             })
-            email_message = EmailMessage(
-                "Verify your BR 22 FILMS account",
-                message,
-                to=[email],
-            )
-            email_message.content_subtype = "html"
             try:
-                email_message.send(fail_silently=False)
+                resend.Emails.send({
+                    "from": settings.DEFAULT_FROM_EMAIL,
+                    "to": [email],
+                    "subject": "Verify Your BR22 FILMS Account",
+                    "html": message,
+                })
             except Exception as error:
                 traceback.print_exc()
                 messages.error(
@@ -140,8 +139,9 @@ def forgot_password(request):
 
             current_site = get_current_site(request)
 
-            reset_link = request.build_absolute_uri(
-                reverse("reset_password", args=[str(reset_token.token)])
+            reset_link = (
+                f"https://br22films.com"
+                f"{reverse('reset_password', args=[str(reset_token.token)])}"
             )
 
             message = render_to_string("accounts/reset_password_email.html", {
@@ -151,13 +151,20 @@ def forgot_password(request):
                 "domain": current_site.domain,
             })
 
-            email_message = EmailMessage(
-                "Reset your BR22 FILMS password",
-                message,
-                to=[email],
-            )
-            email_message.content_subtype = "html"
-            email_message.send()
+            try:
+                resend.Emails.send({
+                    "from": settings.DEFAULT_FROM_EMAIL,
+                    "to": [email],
+                    "subject": "Reset your BR22 FILMS password",
+                    "html": message,
+                })
+            except Exception as error:
+                traceback.print_exc()
+                messages.error(
+                    request,
+                    f"The password reset email could not be sent: {error}",
+                )
+                return redirect("forgot_password")
 
             messages.success(request, "Password reset link has been sent to your email.")
 

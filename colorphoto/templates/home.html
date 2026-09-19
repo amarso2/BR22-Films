@@ -1,5 +1,3 @@
-
-
 {% extends 'base.html' %}
 
 {% load static %}
@@ -7,49 +5,49 @@
 {% block content %}
 
 <style>
-.portfolio-grid {
+  .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
-}
+  }
 
-.portfolio-card {
+  .portfolio-card {
     width: 100%;
     overflow: hidden;
     border-radius: 16px;
-}
+  }
 
-.portfolio-slider {
+  .portfolio-slider {
     position: relative;
     width: 100%;
     max-width: 1400px;
     margin: auto;
     overflow: hidden;
-}
+  }
 
-.portfolio-track {
+  .portfolio-track {
     display: flex;
     gap: 20px;
     transition: transform 0.5s ease;
-}
+  }
 
-.portfolio-item {
+  .portfolio-item {
     flex: 0 0 100%;
     min-width: 0;
-}
+  }
 
-/* Images */
-.portfolio-item img {
+  /* Images */
+  .portfolio-item img {
     width: 100%;
     height: 400px;
     object-fit: cover;
     display: block;
     border-radius: 12px;
-}
+  }
 
-/* < > Buttons */
-.prev-btn,
-.next-btn {
+  /* < > Buttons */
+  .prev-btn,
+  .next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -74,56 +72,56 @@
     justify-content: center;
 
     transition: 0.3s ease;
-}
+  }
 
-.prev-btn {
+  .prev-btn {
     left: 15px;
-}
+  }
 
-.next-btn {
+  .next-btn {
     right: 15px;
-}
+  }
 
-.prev-btn:hover,
-.next-btn:hover {
+  .prev-btn:hover,
+  .next-btn:hover {
     transform: translateY(-50%) scale(1.1);
     background: #fff;
-}
+  }
 
-/* Tablet */
- @media (max-width: 992px) {
+  /* Tablet */
+  @media (max-width: 992px) {
     .portfolio-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-}
+  }
 
-/* Mobile */
-@media (max-width: 600px) {
+  /* Mobile */
+  @media (max-width: 600px) {
     .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
+      grid-template-columns: 1fr;
+      gap: 16px;
     }
 
     .portfolio-track {
-        gap: 0;
+      gap: 0;
     }
 
     .portfolio-item {
-        flex: 0 0 100%;
-        max-width: 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
     }
 
     .portfolio-item img {
-        height: 320px;
+      height: 320px;
     }
 
     .prev-btn,
     .next-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 22px;
+      width: 40px;
+      height: 40px;
+      font-size: 22px;
     }
-} 
+  }
 </style>
 
 <main>
@@ -145,8 +143,9 @@
     <div class="container hero-content">
       <p class="badge badge-gold">India's Premium Photography & Videography Booking Platform</p>
       <h1>Capture Every Moment with Perfection</h1>
-      <p>Book trusted photographers and videographers across India for weddings, pre-weddings, birthdays, corporate events, maternity shoots, and more.</p>
-      <div class="hero-actions">
+      <p>Book trusted photographers and videographers across India for weddings, pre-weddings, birthdays, corporate
+        events, maternity shoots, and more.</p>
+      <div class="hero-actions" style="display: flex; justify-content: center; align-items: center; gap: 1rem;">
         <a href="#portfolio" class="btn btn-gold">Explore Portfolio</a>
         <a href="{% url 'services' %}" class="btn btn-soft">Book Now</a>
       </div>
@@ -154,7 +153,7 @@
         <div class="hero-stat"><span>10,0+</span><small>Happy Clients</small></div>
         <div class="hero-stat"><span>14+</span><small>Professional Photographers & Cinematographer </small></div>
         <div class="hero-stat"><span>25+</span><small>Events Covered</small></div>
-      </div>    
+      </div>
   </section>
 
   <section class="container padding-y-lg" id="services">
@@ -166,11 +165,13 @@
       {% for service in services|slice:":9" %}
       <div class="col-lg-4 mb-4">
         <article class="service-card glass-panel">
-          <a href="{% url 'service_detail' service.id %}"><img src="{{ service.image.url }}" class="card-img-top" alt="{{ service.service_name }}"></a>
+          <a href="{% url 'service_detail' service.id %}"><img src="{{ service.image.url }}" class="card-img-top"
+              alt="{{ service.service_name }}"></a>
           <div class="card-body">
             <h3 class="service-title">{{ service.service_name }}</h3>
             <p>{{ service.description }}</p>
-            <p class="service-price">Starting <del>₹ {{ service.price1|floatformat:0 }}</del>    ₹ {{ service.price2|floatformat:0 }}</p>
+            <p class="service-price">Starting <del>₹ {{ service.price1|floatformat:0 }}</del> ₹ {{
+              service.price2|floatformat:0 }}</p>
             <a href="{% url 'service_detail' service.id %}" class="d-block text-center">View Details</a>
           </div>
         </article>
@@ -178,7 +179,7 @@
       {% endfor %}
     </div>
 
-     <div class="text-center"><a href="{% url 'services' %}" class="btn btn-gold  ">  More</a> </div>
+    <div class="text-center"><a href="{% url 'services' %}" class="btn btn-gold  "> More</a> </div>
   </section>
 
   <section class="container padding-y-lg" id="portfolio">
@@ -208,7 +209,7 @@
           <span class="badge badge-gold">{{ portfolio.heading }}</span>
           <h5>{{ portfolio.title }}</h5>
           <small>{{ portfolio.city }} • {{ portfolio.date|date:"d M Y" }}</small>
-          
+
           <h5 class="btn btn-soft btn-soft">{{ portfolio.description }}</h5>
         </div>
       </article>
@@ -225,38 +226,44 @@
     </header>
     <div class="video-carousel">
       <article class="video-card">
-       <a href="{% url 'video' %}"> <div class="video-thumb">
-          <video loop muted autoplay ="autoplay" src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}" width="100%"></video>
-          <div class="play-circle"><i class="fas fa-play"></i></div>
-        </div>
+        <a href="{% url 'video' %}">
+          <div class="video-thumb">
+            <video loop muted autoplay="autoplay" src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}"
+              width="100%"></video>
+            <div class="play-circle"><i class="fas fa-play"></i></div>
+          </div>
         </a>
         <div class="video-body">
           <small class="video-meta">3:25 • Cinematric Video</small>
           <h5 class="video-title">Cinematric</h5>
         </div>
-      </article> 
+      </article>
       <article class="video-card">
-       <a href="{% url 'video' %}"> <div class="video-thumb">
-          <video loop muted autoplay ="autoplay" src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}" width="100%"></video>
-          <div class="play-circle"><i class="fas fa-play"></i></div>
-        </div>
+        <a href="{% url 'video' %}">
+          <div class="video-thumb">
+            <video loop muted autoplay="autoplay" src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}"
+              width="100%"></video>
+            <div class="play-circle"><i class="fas fa-play"></i></div>
+          </div>
         </a>
         <div class="video-body">
           <small class="video-meta">2:15 • Wedding Highlights</small>
           <h5 class="video-title">Wedding</h5>
         </div>
-      </article> 
+      </article>
       <article class="video-card">
-       <a href="{% url 'video' %}"> <div class="video-thumb">
-          <video loop muted autoplay ="autoplay" src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}" width="100%"></video>
-          <div class="play-circle"><i class="fas fa-play"></i></div>
-        </div>
+        <a href="{% url 'video' %}">
+          <div class="video-thumb">
+            <video loop muted autoplay="autoplay" src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}"
+              width="100%"></video>
+            <div class="play-circle"><i class="fas fa-play"></i></div>
+          </div>
         </a>
         <div class="video-body">
           <small class="video-meta">1:05 • Drone Reel</small>
           <h5 class="video-title">Drone Reel</h5>
         </div>
-      </article> 
+      </article>
     </div>
   </section>
 
@@ -338,117 +345,116 @@
         <a href="{% url 'booking_page' 'package' package.id %}" class="btn btn-gold btn-block mt-3">Book Now</a>
       </article>
       {% endfor %}
-       
+
     </div>
     <br>
-     <div class="text-center"><a href="{% url 'package' %}" class="btn btn-gold  ">  More</a> </div>
+    <div class="text-center"><a href="{% url 'package' %}" class="btn btn-gold  "> More</a> </div>
   </section>
 
   <section class="container padding-y-lg" id="reviews">
-  <header class="text-center">
-    <h2 class="section-title">Customer Reviews</h2>
-    <p class="section-subtitle">
-      Trusted by couples, families, and brands across Bihar.
-    </p>
-  </header>
-
-  <div class="testimonials">
-
-    {% for review in reviews %}
-    <article class="review-card">
-
-      <div class="review-author">
-        <div class="author-img">
-          {% if review.image %}
-            <img src="{{ review.image.url }}" alt="{{ review.user.first_name }}">
-          {% else %}
-            <img src="{% static 'images/default-profile.png' %}" alt="Client">
-          {% endif %}
-        </div>
-
-        <div class="author-meta">
-          <h6>{{ review.user.first_name }} {{ review.user.last_name }}</h6>
-          <small>{{ review.event }}</small>
-        </div>
-      </div>
-
-      <div class="stars mt-3 mb-2">
-        {% for i in "12345" %}
-          {% if forloop.counter <= review.rating %}
-            <i class="fas fa-star"></i>
-          {% else %}
-            <i class="far fa-star"></i>
-          {% endif %}
-        {% endfor %}
-      </div>
-
-      <p class="review-body">
-        "{{ review.message }}"
+    <header class="text-center">
+      <h2 class="section-title">Customer Reviews</h2>
+      <p class="section-subtitle">
+        Trusted by couples, families, and brands across Bihar.
       </p>
+    </header>
 
-    </article>
+    <div class="testimonials">
 
-    {% empty %}
+      {% for review in reviews %}
+      <article class="review-card">
 
-    <article class="review-card text-center">
-      <p class="review-body">No customer reviews yet.</p>
-    </article>
+        <div class="review-author">
+          <div class="author-img">
+            {% if review.image %}
+            <img src="{{ review.image.url }}" alt="{{ review.user.first_name }}">
+            {% else %}
+            <img src="{% static 'images/default-profile.png' %}" alt="Client">
+            {% endif %}
+          </div>
 
-    {% endfor %}
+          <div class="author-meta">
+            <h6>{{ review.user.first_name }} {{ review.user.last_name }}</h6>
+            <small>{{ review.event }}</small>
+          </div>
+        </div>
 
-  </div>
+        <div class="stars mt-3 mb-2">
+          {% for i in "12345" %}
+          {% if forloop.counter <= review.rating %} <i class="fas fa-star"></i>
+            {% else %}
+            <i class="far fa-star"></i>
+            {% endif %}
+            {% endfor %}
+        </div>
 
-  {% if user.is_authenticated %}
-  <div class="text-center mt-5">
-    <button class="btn btn-gold" data-toggle="collapse" data-target="#reviewForm">
-      Write a Review
-    </button>
-  </div>
+        <p class="review-body">
+          "{{ review.message }}"
+        </p>
 
-  <div class="collapse mt-4" id="reviewForm">
-    <form action="{% url 'add_review' %}" method="POST" enctype="multipart/form-data">
-      {% csrf_token %}
+      </article>
 
-      <div class="form-group">
-        {{ review_form.event }}
-      </div>
+      {% empty %}
 
-      <div class="form-group">
-        {{ review_form.rating }}
-      </div>
+      <article class="review-card text-center">
+        <p class="review-body">No customer reviews yet.</p>
+      </article>
 
-      <div class="form-group">
-        {{ review_form.message }}
-      </div>
+      {% endfor %}
 
-      <div class="form-group">
-        {{ review_form.image }}
-      </div>
+    </div>
 
-      <button type="submit" class="btn btn-gold btn-block">
-        Submit Review
+    {% if user.is_authenticated %}
+    <div class="text-center mt-5">
+      <button class="btn btn-gold" data-toggle="collapse" data-target="#reviewForm">
+        Write a Review
       </button>
-    </form>
-  </div>
-  {% endif %}
+    </div>
 
-</section>
+    <div class="collapse mt-4" id="reviewForm">
+      <form action="{% url 'add_review' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="form-group">
+          {{ review_form.event }}
+        </div>
+
+        <div class="form-group">
+          {{ review_form.rating }}
+        </div>
+
+        <div class="form-group">
+          {{ review_form.message }}
+        </div>
+
+        <div class="form-group">
+          {{ review_form.image }}
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-block">
+          Submit Review
+        </button>
+      </form>
+    </div>
+    {% endif %}
+
+  </section>
 
   <section class="container padding-y-lg" id="gallery">
     <header class="text-center">
       <h2 class="section-title">Photo Gallery Preview</h2>
       <p class="section-subtitle">Explore our curated collection across weddings, couples, and cinematic moments.</p>
     </header>
-    
+
     <div class="gallery-preview">
       {% if galleries %}
-        {% for gallery in galleries|slice:":6" %}
-        <article class="gallery-card" data-label="{{ gallery.title|default:'Gallery' }}">
-          <img src="{{ gallery.image.url }}" alt="{{ gallery.title }}">
-        </article>
-        {% endfor %}
+      {% for gallery in galleries|slice:":6" %}
+      <article class="gallery-card" data-label="{{ gallery.title|default:'Gallery' }}">
+        <img src="{{ gallery.image.url }}" alt="{{ gallery.title }}">
+      </article>
+      {% endfor %}
       {% else %}
-        <div class="text-center text-muted">No gallery images are available yet.</div>
+      <div class="text-center text-muted">No gallery images are available yet.</div>
       {% endif %}
     </div>
 
@@ -466,20 +472,20 @@
 
     <div class="gallery-preview">
       {% if videos %}
-        {% for video in videos|slice:":6" %}
-        <article class="gallery-card" data-label="{{ video.title }}">
+      {% for video in videos|slice:":6" %}
+      <article class="gallery-card" data-label="{{ video.title }}">
         <video class="hero-video is-active" autoplay muted loop playsinline>
-        <source src="{{ video.video_file.url }}" type="video/mp4">
-      </video>
-        </article>
-        {% endfor %}
+          <source src="{{ video.video_file.url }}" type="video/mp4">
+        </video>
+      </article>
+      {% endfor %}
       {% else %}
-        <div class="text-center text-muted">No gallery images are available yet.</div>
+      <div class="text-center text-muted">No gallery images are available yet.</div>
       {% endif %}
     </div>
-   
-     
-   
+
+
+
     <div class="text-center mt-4">
       <a href="{% url 'video' %}" class="btn btn-gold">View Complete Video Gallery</a>
     </div>
@@ -491,11 +497,21 @@
       <p class="section-subtitle">A seamless, five-step luxury booking experience.</p>
     </header>
     <div class="timeline">
-      <article class="timeline-step"><i class="fas fa-camera-retro"></i><h6>Choose Service</h6></article>
-      <article class="timeline-step"><i class="fas fa-box-open"></i><h6>Select Package</h6></article>
-      <article class="timeline-step"><i class="fas fa-calendar-check"></i><h6>Pick Date</h6></article>
-      <article class="timeline-step"><i class="fas fa-check-circle"></i><h6>Confirm Booking</h6></article>
-      <article class="timeline-step"><i class="fas fa-glass-cheers"></i><h6>Enjoy Your Event</h6></article>
+      <article class="timeline-step"><i class="fas fa-camera-retro"></i>
+        <h6>Choose Service</h6>
+      </article>
+      <article class="timeline-step"><i class="fas fa-box-open"></i>
+        <h6>Select Package</h6>
+      </article>
+      <article class="timeline-step"><i class="fas fa-calendar-check"></i>
+        <h6>Pick Date</h6>
+      </article>
+      <article class="timeline-step"><i class="fas fa-check-circle"></i>
+        <h6>Confirm Booking</h6>
+      </article>
+      <article class="timeline-step"><i class="fas fa-glass-cheers"></i>
+        <h6>Enjoy Your Event</h6>
+      </article>
     </div>
   </section>
 
@@ -507,26 +523,32 @@
     <div class="accordion" id="faqAccordion">
       <div class="card faq-card">
         <div class="card-header" id="faq1">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#collapse1" aria-expanded="true">How to book?</button>
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapse1" aria-expanded="true">How to
+            book?</button>
         </div>
         <div id="collapse1" class="collapse show" data-parent="#faqAccordion">
-          <div class="card-body">Choose your service, select a package, pick a date, and confirm your booking with our concierge team.</div>
+          <div class="card-body">Choose your service, select a package, pick a date, and confirm your booking with our
+            concierge team.</div>
         </div>
       </div>
       <div class="card faq-card">
         <div class="card-header" id="faq2">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2">Payment process</button>
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2">Payment
+            process</button>
         </div>
         <div id="collapse2" class="collapse" data-parent="#faqAccordion">
-          <div class="card-body">We support secure online payments, UPI, cards, and wallets. Payment is collected at booking confirmation.</div>
+          <div class="card-body">We support secure online payments, UPI, cards, and wallets. Payment is collected at
+            booking confirmation.</div>
         </div>
       </div>
       <div class="card faq-card">
         <div class="card-header" id="faq3">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3">Cancellation policy</button>
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3">Cancellation
+            policy</button>
         </div>
         <div id="collapse3" class="collapse" data-parent="#faqAccordion">
-          <div class="card-body">Cancellations are allowed with a refund window subject to package terms and event date proximity.</div>
+          <div class="card-body">Cancellations are allowed with a refund window subject to package terms and event date
+            proximity.</div>
         </div>
       </div>
       <div class="card faq-card">
@@ -534,7 +556,8 @@
           <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4">Delivery time</button>
         </div>
         <div id="collapse4" class="collapse" data-parent="#faqAccordion">
-          <div class="card-body">Photos are delivered within 10-14 days, and edited videos arrive within 21 days after the event.</div>
+          <div class="card-body">Photos are delivered within 10-14 days, and edited videos arrive within 21 days after
+            the event.</div>
         </div>
       </div>
       <div class="card faq-card">
@@ -542,166 +565,164 @@
           <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5">Album options</button>
         </div>
         <div id="collapse5" class="collapse" data-parent="#faqAccordion">
-          <div class="card-body">We offer premium leather, linen, and handcrafted albums with customization and fast delivery.</div>
+          <div class="card-body">We offer premium leather, linen, and handcrafted albums with customization and fast
+            delivery.</div>
         </div>
       </div>
     </div>
   </section>
 
   <section class="container padding-y-lg contact-section" id="contact">
-  <div class="row align-items-start">
+    <div class="row align-items-start">
 
-    <!-- Contact Information -->
-    <div class="col-lg-5">
-      <div class="contact-card">
-        <h3>Contact Information</h3>
-        <p>Our team is available around the clock to support your booking and shoot planning.</p>
+      <!-- Contact Information -->
+      <div class="col-lg-5">
+        <div class="contact-card">
+          <h3>Contact Information</h3>
+          <p>Our team is available around the clock to support your booking and shoot planning.</p>
 
-        <p><strong>Email</strong><br>
-          <a href="mailto:br22films@gmail.com">br22films@gmail.com</a>
-        </p>
+          <p><strong>Email</strong><br>
+            <a href="mailto:br22films@gmail.com">br22films@gmail.com</a>
+          </p>
 
-        <p><strong>Founder Phone</strong><br>
-          <a href="tel:7520254879">+91 7520254879</a>
-        </p>
+          <p><strong>Founder Phone</strong><br>
+            <a href="tel:7520254879">+91 7520254879</a>
+          </p>
 
-        <p><strong>Co-Founder Phone</strong><br>
-          <a href="tel:7255885533">+91 7255885533</a>
-        </p>
+          <p><strong>Co-Founder Phone</strong><br>
+            <a href="tel:7255885533">+91 7255885533</a>
+          </p>
 
-        <p><strong>Address</strong><br>
-          <a href="https://maps.app.goo.gl/xcEzGCovvQc7fQFQ9" target="_blank">
-            BR22 Films, Pipra Chowk, Bettiah, Ward No. 44, Bihar - 845438
-          </a>
-        </p>
+          <p><strong>Address</strong><br>
+            <a href="https://maps.app.goo.gl/xcEzGCovvQc7fQFQ9" target="_blank">
+              BR22 Films, Pipra Chowk, Bettiah, Ward No. 44, Bihar - 845438
+            </a>
+          </p>
 
-        <p><strong>Working Hours</strong><br>
-          Mon - Sun: 9:00 AM - 9:00 PM
-        </p>
+          <p><strong>Working Hours</strong><br>
+            Mon - Sun: 9:00 AM - 9:00 PM
+          </p>
+        </div>
       </div>
-    </div>
 
-    <!-- Contact Form -->
-    <div class="col-lg-7 mt-4 mt-lg-0">
-      <div class="contact-card contact-form">
-        <h3>Send a Message</h3>
+      <!-- Contact Form -->
+      <div class="col-lg-7 mt-4 mt-lg-0">
+        <div class="contact-card contact-form">
+          <h3>Send a Message</h3>
 
-        {% if messages %}
+          {% if messages %}
           {% for message in messages %}
-            <div class="alert alert-success">{{ message }}</div>
+          <div class="alert alert-success">{{ message }}</div>
           {% endfor %}
-        {% endif %}
+          {% endif %}
 
-        <form method="POST" action="{% url 'contact' %}">
-          {% csrf_token %}
+          <form method="POST" action="{% url 'contact' %}">
+            {% csrf_token %}
 
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label>Name</label>
-              <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Name</label>
+                <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label>Phone</label>
+                <input type="tel" name="phone" class="form-control" maxlength="10"
+                  placeholder="Enter 10-digit phone number" required>
+              </div>
             </div>
 
-            <div class="form-group col-md-6">
-              <label>Phone</label>
-              <input type="tel" name="phone" class="form-control" maxlength="10" placeholder="Enter 10-digit phone number" required>
-            </div>
-          </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+              </div>
 
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label>Email</label>
-              <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
-            </div>
-
-            <div class="form-group col-md-6">
-              <label>Event Type</label>
-              <select name="event" class="custom-select" required>
-                <option value="">Select Event</option>
-                {% for value, label in events %}
+              <div class="form-group col-md-6">
+                <label>Event Type</label>
+                <select name="event" class="custom-select" required>
+                  <option value="">Select Event</option>
+                  {% for value, label in events %}
                   <option value="{{ value }}">{{ label }}</option>
-                {% endfor %}
-              </select>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label>City</label>
-              <input list="city-list" name="city" class="form-control" placeholder="Select or type city" required>
-
-              <datalist id="city-list">
-                <option value="Bettiah">
-                <option value="Motihari">
-                <option value="Areraj">
-                <option value="Muzafferpur">
-                <option value="Patna">
-                <option value="Other">
-              </datalist>
+                  {% endfor %}
+                </select>
+              </div>
             </div>
 
-            <div class="form-group col-md-6">
-              <label>Event Date</label>
-              <input type="date" name="event_date" class="form-control" min="{{ today|date:'Y-m-d' }}" required>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>City</label>
+                <input list="city-list" name="city" class="form-control" placeholder="Select or type city" required>
+
+                <datalist id="city-list">
+                  <option value="Bettiah">
+                  <option value="Motihari">
+                  <option value="Areraj">
+                  <option value="Muzafferpur">
+                  <option value="Patna">
+                  <option value="Other">
+                </datalist>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label>Event Date</label>
+                <input type="date" name="event_date" class="form-control" min="{{ today|date:'Y-m-d' }}" required>
+              </div>
             </div>
-          </div>
 
-          <div class="form-group">
-            <label>Message</label>
-            <textarea name="message" class="form-control" rows="5" placeholder="Tell us about your event" required></textarea>
-          </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea name="message" class="form-control" rows="5" placeholder="Tell us about your event"
+                required></textarea>
+            </div>
 
-          <button type="submit" class="btn btn-gold">Submit Request</button>
-        </form>
+            <button type="submit" class="btn btn-gold">Submit Request</button>
+          </form>
+        </div>
       </div>
+
     </div>
 
-  </div>
-
-  <!-- Google Map -->
-  <div class="glass-panel mt-4" style="border-radius:22px;border:1px solid rgba(255,255,255,.1);overflow:hidden;">
-    <iframe
-      src="https://www.google.com/maps?q=BR22+Films+Pipra+Chowk+Bettiah+Bihar+845438&output=embed"
-      width="100%"
-      height="300"
-      style="border:0;"
-      loading="lazy"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
+    <!-- Google Map -->
+    <div class="glass-panel mt-4" style="border-radius:22px;border:1px solid rgba(255,255,255,.1);overflow:hidden;">
+      <iframe src="https://www.google.com/maps?q=BR22+Films+Pipra+Chowk+Bettiah+Bihar+845438&output=embed" width="100%"
+        height="300" style="border:0;" loading="lazy" allowfullscreen>
+      </iframe>
+    </div>
+  </section>
 </main>
 
 
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const videos = document.querySelectorAll('.hero-video');
-  const prevBtn = document.querySelector('.hero-video-control-left');
-  const nextBtn = document.querySelector('.hero-video-control-right');
-  if (videos.length < 2) return;
+  document.addEventListener('DOMContentLoaded', function () {
+    const videos = document.querySelectorAll('.hero-video');
+    const prevBtn = document.querySelector('.hero-video-control-left');
+    const nextBtn = document.querySelector('.hero-video-control-right');
+    if (videos.length < 2) return;
 
-  let currentIndex = 0;
+    let currentIndex = 0;
 
-  function showVideo(index) {
-    videos.forEach((video, videoIndex) => {
-      video.classList.toggle('is-active', videoIndex === index);
-    });
-    currentIndex = index;
-  }
+    function showVideo(index) {
+      videos.forEach((video, videoIndex) => {
+        video.classList.toggle('is-active', videoIndex === index);
+      });
+      currentIndex = index;
+    }
 
-  function goToNextVideo() {
-    showVideo((currentIndex + 1) % videos.length);
-  }
+    function goToNextVideo() {
+      showVideo((currentIndex + 1) % videos.length);
+    }
 
-  function goToPreviousVideo() {
-    showVideo((currentIndex - 1 + videos.length) % videos.length);
-  }
+    function goToPreviousVideo() {
+      showVideo((currentIndex - 1 + videos.length) % videos.length);
+    }
 
-  setInterval(goToNextVideo, 8000);
+    setInterval(goToNextVideo, 8000);
 
-  if (prevBtn) prevBtn.addEventListener('click', goToPreviousVideo);
-  if (nextBtn) nextBtn.addEventListener('click', goToNextVideo);
-});
+    if (prevBtn) prevBtn.addEventListener('click', goToPreviousVideo);
+    if (nextBtn) nextBtn.addEventListener('click', goToNextVideo);
+  });
 
   document.querySelectorAll(".portfolio-slider").forEach((slider) => {
     const track = slider.querySelector(".portfolio-track");
@@ -754,6 +775,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 </body>
+
 </html>
 
 {% endblock %}
