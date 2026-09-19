@@ -105,8 +105,8 @@
                 {% endif %}
 
                 <p class="service-price">
-                    From ₹ <del>{{ service.price1 }}</del>
-                    {{ service.price2 }}
+                    From ₹ <del>{{ service.price1|floatformat:0 }}</del>
+                    ₹ {{ service.price2|floatformat:0 }}
                 </p>
 
                 <div class="card-body">

@@ -184,7 +184,7 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 RESEND_API_KEY = config('RESEND_API_KEY')
 resend.api_key = RESEND_API_KEY
 
-DEFAULT_FROM_EMAIL = "BR22 FILMS <onboarding@resend.dev>"
+DEFAULT_FROM_EMAIL = "BR22 FILMS <noreply@br22films.com>"
 
 PASSWORD_RESET_DOMAIN = 'br22films.com'
 PASSWORD_RESET_PROTOCOL = 'https'

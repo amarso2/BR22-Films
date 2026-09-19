@@ -22,7 +22,7 @@
           <div class="card-body">
             <h3 class="service-title">{{ service.service_name }}</h3>
             <p>{{ service.description }}</p>
-            <p class="service-price">From ₹ <del>{{service.price1}}</del> {{service.price2}}</p>
+            <p class="service-price">From ₹ <del>{{ service.price1|floatformat:0 }}</del> ₹ {{ service.price2|floatformat:0 }}</p>
             <a href="{% url 'booking_page' 'service' service.id %}" class="btn btn-block btn-primary">Booking</a>
             <a href="{% url 'service_detail' service.id %}" class="btn btn-block btn-gold">View Details</a>
             <!-- <a href="{% url 'service_detail' service.id %}" class="btn btn-block btn-secondary">View Details</a> -->

@@ -170,8 +170,7 @@
           <div class="card-body">
             <h3 class="service-title">{{ service.service_name }}</h3>
             <p>{{ service.description }}</p>
-            <p class="service-price">Starting <del>₹ {{ service.price1|floatformat:0 }}</del> ₹ {{
-              service.price2|floatformat:0 }}</p>
+            <p class="service-price">Starting ₹ <del>{{ service.price1|floatformat:0 }}</del> ₹ {{ service.price2|floatformat:0 }}</p>
             <a href="{% url 'service_detail' service.id %}" class="d-block text-center">View Details</a>
           </div>
         </article>
