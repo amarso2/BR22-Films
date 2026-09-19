@@ -12,7 +12,6 @@ from django.urls import reverse
 import traceback
 import resend
 from .models import Account, PasswordResetToken
-from .models import Account, PasswordResetToken
 from .forms import RegistrationForm, EditProfileForm
 from .tokens import account_activation_token
 from payments.models import Booking
