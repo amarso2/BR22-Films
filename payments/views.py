@@ -5,11 +5,9 @@ from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect, render
-from django.template.loader import render_to_string
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
-import resend
 
 from package.models import Package, Package_details
 from services.models import Services
@@ -254,28 +252,6 @@ def payment_success(request, booking_id):
         "payment_method",
         "payment_status",
     ])
-
-    try:
-        message = render_to_string(
-            "payments/payment_confirmation_email.html",
-            {
-                "booking": booking,
-                "user": booking.user,
-                "amount": booking.advance_price,
-                "event": booking.selected_item,
-                "event_date": booking.event_date,
-                "payment_id": booking.razorpay_payment_id,
-            },
-        )
-        response = resend.Emails.send({
-            "from": "BR22 FILMS <noreply@br22films.com>",
-            "to": [booking.email],
-            "subject": "Payment Confirmed – BR22 FILMS",
-            "html": message,
-        })
-        print("PAYMENT EMAIL RESPONSE:", response)
-    except Exception as e:
-        print("PAYMENT EMAIL ERROR:", e)
 
     return render(request, "payments/payment_success.html", {
         "booking": booking

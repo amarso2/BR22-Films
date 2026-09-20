@@ -60,6 +60,8 @@ class Booking(models.Model):
         default="Pending"
     )
 
+    confirmation_email_sent = models.BooleanField(default=False)
+
     payment_screenshot = models.ImageField(
     upload_to="payments/screenshots/",
     blank=True,
