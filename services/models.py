@@ -1,7 +1,8 @@
 from django.db import models
+from utils.image_optimizer import WebPImageModelMixin
 
 # Create your models here.
-class Services(models.Model):
+class Services(WebPImageModelMixin, models.Model):
     service_name = models.CharField(max_length=100)
     description = models.TextField(max_length=250, blank=True, null=True)
     price1 = models.DecimalField(max_digits=10, decimal_places=2)
@@ -18,7 +19,7 @@ class Services(models.Model):
     def __str__(self):
             return self.service_name
 
-class Services_details(models.Model):
+class Services_details(WebPImageModelMixin, models.Model):
     title =models.CharField()
     image1 = models.ImageField(upload_to='photos/services_details/')
     image2 = models.ImageField(upload_to='photos/services_details/', blank=True, null=True)

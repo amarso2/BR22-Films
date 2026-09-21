@@ -17,25 +17,25 @@
                     {% if service_detail.image1 %}
                         <img src="{{ service_detail.image1.url }}"
                              class="img-fluid mb-3 rounded"
-                             alt="{{ service_detail.title }}">
+                             alt="{{ service_detail.title }}" loading="lazy" decoding="async" width="1200" height="800">
                     {% endif %}
 
                     {% if service_detail.image2 %}
                         <img src="{{ service_detail.image2.url }}"
                              class="img-fluid mb-3 rounded"
-                             alt="{{ service_detail.title }}">
+                             alt="{{ service_detail.title }}" loading="lazy" decoding="async" width="1200" height="800">
                     {% endif %}
 
                     {% if service_detail.image3 %}
                         <img src="{{ service_detail.image3.url }}"
                              class="img-fluid mb-3 rounded"
-                             alt="{{ service_detail.title }}">
+                             alt="{{ service_detail.title }}" loading="lazy" decoding="async" width="1200" height="800">
                     {% endif %}
 
                 {% elif service.image %}
                     <img src="{{ service.image.url }}"
                          class="img-fluid mb-3 rounded"
-                         alt="{{ service.service_name }}">
+                         alt="{{ service.service_name }}" loading="eager" fetchpriority="high" decoding="async" width="1200" height="800">
                 {% endif %}
             </article>
         </div>

@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth import get_user_model
 from django.utils import timezone
 from datetime import timedelta
+from utils.image_optimizer import WebPImageModelMixin
 
 User = get_user_model()
 
@@ -35,7 +36,7 @@ class Album(models.Model):
         return self.title
 
 
-class AlbumPage(models.Model):
+class AlbumPage(WebPImageModelMixin, models.Model):
     album = models.ForeignKey(
         Album,
         on_delete=models.CASCADE,

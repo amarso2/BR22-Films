@@ -1,4 +1,5 @@
 from django.db import models
+from utils.image_optimizer import WebPImageModelMixin
 
 # Create your models here.
 
@@ -25,7 +26,7 @@ class Package(models.Model):
 
     
 
-class Package_details(models.Model):
+class Package_details(WebPImageModelMixin, models.Model):
     title1 =models.CharField()
     image1 = models.ImageField(upload_to='photos/package_details/')
     image2 = models.ImageField(upload_to='photos/package_details/', blank=True, null=True)

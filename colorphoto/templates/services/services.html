@@ -18,7 +18,7 @@
       {% for service in services %}
       <div class="col-lg-4 mb-4">
         <article class="service-card glass-panel">
-          <a href="{% url 'service_detail' service.id %}" ><img src="{{ service.image.url }}" class="card-img-top" alt="{{ service.name }}"> </a>
+          <a href="{% url 'service_detail' service.id %}" ><img src="{{ service.image.url }}" class="card-img-top img-fluid" alt="{{ service.name }}" loading="lazy" decoding="async" width="640" height="480"> </a>
           <div class="card-body">
             <h3 class="service-title">{{ service.service_name }}</h3>
             <p>{{ service.description }}</p>

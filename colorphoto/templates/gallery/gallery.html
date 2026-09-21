@@ -126,7 +126,7 @@
       {% if galleries %}
         {% for gallery in galleries %}
         <article class="gallery-card" data-label="{{ gallery.title|default:'Gallery' }}">
-          <img src="{{ gallery.image.url }}" alt="{{ gallery.title }}">
+          <img src="{{ gallery.image.url }}" class="img-fluid" alt="{{ gallery.title }}" loading="lazy" decoding="async" width="1200" height="800">
         </article>
         {% endfor %}
       {% else %}
@@ -139,7 +139,7 @@
         {% for video in videos %}
    <article class="gallery-card">
           <a href="{{ video.video_file.url }}" target="_blank" rel="noopener noreferrer">
-            <video muted preload="metadata" playsinline>
+            <video autoplay muted loop preload="metadata" playsinline>
               <source src="{{ video.video_file.url }}" type="video/mp4">
             </video>
             <div class="play-circle"><i class="fas fa-play"></i></div>
@@ -166,8 +166,10 @@
 
             <div class="video-wrapper">
                 <video
-                    class="gallery-video"
-                    muted
+                  class="gallery-video"
+                  autoplay
+                  muted
+                  loop
                     playsinline
                     preload="metadata"
                     controls

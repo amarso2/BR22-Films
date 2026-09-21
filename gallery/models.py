@@ -1,7 +1,8 @@
 from django.db import models
+from utils.image_optimizer import WebPImageModelMixin
 
 # Create your models here.
-class Gallery(models.Model):
+class Gallery(WebPImageModelMixin, models.Model):
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='photos/gallery') 
     created_at = models.DateTimeField(auto_now_add=True)

@@ -1,7 +1,8 @@
 from django.db import models
 from django.conf import settings
+from utils.image_optimizer import WebPImageModelMixin
 
-class Review(models.Model):
+class Review(WebPImageModelMixin, models.Model):
 
     EVENT_CHOICES = [
         ("Wedding","Wedding"),

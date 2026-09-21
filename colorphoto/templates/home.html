@@ -127,10 +127,10 @@
 <main>
   <section class="hero" id="home">
     <div class="hero-bg" aria-hidden="true">
-      <video class="hero-video is-active" autoplay muted loop playsinline>
+      <video class="hero-video is-active" autoplay muted loop playsinline preload="metadata">
         <source src="{% static 'images/video/fornt.mp4' %}" type="video/mp4">
       </video>
-      <!-- <video class="hero-video" autoplay muted loop playsinline>
+      <!-- <video class="hero-video" autoplay muted loop playsinline preload="metadata">
         <source src="{% static 'images/video/check.mp4' %}" type="video/mp4">
       </video> -->
     </div>
@@ -165,8 +165,8 @@
       {% for service in services|slice:":9" %}
       <div class="col-lg-4 mb-4">
         <article class="service-card glass-panel">
-          <a href="{% url 'service_detail' service.id %}"><img src="{{ service.image.url }}" class="card-img-top"
-              alt="{{ service.service_name }}"></a>
+            <a href="{% url 'service_detail' service.id %}"><img src="{{ service.image.url }}" class="card-img-top img-fluid"
+              alt="{{ service.service_name }}" loading="lazy" decoding="async" width="640" height="480"></a>
           <div class="card-body">
             <h3 class="service-title">{{ service.service_name }}</h3>
             <p>{{ service.description }}</p>
@@ -193,13 +193,13 @@
           <button class="prev-btn" type="button" aria-label="Previous image">&lt;</button>
           <div class="portfolio-track">
             {% if portfolio.image1 %}
-            <div class="portfolio-item"><img src="{{ portfolio.image1.url }}" alt="{{ portfolio.title }}"></div>
+            <div class="portfolio-item"><img src="{{ portfolio.image1.url }}" class="img-fluid" alt="{{ portfolio.title }}" loading="lazy" decoding="async" width="1400" height="900"></div>
             {% endif %}
             {% if portfolio.image2 %}
-            <div class="portfolio-item"><img src="{{ portfolio.image2.url }}" alt="{{ portfolio.title }}"></div>
+            <div class="portfolio-item"><img src="{{ portfolio.image2.url }}" class="img-fluid" alt="{{ portfolio.title }}" loading="lazy" decoding="async" width="1400" height="900"></div>
             {% endif %}
             {% if portfolio.image3 %}
-            <div class="portfolio-item"><img src="{{ portfolio.image3.url }}" alt="{{ portfolio.title }}"></div>
+            <div class="portfolio-item"><img src="{{ portfolio.image3.url }}" class="img-fluid" alt="{{ portfolio.title }}" loading="lazy" decoding="async" width="1400" height="900"></div>
             {% endif %}
           </div>
           <button class="next-btn" type="button" aria-label="Next image">&gt;</button>
@@ -227,7 +227,7 @@
       <article class="video-card">
         <a href="{% url 'video' %}">
           <div class="video-thumb">
-            <video loop muted autoplay="autoplay" src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}"
+            <video loop muted autoplay playsinline preload="metadata" src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}"
               width="100%"></video>
             <div class="play-circle"><i class="fas fa-play"></i></div>
           </div>
@@ -240,7 +240,7 @@
       <article class="video-card">
         <a href="{% url 'video' %}">
           <div class="video-thumb">
-            <video loop muted autoplay="autoplay" src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}"
+            <video loop muted autoplay playsinline preload="metadata" src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}"
               width="100%"></video>
             <div class="play-circle"><i class="fas fa-play"></i></div>
           </div>
@@ -253,7 +253,7 @@
       <article class="video-card">
         <a href="{% url 'video' %}">
           <div class="video-thumb">
-            <video loop muted autoplay="autoplay" src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}"
+            <video loop muted autoplay playsinline preload="metadata" src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}"
               width="100%"></video>
             <div class="play-circle"><i class="fas fa-play"></i></div>
           </div>
@@ -366,9 +366,9 @@
         <div class="review-author">
           <div class="author-img">
             {% if review.image %}
-            <img src="{{ review.image.url }}" alt="{{ review.user.first_name }}">
+            <img src="{{ review.image.url }}" class="img-fluid" alt="{{ review.user.first_name }}" loading="lazy" decoding="async" width="160" height="160">
             {% else %}
-            <img src="{% static 'images/default-profile.png' %}" alt="Client">
+            <img src="{% static 'images/default-profile.png' %}" class="img-fluid" alt="Client" loading="lazy" decoding="async" width="160" height="160">
             {% endif %}
           </div>
 
@@ -449,7 +449,7 @@
       {% if galleries %}
       {% for gallery in galleries|slice:":6" %}
       <article class="gallery-card" data-label="{{ gallery.title|default:'Gallery' }}">
-        <img src="{{ gallery.image.url }}" alt="{{ gallery.title }}">
+        <img src="{{ gallery.image.url }}" class="img-fluid" alt="{{ gallery.title }}" loading="lazy" decoding="async" width="1200" height="800">
       </article>
       {% endfor %}
       {% else %}
@@ -473,7 +473,7 @@
       {% if videos %}
       {% for video in videos|slice:":6" %}
       <article class="gallery-card" data-label="{{ video.title }}">
-        <video class="hero-video is-active" autoplay muted loop playsinline>
+        <video class="hero-video is-active" autoplay muted loop playsinline preload="metadata">
           <source src="{{ video.video_file.url }}" type="video/mp4">
         </video>
       </article>

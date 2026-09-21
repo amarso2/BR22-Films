@@ -1,8 +1,9 @@
 from django.db import models
+from utils.image_optimizer import WebPImageModelMixin
 
 # Create your models here.
 
-class Portfolio(models.Model):
+class Portfolio(WebPImageModelMixin, models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     city = models.CharField(max_length=100)

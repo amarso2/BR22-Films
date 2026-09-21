@@ -193,21 +193,21 @@ button{
     <!-- Hidden spread underneath -->
     <div class="spread" id="nextSpread" style="opacity:0;">
         <div class="page-half left">
-            <img id="nextLeft">
+            <img id="nextLeft" loading="lazy" decoding="async" width="1200" height="400">
         </div>
         <div class="page-half right">
-            <img id="nextRight">
+            <img id="nextRight" loading="lazy" decoding="async" width="1200" height="400">
         </div>
     </div>
 
     <!-- Current spread -->
     <div class="spread" id="currentSpread">
         <div class="page-half left">
-            <img id="currLeft">
+            <img id="currLeft" loading="eager" fetchpriority="high" decoding="async" width="1200" height="400">
         </div>
 
         <div class="page-half right" id="flipPage">
-            <img id="currRight">
+            <img id="currRight" loading="eager" fetchpriority="high" decoding="async" width="1200" height="400">
         </div>
     </div>
 
@@ -231,8 +231,8 @@ button{
       <small>© 2026 BR 22 Films. All rights reserved.</small>
     </div>
 <!-- This template is standalone, so load the Bootstrap bundle required by the navbar toggle. -->
-<script src="{% static 'js/jquery-2.0.0.min.js' %}"></script>
-<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/jquery-2.0.0.min.js' %}" defer></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}" defer></script>
 
 <script>
 

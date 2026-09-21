@@ -1,9 +1,10 @@
 from django.db import models
 from django.conf import settings
 from django.utils import timezone
+from utils.image_optimizer import WebPImageModelMixin
 
 
-class Booking(models.Model):
+class Booking(WebPImageModelMixin, models.Model):
 
     BOOKING_TYPE = [
         ("package", "Package"),

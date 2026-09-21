@@ -143,13 +143,13 @@
           <button class="prev-btn" type="button" aria-label="Previous image">&lt;</button>
           <div class="portfolio-track">
             {% if portfolio.image1 %}
-            <div class="portfolio-item"><img src="{{ portfolio.image1.url }}" alt="{{ portfolio.title }}"></div>
+            <div class="portfolio-item"><img src="{{ portfolio.image1.url }}" class="img-fluid" alt="{{ portfolio.title }}" loading="lazy" decoding="async" width="1400" height="900"></div>
             {% endif %}
             {% if portfolio.image2 %}
-            <div class="portfolio-item"><img src="{{ portfolio.image2.url }}" alt="{{ portfolio.title }}"></div>
+            <div class="portfolio-item"><img src="{{ portfolio.image2.url }}" class="img-fluid" alt="{{ portfolio.title }}" loading="lazy" decoding="async" width="1400" height="900"></div>
             {% endif %}
             {% if portfolio.image3 %}
-            <div class="portfolio-item"><img src="{{ portfolio.image3.url }}" alt="{{ portfolio.title }}"></div>
+            <div class="portfolio-item"><img src="{{ portfolio.image3.url }}" class="img-fluid" alt="{{ portfolio.title }}" loading="lazy" decoding="async" width="1400" height="900"></div>
             {% endif %}
           </div>
           <button class="next-btn" type="button" aria-label="Next image">&gt;</button>

@@ -4,6 +4,7 @@ from django.utils import timezone
 from datetime import timedelta
 from django.conf import settings
 import uuid
+from utils.image_optimizer import WebPImageModelMixin
 
 class MyAccountManager(BaseUserManager):
     def create_user(self, first_name, last_name, username, email, password=None):
@@ -39,7 +40,7 @@ class MyAccountManager(BaseUserManager):
         return user
 
 
-class Account(AbstractBaseUser, PermissionsMixin):
+class Account(WebPImageModelMixin, AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     username = models.CharField(max_length=50, unique=True)
