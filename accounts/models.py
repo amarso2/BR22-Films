@@ -48,7 +48,6 @@ class Account(WebPImageModelMixin, AbstractBaseUser, PermissionsMixin):
     phone_number = models.CharField(max_length=10, blank=True)
     profile_picture = models.ImageField(
         upload_to="profile_pictures/",
-        default="profile_pictures/default.png",
         blank=True,
         null=True
     )

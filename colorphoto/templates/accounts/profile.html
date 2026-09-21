@@ -86,7 +86,11 @@
 
         <div class="profile-card text-center">
 
-            <img src="{{ user.profile_picture.url }}" class="profile-img mb-3" alt="Profile">
+            {% if user.profile_picture %}
+                <img src="{{ user.profile_picture.url }}" class="profile-img mb-3" alt="Profile">
+            {% else %}
+                <img src="{% static 'images/default.png' %}" class="profile-img mb-3" alt="Profile">
+            {% endif %}
 
             <h3>{{ user.first_name }} {{ user.last_name }}</h3>
             <p class="text-warning">{{ user.email }}</p>
