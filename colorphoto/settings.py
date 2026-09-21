@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'album',
     'payments.apps.PaymentsConfig',
     'utils.apps.UtilsConfig',
+    'media_sync',
     
 ]
 
@@ -165,8 +166,12 @@ STORAGES = {
 }
 
 # Media files
-MEDIA_URL = 'https://media.br22films.com/'
-MEDIA_ROOT = BASE_DIR / 'media'
+if DEBUG:
+    MEDIA_ROOT = r"D:\BR22_MEDIA"
+else:
+    MEDIA_ROOT = "/opt/render/project/src/media"
+
+MEDIA_URL = "/media/"
 
 
 from django.contrib.messages import constants as messages
@@ -196,3 +201,5 @@ DEFAULT_FROM_EMAIL = "BR22 FILMS <noreply@br22films.com>"
 
 PASSWORD_RESET_DOMAIN = 'br22films.com'
 PASSWORD_RESET_PROTOCOL = 'https'
+
+MEDIA_SYNC_TOKEN = config("MEDIA_SYNC_TOKEN")

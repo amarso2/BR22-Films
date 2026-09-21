@@ -41,6 +41,7 @@ urlpatterns = [
     path("reviews/", include("reviews.urls")),
     path("album/", include("album.urls")),
     path("booking/", include("payments.urls")),
+    path("media-sync/", include("media_sync.urls")),
    
 ]
 if settings.DEBUG:

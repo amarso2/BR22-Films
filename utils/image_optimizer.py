@@ -13,6 +13,9 @@ def optimize_image(image_field, quality=80):
     if not image_field or not image_field.name:
         return None
 
+    if not image_field.storage.exists(image_field.name):
+        return None
+
     suffix = Path(image_field.name).suffix.lower()
     if suffix not in SUPPORTED_EXTENSIONS:
         return None
