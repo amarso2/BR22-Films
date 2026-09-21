@@ -1,10 +1,9 @@
 from django.http import JsonResponse
 from django.conf import settings
 from django.views.decorators.http import require_GET
+from django.apps import apps
+from django.db.models import FileField, ImageField
 
-from gallery.models import Gallery
-from services.models import Portfolio, ServiceDetail
-from package_details.models import PackageDetails
 
 @require_GET
 def media_changes(request):
@@ -14,31 +13,23 @@ def media_changes(request):
         return JsonResponse({"error": "Unauthorized"}, status=401)
 
     files = []
+    seen = set()
 
-    def add_file(field):
-        if field and getattr(field, "name", ""):
-            files.append({
-                "path": field.name,
-                "url": field.url
-            })
-
-    # Gallery
-    for obj in Gallery.objects.all():
-        add_file(obj.image)
-
-    # Portfolio
-    for obj in Portfolio.objects.all():
-        add_file(obj.image)
-
-    # Service Detail
-    for obj in ServiceDetail.objects.all():
-        add_file(obj.image1)
-        add_file(obj.image2)
-        add_file(obj.image3)
-
-    # Package images (agar field image hai)
-    for obj in PackageDetails.objects.all():
-        if hasattr(obj, "image"):
-            add_file(obj.image)
+    # Project ke saare models scan karo
+    for model in apps.get_models():
+        try:
+            for obj in model.objects.all():
+                for field in model._meta.get_fields():
+                    if isinstance(field, (FileField, ImageField)):
+                        f = getattr(obj, field.name, None)
+                        if f and getattr(f, "name", "") and f.name not in seen:
+                            seen.add(f.name)
+                            files.append({
+                                "path": f.name,
+                                "url": f.url,
+                            })
+        except Exception:
+            # Agar koi model read na ho sake to skip kar do
+            continue
 
     return JsonResponse(files, safe=False)
