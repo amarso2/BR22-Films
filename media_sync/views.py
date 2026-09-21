@@ -1,10 +1,10 @@
-from django.shortcuts import render
-
-# Create your views here.
 from django.http import JsonResponse
 from django.conf import settings
 from django.views.decorators.http import require_GET
-import os
+
+from gallery.models import Gallery
+from services.models import Portfolio, ServiceDetail
+from package_details.models import PackageDetails
 
 @require_GET
 def media_changes(request):
@@ -13,19 +13,32 @@ def media_changes(request):
     if token != settings.MEDIA_SYNC_TOKEN:
         return JsonResponse({"error": "Unauthorized"}, status=401)
 
-    media_root = settings.MEDIA_ROOT
     files = []
 
-    for root, dirs, filenames in os.walk(media_root):
-        for filename in filenames:
-            rel_path = os.path.relpath(
-                os.path.join(root, filename),
-                media_root
-            ).replace("\\", "/")
-
+    def add_file(field):
+        if field and getattr(field, "name", ""):
             files.append({
-                "path": rel_path,
-                "url": request.build_absolute_uri(settings.MEDIA_URL + rel_path)
+                "path": field.name,
+                "url": field.url
             })
+
+    # Gallery
+    for obj in Gallery.objects.all():
+        add_file(obj.image)
+
+    # Portfolio
+    for obj in Portfolio.objects.all():
+        add_file(obj.image)
+
+    # Service Detail
+    for obj in ServiceDetail.objects.all():
+        add_file(obj.image1)
+        add_file(obj.image2)
+        add_file(obj.image3)
+
+    # Package images (agar field image hai)
+    for obj in PackageDetails.objects.all():
+        if hasattr(obj, "image"):
+            add_file(obj.image)
 
     return JsonResponse(files, safe=False)
