@@ -171,7 +171,9 @@ if DEBUG:
 else:
     MEDIA_ROOT = "/opt/render/project/src/media"
 
-MEDIA_URL = "/media/"
+from decouple import config
+
+MEDIA_URL = config("MEDIA_URL", default="/media/")
 
 
 from django.contrib.messages import constants as messages
