@@ -165,12 +165,16 @@
       {% for service in services|slice:":9" %}
       <div class="col-lg-4 mb-4">
         <article class="service-card glass-panel">
-            <a href="{% url 'service_detail' service.id %}"><img src="{{ service.image.url }}" class="card-img-top img-fluid"
-              alt="{{ service.service_name }}" loading="lazy" decoding="async" width="640" height="480"></a>
+          <a href="{% url 'service_detail' service.id %}">
+            <img src="{{ service.image.url }}?v={{ service.modified_date|date:'U' }}" class="card-img-top img-fluid"
+              alt="{{ service.service_name }}" loading="lazy" decoding="async" width="640" height="480"
+              onerror="if(!this.dataset.fallback){this.dataset.fallback=1;this.src='https://media.br22films.com/{{ service.image.name }}?v={{ service.modified_date|date:'U' }}';}">
+          </a>
           <div class="card-body">
             <h3 class="service-title">{{ service.service_name }}</h3>
             <p>{{ service.description }}</p>
-            <p class="service-price">Starting ₹ <del>{{ service.price1|floatformat:0 }}</del> ₹ {{ service.price2|floatformat:0 }}</p>
+            <p class="service-price">Starting ₹ <del>{{ service.price1|floatformat:0 }}</del> ₹ {{
+              service.price2|floatformat:0 }}</p>
             <a href="{% url 'service_detail' service.id %}" class="d-block text-center">View Details</a>
           </div>
         </article>
@@ -193,13 +197,16 @@
           <button class="prev-btn" type="button" aria-label="Previous image">&lt;</button>
           <div class="portfolio-track">
             {% if portfolio.image1 %}
-            <div class="portfolio-item"><img src="{{ portfolio.image1.url }}" class="img-fluid" alt="{{ portfolio.title }}" loading="lazy" decoding="async" width="1400" height="900"></div>
+            <div class="portfolio-item"><img src="{{ portfolio.image1.url }}" class="img-fluid"
+                alt="{{ portfolio.title }}" loading="lazy" decoding="async" width="1400" height="900"></div>
             {% endif %}
             {% if portfolio.image2 %}
-            <div class="portfolio-item"><img src="{{ portfolio.image2.url }}" class="img-fluid" alt="{{ portfolio.title }}" loading="lazy" decoding="async" width="1400" height="900"></div>
+            <div class="portfolio-item"><img src="{{ portfolio.image2.url }}" class="img-fluid"
+                alt="{{ portfolio.title }}" loading="lazy" decoding="async" width="1400" height="900"></div>
             {% endif %}
             {% if portfolio.image3 %}
-            <div class="portfolio-item"><img src="{{ portfolio.image3.url }}" class="img-fluid" alt="{{ portfolio.title }}" loading="lazy" decoding="async" width="1400" height="900"></div>
+            <div class="portfolio-item"><img src="{{ portfolio.image3.url }}" class="img-fluid"
+                alt="{{ portfolio.title }}" loading="lazy" decoding="async" width="1400" height="900"></div>
             {% endif %}
           </div>
           <button class="next-btn" type="button" aria-label="Next image">&gt;</button>
@@ -227,8 +234,8 @@
       <article class="video-card">
         <a href="{% url 'video' %}">
           <div class="video-thumb">
-            <video loop muted autoplay playsinline preload="metadata" src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}"
-              width="100%"></video>
+            <video loop muted autoplay playsinline preload="metadata"
+              src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}" width="100%"></video>
             <div class="play-circle"><i class="fas fa-play"></i></div>
           </div>
         </a>
@@ -240,8 +247,8 @@
       <article class="video-card">
         <a href="{% url 'video' %}">
           <div class="video-thumb">
-            <video loop muted autoplay playsinline preload="metadata" src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}"
-              width="100%"></video>
+            <video loop muted autoplay playsinline preload="metadata"
+              src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}" width="100%"></video>
             <div class="play-circle"><i class="fas fa-play"></i></div>
           </div>
         </a>
@@ -253,8 +260,8 @@
       <article class="video-card">
         <a href="{% url 'video' %}">
           <div class="video-thumb">
-            <video loop muted autoplay playsinline preload="metadata" src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}"
-              width="100%"></video>
+            <video loop muted autoplay playsinline preload="metadata"
+              src="{% static 'images/video/11029950-hd_1920_1080_30fps.mp4' %}" width="100%"></video>
             <div class="play-circle"><i class="fas fa-play"></i></div>
           </div>
         </a>
@@ -366,9 +373,11 @@
         <div class="review-author">
           <div class="author-img">
             {% if review.image %}
-            <img src="{{ review.image.url }}" class="img-fluid" alt="{{ review.user.first_name }}" loading="lazy" decoding="async" width="160" height="160">
+            <img src="{{ review.image.url }}" class="img-fluid" alt="{{ review.user.first_name }}" loading="lazy"
+              decoding="async" width="160" height="160">
             {% else %}
-            <img src="{% static 'images/default-profile.png' %}" class="img-fluid" alt="Client" loading="lazy" decoding="async" width="160" height="160">
+            <img src="{% static 'images/default-profile.png' %}" class="img-fluid" alt="Client" loading="lazy"
+              decoding="async" width="160" height="160">
             {% endif %}
           </div>
 
@@ -449,7 +458,8 @@
       {% if galleries %}
       {% for gallery in galleries|slice:":6" %}
       <article class="gallery-card" data-label="{{ gallery.title|default:'Gallery' }}">
-        <img src="{{ gallery.image.url }}" class="img-fluid" alt="{{ gallery.title }}" loading="lazy" decoding="async" width="1200" height="800">
+        <img src="{{ gallery.image.url }}" class="img-fluid" alt="{{ gallery.title }}" loading="lazy" decoding="async"
+          width="1200" height="800">
       </article>
       {% endfor %}
       {% else %}

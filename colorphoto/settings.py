@@ -15,6 +15,9 @@ from decouple import config
 import resend
 import os
 import dj_database_url
+
+
+from decouple import config
   
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -170,8 +173,6 @@ if DEBUG:
     MEDIA_ROOT = r"D:\BR22_MEDIA"
 else:
     MEDIA_ROOT = "/opt/render/project/src/media"
-
-from decouple import config
 
 MEDIA_URL = config("MEDIA_URL", default="/media/")
 
