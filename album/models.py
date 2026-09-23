@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model
 from django.utils import timezone
 from datetime import timedelta
 from utils.image_optimizer import WebPImageModelMixin
+from utils.storage import media_storage
 
 User = get_user_model()
 
@@ -43,7 +44,7 @@ class AlbumPage(WebPImageModelMixin, models.Model):
         related_name="pages"
     )
     page_number = models.PositiveIntegerField()
-    image = models.ImageField(upload_to="albums/")
+    image = models.ImageField(upload_to="albums/", storage=media_storage)
 
     class Meta:
         ordering = ["page_number"]

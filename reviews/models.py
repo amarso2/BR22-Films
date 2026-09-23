@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 from utils.image_optimizer import WebPImageModelMixin
+from utils.storage import media_storage
 
 class Review(WebPImageModelMixin, models.Model):
 
@@ -25,7 +26,7 @@ class Review(WebPImageModelMixin, models.Model):
     message = models.TextField()
 
     image = models.ImageField(
-        upload_to="review_images/",
+        upload_to="review_images/",storage=media_storage,
         blank=True,
         null=True
     )
