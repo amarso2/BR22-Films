@@ -3,7 +3,6 @@ from django.conf import settings
 from django.views.decorators.http import require_GET
 from django.apps import apps
 from django.db.models import FileField, ImageField
-import os
 
 
 @require_GET
@@ -28,13 +27,6 @@ def media_changes(request):
                             continue
 
                         if f.name in seen:
-                            continue
-
-                        full_path = os.path.join(settings.MEDIA_ROOT, f.name)
-
-                        # Sirf existing files bhejo
-                        if not os.path.isfile(full_path):
-                            print(f"Missing media skipped: {f.name}")
                             continue
 
                         seen.add(f.name)
