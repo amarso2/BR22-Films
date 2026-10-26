@@ -1,3 +1,4 @@
+
 from django.http import JsonResponse
 from django.conf import settings
 from django.views.decorators.http import require_GET
@@ -9,35 +10,43 @@ from django.db.models import FileField, ImageField
 def media_changes(request):
     token = request.headers.get("X-MEDIA-TOKEN")
 
-    if token != settings.MEDIA_SYNC_TOKEN:
+    if not token or token != settings.MEDIA_SYNC_TOKEN:
         return JsonResponse({"error": "Unauthorized"}, status=401)
 
     files = []
     seen = set()
 
-    # Project ke saare models scan karo
     for model in apps.get_models():
         try:
-            for obj in model.objects.all():
+            for obj in model.objects.all().iterator():
                 for field in model._meta.get_fields():
-                    if isinstance(field, (FileField, ImageField)):
+                    if not isinstance(field, (FileField, ImageField)):
+                        continue
+
+                    try:
                         f = getattr(obj, field.name, None)
 
                         if not f or not getattr(f, "name", ""):
                             continue
 
-                        if f.name in seen:
+                        name = f.name
+
+                        if name in seen:
                             continue
 
-                        seen.add(f.name)
+                        if not f.storage.exists(name):
+                            continue
 
+                        seen.add(name)
                         files.append({
-                            "path": f.name,
-                            "url": settings.MEDIA_URL + f.name,
+                            "path": name,
+                            "url": f.storage.url(name),
                         })
 
+                    except Exception:
+                        continue
+
         except Exception:
-            # Agar koi model read na ho sake to skip kar do
             continue
 
     return JsonResponse(files, safe=False)
