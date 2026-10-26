@@ -1,0 +1,5124 @@
+[
+{
+  "model": "sessions.session",
+  "pk": "92ydargr7dge0uvu909rxoajjvw8gwqy",
+  "fields": {
+    "session_data": "eyJfc2Vzc2lvbl9pbml0X3RpbWVzdGFtcF8iOjE3ODk2NjkyNzguMDUwNTcwN30:1x7GjX:fqCyOZ9BK2tb1pwLwwm_L7YC0VjICdWiOChR0kEfb8o",
+    "expire_date": "2026-10-01T18:21:19.628Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "bcw0cyned6p52su2f93nlubwao8e75um",
+  "fields": {
+    "session_data": "eyJfc2Vzc2lvbl9pbml0X3RpbWVzdGFtcF8iOjE3ODk2NjkyMzguNjQzMDM2NH0:1x7Giu:_AqJbajQbQZyX4V0ORejsbLhTcqCRi3K15nIi7LeN_U",
+    "expire_date": "2026-10-01T18:20:40.157Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ben3aneu8jz800ed9d4uuykhyxs4nk7q",
+  "fields": {
+    "session_data": ".eJxVjEsOwiAUAO_C2hB4UB506d4zEAqvFj9gCl0Z726adKHbmcm8mQ9bX_zWaPU5sZFJdvplU4h3KrtIt1Culcda-ponvif8sI1faqLH-Wj_BktoCxuZs04NEwZQSYCGOQDI6GYBmpISSaSocaAoI6KzJopgpbPGUJwNDYh6nzZqLdfic8nd9_yk1sPz5dko0QGilRa4BrBCqM8XMTxFpw:1xKJV8:YWd-CBDbIUBzWie7bc_5XPBdFg3fefW7_aBm8hCszD4",
+    "expire_date": "2026-11-06T17:56:22.632Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "c1ddztivkompl7w4h82h1wxk0jq2hd2m",
+  "fields": {
+    "session_data": ".eJxVzEEOwiAQheG7zNoQqUChS_eegQzMjFQNTUq7Mt7dkHSh2_d_eW-IuG8l7o3XOBNMYAKcfseE-cm1F3pgvS8qL3Vb56Q6UUdt6rYQv66H_Tso2ApMwGEMOgiOpE3KnpNxAyZynmTQciHjMTvNkoSs7dQwnUWyF2-ctQyfLzKeOSQ:1x2Zof:tHSZlaqPa2w86X6vjf9pVMZzwq4zePF9ZJwtz5cmflg",
+    "expire_date": "2026-09-18T19:43:13.821Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ja0opvqrwks4bvwqpi1lz8l4mxy73hrk",
+  "fields": {
+    "session_data": "eyJfc2Vzc2lvbl9pbml0X3RpbWVzdGFtcF8iOjE3ODk2NjkzMTEuNjAwMjk2N30:1x7Gk5:EQK2uAgbA5isisx-rG__Ie6WAmq2bqe_zdt-tjOsGfk",
+    "expire_date": "2026-10-01T18:21:53.218Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qzn9t5zhi9iv3wjvkwhrmzra27m2vdw0",
+  "fields": {
+    "session_data": ".eJxVjLsOgzAMAP_FcxWR4LwYu_cbkIPtQluBRGCq-u8VEkO73p3uDT3t29jvVdZ-YujAW7j8wkLDU-bD8IPm-2KGZd7WqZgjMaet5rawvK5n-zcYqY7QQbaD5mQJpSCTOJ-wbQW9KmouIWluRdG6yI1SwRQ1hhycD8Qxc-Pg8wUXgjgs:1x3vEs:FQ5b1LAblXNgOxrA_XnPKXBFoxJlZokr9nTBjfny-3s",
+    "expire_date": "2026-09-22T12:47:50.908Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ukjivkk06l3vbdpt52lwxd5jj397a0s3",
+  "fields": {
+    "session_data": ".eJxVjMsOgjAQAP9lz6ZpS-mDo3e_gWx3F0FNm1A4Gf_dkHDQ68xk3jDivs3j3mQdF4YBDFx-WUZ6SjkEP7Dcq6JatnXJ6kjUaZu6VZbX9Wz_BjO2GQZIMXV9Dmg71tbZCa01lCZtnXCnWTO50AsZCiFFTxqjSdF7oclLH4KDzxfKIzdQ:1wt1yO:1RvOSFnd30qWy5eonzcyCT9o1OAJ9ZvjJtwqQauuKWU",
+    "expire_date": "2026-08-23T11:45:48.538Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "v5dmz041falr0u0i2qqs54g4ncfx4mla",
+  "fields": {
+    "session_data": ".eJxVjEsOwiAUAO_C2hCgwHt06d4zEAqvFj9gCl0Z726adKHbmcm8mQ9bX_zWaPU5sZFJdvplU4h3KrtIt1Culcda-ponvif8sI1faqLH-Wj_BktoCxuZQzeYCYIaklBazUEpGd0slKY0iCRS1GAoygjg0EYRUDq0luJsyQDofdqotVyLzyV33_OTWg_Pl2ejBEQEIwfHNSohnPp8ATGdRbI:1x3w8p:m1IvsBqljpZOLULlK4jHoJQrXruEx_LwsgFZ63pM1Is",
+    "expire_date": "2026-09-22T13:45:39.523Z"
+  }
+},
+{
+  "model": "services.services",
+  "pk": 1,
+  "fields": {
+    "service_name": "Wedding Photography",
+    "description": "Luxury wedding coverage with cinematic storytelling and editorial artistry.",
+    "price1": "10999.00",
+    "price2": "8999.00",
+    "image": "photo/services/1.webp",
+    "stock": true,
+    "is_available": true,
+    "created_date": "2026-08-09T13:41:35.849Z",
+    "modified_date": "2026-08-18T12:29:22.803Z"
+  }
+},
+{
+  "model": "services.services",
+  "pk": 2,
+  "fields": {
+    "service_name": "Wedding Videography",
+    "description": "Cinematic films, drone capture, and highlight reels for timeless memories",
+    "price1": "11999.00",
+    "price2": "8999.00",
+    "image": "photo/services/2.webp",
+    "stock": true,
+    "is_available": true,
+    "created_date": "2026-08-09T13:42:57.175Z",
+    "modified_date": "2026-08-18T12:30:19.403Z"
+  }
+},
+{
+  "model": "services.services",
+  "pk": 3,
+  "fields": {
+    "service_name": "Pre-Wedding Shoot",
+    "description": "Elegant location shoots, creative direction, and luxury wardrobe styling.",
+    "price1": "15999.00",
+    "price2": "12999.00",
+    "image": "photo/services/3.webp",
+    "stock": true,
+    "is_available": true,
+    "created_date": "2026-08-09T13:44:11.554Z",
+    "modified_date": "2026-08-18T12:31:02.762Z"
+  }
+},
+{
+  "model": "services.services",
+  "pk": 4,
+  "fields": {
+    "service_name": "Engagement",
+    "description": "Intimate engagement stories that celebrate your love in every frame.",
+    "price1": "13999.00",
+    "price2": "11999.00",
+    "image": "photo/services/4.webp",
+    "stock": true,
+    "is_available": true,
+    "created_date": "2026-08-09T13:45:01.647Z",
+    "modified_date": "2026-08-18T12:31:57.534Z"
+  }
+},
+{
+  "model": "services.services",
+  "pk": 5,
+  "fields": {
+    "service_name": "Birthday",
+    "description": "Personalized event coverage for stylish birthdays and milestone celebrations.",
+    "price1": "9999.00",
+    "price2": "6999.00",
+    "image": "photo/services/5.webp",
+    "stock": true,
+    "is_available": true,
+    "created_date": "2026-08-09T13:45:31.692Z",
+    "modified_date": "2026-08-18T12:32:52.267Z"
+  }
+},
+{
+  "model": "services.services",
+  "pk": 6,
+  "fields": {
+    "service_name": "Maternity",
+    "description": "Beautiful maternity portraits crafted with warmth and elegance.",
+    "price1": "8999.00",
+    "price2": "5999.00",
+    "image": "photo/services/6.webp",
+    "stock": true,
+    "is_available": true,
+    "created_date": "2026-08-09T13:46:05.280Z",
+    "modified_date": "2026-08-18T12:31:21.776Z"
+  }
+},
+{
+  "model": "services.services",
+  "pk": 7,
+  "fields": {
+    "service_name": "Baby Shoot",
+    "description": "Delicate portraits for newborn and family milestones.",
+    "price1": "8999.00",
+    "price2": "6499.00",
+    "image": "photo/services/7.webp",
+    "stock": true,
+    "is_available": true,
+    "created_date": "2026-08-09T13:46:36.539Z",
+    "modified_date": "2026-08-18T12:33:12.479Z"
+  }
+},
+{
+  "model": "services.services",
+  "pk": 8,
+  "fields": {
+    "service_name": "Corporate Event",
+    "description": "Professional coverage for conferences, launches, and brand events.",
+    "price1": "15999.00",
+    "price2": "11999.00",
+    "image": "photo/services/8.webp",
+    "stock": true,
+    "is_available": true,
+    "created_date": "2026-08-09T13:47:10.025Z",
+    "modified_date": "2026-08-18T12:32:28.201Z"
+  }
+},
+{
+  "model": "services.services",
+  "pk": 9,
+  "fields": {
+    "service_name": "Product Photography",
+    "description": "Luxury product imagery for fashion, jewelry, and premium brands",
+    "price1": "8999.00",
+    "price2": "7999.00",
+    "image": "photo/services/9.webp",
+    "stock": true,
+    "is_available": true,
+    "created_date": "2026-08-09T13:47:42.896Z",
+    "modified_date": "2026-08-18T12:30:37.309Z"
+  }
+},
+{
+  "model": "services.services",
+  "pk": 10,
+  "fields": {
+    "service_name": "DLSR Rent",
+    "description": "For only 18 hours rental only for this services stideo owner.",
+    "price1": "2500.00",
+    "price2": "2000.00",
+    "image": "photo/services/dslr1.webp",
+    "stock": true,
+    "is_available": true,
+    "created_date": "2026-08-09T18:13:22.994Z",
+    "modified_date": "2026-08-18T13:24:50.394Z"
+  }
+},
+{
+  "model": "services.services",
+  "pk": 11,
+  "fields": {
+    "service_name": "M3",
+    "description": "For only 18 hours rental only for this services studio owner.",
+    "price1": "3000.00",
+    "price2": "2500.00",
+    "image": "photo/services/Screenshot_34.webp",
+    "stock": true,
+    "is_available": true,
+    "created_date": "2026-08-18T13:26:48.669Z",
+    "modified_date": "2026-08-18T13:33:10.959Z"
+  }
+},
+{
+  "model": "services.services",
+  "pk": 12,
+  "fields": {
+    "service_name": "LCD 55 Inch",
+    "description": "Each one of the price Only for 18h. \r\nAnd also this price not include staff.\r\nFirstly contact : - full details in About section.",
+    "price1": "2500.00",
+    "price2": "1500.00",
+    "image": "photo/services/full-hd-rectangular-black-lcd-tv-with-sleek-design-wall-mounted-multi-ta_1pUehsZ.webp",
+    "stock": true,
+    "is_available": true,
+    "created_date": "2026-08-18T13:38:22.343Z",
+    "modified_date": "2026-08-18T13:38:22.343Z"
+  }
+},
+{
+  "model": "services.services_details",
+  "pk": 1,
+  "fields": {
+    "title": "Service Overview",
+    "image1": "photos/services_details/p20_WWEgpzP.webp",
+    "image2": "photos/services_details/p21_eUNm8Z8.webp",
+    "image3": "photos/services_details/p24_8Bf4l9E.png",
+    "about": "Your wedding is one of the most important celebrations of your life. Our wedding photography and videography service is designed to capture every emotion, ritual, celebration, and unforgettable moment of your special day.\r\n\r\nFrom bride and groom preparation to the wedding ceremony and reception, our professional team combines candid photography, traditional photography, and cinematic videography to tell your complete wedding story.",
+    "cover": "What We Cover \r\n\r\nBride & groom preparation\r\nFamily moments\r\nCandid moments\r\nTraditional ceremonies\r\nBride entry\r\nGroom entry\r\nVarmala ceremony\r\nWedding rituals\r\nPheras\r\nFamily portraits\r\nCouple portraits\r\nGuest interactions\r\nReception\r\nVenue and decoration details\r\nEmotional and spontaneous moments",
+    "photographer": "Photography\r\n\r\nOur photographers capture both planned portraits and natural candid moments.\r\n\r\nPhotography includes:\r\n\r\nCandid photography\r\nTraditional photography\r\nCouple portraits\r\nFamily portraits\r\nGroup photographs\r\nCreative compositions\r\nDetail photography\r\nHigh-resolution photographs\r\nProfessional color correction\r\nProfessional photo editing",
+    "videographer": "Videography\r\n\r\nOur cinematic videography team records your wedding as a visual story rather than simply documenting the event.\r\n\r\nVideography includes:\r\n\r\nCinematic wedding film\r\nFull event recording\r\nCouple cinematic sequences\r\nCeremony coverage\r\nFamily moments\r\nGuest interactions\r\nWedding highlights\r\nProfessional audio recording where available\r\nCinematic color grading\r\nProfessional editing",
+    "drone": "Drone Coverage\r\n\r\nDrone photography and videography can be included for suitable venues and outdoor events.\r\n\r\nPossible aerial shots include:\r\n\r\nWedding venue\r\nBaraat\r\nCouple entry\r\nOutdoor ceremonies\r\nVenue decorations\r\nLarge gatherings\r\nWide cinematic establishing shots",
+    "Deliverables": "Deliverables\r\n\r\nDepending on the selected package, clients can receive:\r\n\r\nProfessionally edited photographs\r\nCandid photographs\r\nTraditional photographs\r\nCinematic highlight film\r\nFull wedding film\r\nSocial-media-ready photographs\r\nShort video clips\r\nPremium wedding album\r\nPrivate online gallery",
+    "created_date": "2026-08-17T15:59:48.665Z"
+  }
+},
+{
+  "model": "services.services_details",
+  "pk": 2,
+  "fields": {
+    "title": "What We Cover",
+    "image1": "photos/services_details/w3.webp",
+    "image2": "photos/services_details/w2.webp",
+    "image3": "photos/services_details/w1.png",
+    "about": "Your wedding is one of the most important celebrations of your life. Our wedding photography and videography service is designed to capture every emotion, ritual, celebration, and unforgettable moment of your special day. From bride and groom preparation to the wedding ceremony and reception, our professional team combines candid photography, traditional photography, and cinematic videography to tell your complete wedding story.",
+    "cover": "Bride & groom preparation\r\n Family moments\r\n Candid moments\r\n Traditional ceremonies\r\n Bride entry\r\n Groom entry\r\n Varmala ceremony\r\n Wedding rituals\r\n Pheras\r\n Family portraits\r\n Couple portraits\r\n Guest interactions\r\n Reception\r\n Venue and decoration details\r\n Emotional and spontaneous moments",
+    "photographer": "None",
+    "videographer": "Our cinematic videography team records your wedding as a visual story rather than simply documenting the event.\r\n Videography (1) includes:\r\n Full event recording\r\n  Ceremony coverage\r\n Family moments\r\n Guest interactions\r\n Wedding highlights\r\n Professional audio recording where available\r\n Cinematic color grading\r\n Professional editing",
+    "drone": "None",
+    "Deliverables": "Traditional Video\r\n  Full wedding film\r\n   Short video clips\r\n   Supprot",
+    "created_date": "2026-08-18T12:22:55.777Z"
+  }
+},
+{
+  "model": "services.services_details",
+  "pk": 3,
+  "fields": {
+    "title": "Pre-Wedding Photography & Cinematic Videography Service Overview",
+    "image1": "photos/services_details/p15.webp",
+    "image2": "photos/services_details/p14.webp",
+    "image3": "photos/services_details/p13.png",
+    "about": "A pre-wedding shoot is a beautiful opportunity for couples to celebrate their relationship before the wedding. Our pre-wedding photography and videography service focuses on natural emotions, romantic moments, creative compositions, and cinematic storytelling.\r\n\r\nWe work with each couple to create a shoot that matches their personality, style, outfits, and chosen location.",
+    "cover": "Shoot Themes\r\n\r\nYou can choose a concept that matches your personality and style.\r\nRomantic Theme\r\nSoft, emotional, and intimate photographs focusing on natural expressions and couple interactions.\r\nRoyal Theme\r\n\r\nElegant outfits, luxury locations, traditional styling, and dramatic cinematic compositions.\r\nTraditional Theme\r\n\r\nIndian outfits, cultural locations, traditional poses, and a classic visual style.\r\nCasual Theme",
+    "photographer": "Our photography team captures a combination of natural and professionally guided moments, including:\r\n\r\nRomantic couple portraits\r\nCandid moments\r\nNatural interactions\r\nWalking shots\r\nClose-up portraits\r\nCreative poses\r\nSilhouette photographs\r\nReflection shots\r\nWide-angle photographs\r\nDetail photographs\r\nSunset portraits\r\nLocation-based portraits",
+    "videographer": "Cinematic Pre-Wedding Videography\r\n\r\nWe create a cinematic film that tells your story through movement, emotion, music, and beautiful locations.\r\n\r\nThe video can include:\r\n\r\nCouple introduction\r\nRomantic sequences\r\nWalking shots\r\nNatural interactions\r\nClose-up cinematic shots\r\nWide establishing shots\r\nSlow-motion footage\r\nCreative camera movements\r\nLocation shots\r\nSunset sequences\r\nStory-based editing",
+    "drone": "Drone coverage can add cinematic aerial views to your pre-wedding film.\r\n\r\nPossible shots include:\r\n\r\nCouple walking\r\nWide location shots\r\nResort views\r\nBeach or lake views\r\nOutdoor portraits\r\nSunset scenes\r\nLarge establishing shots",
+    "Deliverables": "100+ professionally edited photographs\r\nCandid photographs\r\nCouple portraits\r\n1 Cinematic Pre-Wedding Film\r\nShort social-media video clips\r\nInstagram Reel\r\nSocial-media-ready photographs",
+    "created_date": "2026-08-18T12:39:22.942Z"
+  }
+},
+{
+  "model": "services.services_details",
+  "pk": 4,
+  "fields": {
+    "title": "Summary",
+    "image1": "photos/services_details/e3.webp",
+    "image2": "photos/services_details/e2.webp",
+    "image3": "photos/services_details/e1.png",
+    "about": "Capture the happiness, emotions, ring ceremony, couple moments, family celebrations, and special memories of your engagement with professional photography and  videography",
+    "cover": "Ring Ceremony\r\nRing Exchange\r\nCouple Entry\r\nCouple Portraits\r\nFamily & Friends\r\nGroup Photos\r\nCandid Moments\r\nTraditional Moments\r\nVenue & Decoration\r\nCake Cutting\r\nCelebration Moments\r\nGuest Interactions",
+    "photographer": "(2) Professional engagement photography\r\nCandid couple photography\r\nRing ceremony coverage\r\nCouple portraits\r\nFamily and group photographs\r\nVenue and decoration photography\r\nProfessionally edited photographs",
+    "videographer": "(1) engagement videography\r\nRing exchange coverage\r\nCouple moments\r\nFamily and guest moments\r\nEvent highlights\r\nProfessional video editing\r\nCinematic color grading",
+    "drone": "Aerial venue shots\r\nCouple entry shots\r\nEvent establishing shots\r\nVenue decoration shots\r\nCinematic aerial footage",
+    "Deliverables": "Professionally edited photographs\r\nCandid photographs\r\nCouple portraits\r\nCinematic engagement highlight video\r\nFull event video\r\nSocial-media-ready photos/videos\r\nPrivate online gallery",
+    "created_date": "2026-08-18T12:55:23.097Z"
+  }
+},
+{
+  "model": "services.services_details",
+  "pk": 5,
+  "fields": {
+    "title": "Birthday Photography & Videography",
+    "image1": "photos/services_details/t1_rZDIsC3.webp",
+    "image2": "photos/services_details/t1_8sGdmZW.webp",
+    "image3": "photos/services_details/t1_zT6c1Kp.webp",
+    "about": "Capture the fun, excitement, laughter, emotions, and unforgettable moments of your birthday celebration with professional photography and cinematic videography.Only Shoot 1/2 hour.",
+    "cover": "Birthday Entry\r\nCake Cutting\r\nBirthday Celebration\r\nFamily & Friends\r\nGroup Photos\r\nCandid Moments\r\nGuest Interactions\r\nDecoration & Venue\r\nGames & Activities\r\nDance & Music\r\nSurprise Moments\r\nSpecial Performances",
+    "photographer": "(1) Professional birthday photography\r\nBirthday portraits\r\nFamily photographs\r\nGroup photographs\r\nCake-cutting photography\r\nDecoration and venue photography\r\nGuest and celebration moments\r\nProfessionally edited photographs",
+    "videographer": "Birthday entry coverage\r\nCake-cutting video\r\nFamily and friends moments\r\nGames and activities\r\nDance and celebration coverage\r\nHighlight video\r\nProfessional video editing\r\nCinematic color grading",
+    "drone": "Aerial venue shots\r\nBirthday venue overview\r\nGuest gathering shots\r\nBirthday entry shots\r\nOutdoor celebration footage\r\nCinematic aerial footage",
+    "Deliverables": "Professionally edited photographs\r\nCandid photographs\r\nBirthday portraits\r\nFamily & group photographs\r\nFull event video\r\nSocial-media-ready photos/videos\r\nPrivate online gallery",
+    "created_date": "2026-08-18T13:00:50.779Z"
+  }
+},
+{
+  "model": "services.services_details",
+  "pk": 6,
+  "fields": {
+    "title": "Maternity Photography & Videography",
+    "image1": "photos/services_details/f3.webp",
+    "image2": "photos/services_details/f3_Sq5bwee.webp",
+    "image3": "photos/services_details/f3_eVRTjPY.webp",
+    "about": "Celebrate the beautiful journey of motherhood with a professional maternity photoshoot that captures the love, happiness, emotions, and special connection between the parents and their little one. This service only 1 hour shoot.",
+    "cover": "Maternity Couple Portraits\r\nMother-to-Be Portraits\r\nFather-to-Be Moments\r\nCouple Candid Moments\r\nBaby Bump Portraits\r\nFamily Portraits\r\nTraditional Moments\r\nCreative Poses\r\nOutdoor & Indoor Portraits\r\nLocation & Decoration Details\r\nEmotional Family Moments\r\nNatural Candid Moments",
+    "photographer": "Professional maternity photography\r\nCreative maternity portraits\r\nBaby bump photography\r\nCouple photography\r\nCandid photography\r\nFamily photographs\r\nTraditional and modern poses\r\nIndoor and outdoor photography\r\nProfessionally edited photographs\r\nProfessional color correction and retouching",
+    "videographer": "Cinematic maternity videography\r\nCouple moments\r\nBaby bump reveal\r\nNatural interactions\r\nEmotional moments\r\nFamily moments\r\nCreative cinematic shots\r\nShort maternity highlight film\r\nProfessional video editing\r\nCinematic color grading",
+    "drone": "Aerial location shots\r\nCouple outdoor shots\r\nWide cinematic views\r\nGarden, resort, or outdoor location shots\r\nCreative establishing shots",
+    "Deliverables": "Professionally edited maternity photographs\r\nBaby bump portraits\r\nCouple photographs\r\nFamily photographs\r\nCandid photographs\r\nCinematic maternity highlight video\r\nSocial-media-ready photos/videos\r\nPrivate online gallery",
+    "created_date": "2026-08-18T13:04:13.874Z"
+  }
+},
+{
+  "model": "services.services_details",
+  "pk": 7,
+  "fields": {
+    "title": "Baby Shoot Photography & Videography",
+    "image1": "photos/services_details/w1_J9oKCNz.webp",
+    "image2": "photos/services_details/w1_xO7wSAK.webp",
+    "image3": "photos/services_details/w1_ququn1F.png",
+    "about": "Summary\r\n\r\nCapture the innocence, smiles, expressions, and beautiful little moments of your baby with a professional baby photoshoot. We create a safe, comfortable, and fun environment to preserve precious memories of your little one. It is asho valid only 1hour shoot",
+    "cover": "Baby Portraits\r\nNewborn Moments\r\nBaby Smiles & Expressions\r\nSleeping Baby Photos\r\nParent & Baby Moments\r\nFamily Portraits\r\nSibling Moments\r\nCandid Moments\r\nCreative Baby Poses\r\nBirthday Milestones\r\nBaby Details\r\nThemed Setup & Decorations",
+    "photographer": "(1) Professional baby photography\r\nNewborn photography\r\nCandid baby portraits\r\nBaby expressions and smiles\r\nParent & baby photography\r\nFamily photographs\r\nCreative themed setups\r\nMilestone photography\r\nProfessional editing\r\nHigh-resolution final photographs",
+    "videographer": "(1) Cinematic baby videography\r\nBaby expressions and activities\r\nParent & baby moments\r\nFamily interactions\r\nCreative cinematic shots\r\nShort baby highlight film\r\nMilestone video\r\nProfessional video editing\r\nCinematic color grading",
+    "drone": "Outdoor family shots\r\nWide location shots\r\nGarden or outdoor setup\r\nFamily celebration aerial shots\r\nCinematic establishing footage",
+    "Deliverables": "Professionally edited baby photographs\r\nCandid baby portraits\r\nParent & baby photographs\r\nFamily photographs\r\nThemed photographs\r\nCinematic baby highlight video\r\nSocial-media-ready photos/videos\r\nPrivate online gallery",
+    "created_date": "2026-08-18T13:13:44.919Z"
+  }
+},
+{
+  "model": "services.services_details",
+  "pk": 8,
+  "fields": {
+    "title": "Corporate Event Photography & Videography",
+    "image1": "photos/services_details/c3.webp",
+    "image2": "photos/services_details/c1.webp",
+    "image3": "photos/services_details/c2.webp",
+    "about": "Professional photography and videography for corporate events, conferences, seminars, meetings, product launches, award ceremonies, office events, and business celebrations. We capture important moments while maintaining a professional and polished visual style.",
+    "cover": "Corporate Meetings\r\nConferences\r\nSeminars & Workshops\r\nProduct Launches\r\nAward Ceremonies\r\nBusiness Events\r\nOffice Celebrations\r\nTeam Activities\r\nGuest & Speaker Moments\r\nStage Events\r\nPresentations\r\nNetworking Sessions\r\nBrand & Venue Details\r\nGroup & Team Photos\r\nCandid Corporate Moments",
+    "photographer": "Professional corporate photography\r\nEvent documentation\r\nSpeaker and presentation photography\r\nCandid event photography\r\nTeam and group photographs\r\nGuest photographs\r\nProduct and branding photography\r\nStage and award photography\r\nVenue and decoration details\r\nHigh-resolution professionally edited photographs",
+    "videographer": "Professional corporate event videography\r\nConference and seminar coverage\r\nSpeaker presentations\r\nProduct launch coverage\r\nAward ceremony coverage\r\nGuest and networking moments\r\nCorporate event highlight film\r\nInterviews and testimonials\r\nProfessional video editing\r\nCorporate-style color grading",
+    "drone": "Aerial venue shots\r\nCorporate event venue overview\r\nOutdoor event coverage\r\nGuest gathering shots\r\nBuilding and location establishing shots\r\nCinematic aerial footage",
+    "Deliverables": "Professionally edited photographs\r\nCandid event photographs\r\nTeam and group photographs\r\nSpeaker and presentation photographs\r\nCorporate event highlight video\r\nFull event video\r\nSocial-media-ready photos/videos\r\nPrivate online gallery",
+    "created_date": "2026-08-18T13:16:32.354Z"
+  }
+},
+{
+  "model": "services.services_details",
+  "pk": 9,
+  "fields": {
+    "title": "Product Photography & Videography",
+    "image1": "photos/services_details/t1_4azf3dh.webp",
+    "image2": "photos/services_details/t1_1BFQogJ.webp",
+    "image3": "photos/services_details/t1_1VLDJGQ.webp",
+    "about": "Professional product photography and videography designed to showcase your products with clean, attractive, and high-quality visuals. Perfect for e-commerce websites, social media, catalogs, advertisements, marketplaces, and brand promotions.",
+    "cover": "Product Hero Shots\r\nWhite Background Photography\r\nMultiple-Angle Shots\r\nClose-Up Detail Shots\r\nProduct Feature Shots\r\nLifestyle Photography\r\nCreative Product Photography\r\nPackaging Photography\r\nFlat-Lay Photography\r\nProduct Demonstration\r\n360° Product Views\r\nBrand & Logo Details\r\nSocial Media Content\r\nE-Commerce Product Images",
+    "photographer": "Professional product photography\r\nWhite-background product images\r\nMultiple product angles\r\nClose-up detail photography\r\nLifestyle product photography\r\nCreative compositions\r\nPackaging and branding shots\r\nProduct feature photography\r\nProfessional lighting setup\r\nHigh-resolution edited photographs\r\nBackground cleanup and retouching\r\nE-commerce-ready images",
+    "videographer": "Professional product videography\r\nProduct introduction videos\r\nProduct demonstration videos\r\n360° product videos\r\nClose-up cinematic shots\r\nProduct feature demonstrations\r\nUnboxing videos\r\nSlow-motion product shots\r\nLifestyle product videos\r\nSocial-media promotional videos\r\nProfessional video editing\r\nCinematic color grading",
+    "drone": "None",
+    "Deliverables": "High-resolution product photographs\r\nWhite-background images\r\nLifestyle product photographs\r\nMultiple-angle photographs\r\nProduct detail images\r\nProfessionally edited product videos\r\nProduct demonstration videos\r\nSocial-media-ready photos/videos\r\nE-commerce-ready images\r\nPrivate online gallery",
+    "created_date": "2026-08-18T13:21:35.580Z"
+  }
+},
+{
+  "model": "accounts.account",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$Cq4BD6LEgVY3WHx8JxI6K2$dDDUX48Orj80Om25IACWjzRN/sFKyjMYHh+M70M2Qdg=",
+    "first_name": "Amardip",
+    "last_name": "Kumar",
+    "username": "amarso2",
+    "email": "br22films@gmail.com",
+    "phone_number": "",
+    "profile_picture": "",
+    "date_joined": "2026-08-09T11:44:59.658Z",
+    "last_login": "2026-10-23T17:56:19.900Z",
+    "is_admin": true,
+    "is_staff": true,
+    "is_active": true,
+    "is_superuser": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.account",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$4IKWcIJfHytX77NXkQB4qA$+Em6LcJbhb1R+Q6FvvjSZwm/AXMWq/i66aZwBUvnw+Q=",
+    "first_name": "Amar",
+    "last_name": "Kumar",
+    "username": "akpandit1211",
+    "email": "akpandit1211@gmail.com",
+    "phone_number": "7520254879",
+    "profile_picture": "",
+    "date_joined": "2026-09-17T18:04:47.443Z",
+    "last_login": "2026-09-22T19:10:10.661Z",
+    "is_admin": false,
+    "is_staff": false,
+    "is_active": true,
+    "is_superuser": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "portfolio.portfolio",
+  "pk": 1,
+  "fields": {
+    "title": "Wedding",
+    "description": "Shoot By Sunil Kumar",
+    "city": "Bettiah, Hariwatika",
+    "heading": "Eternal Vows",
+    "date": "2026-08-10",
+    "image1": "photos/portfolio/p21.webp",
+    "image2": "photos/portfolio/p20.webp",
+    "image3": "photos/portfolio/p24.png",
+    "created_at": "2026-08-10T10:28:48.133Z"
+  }
+},
+{
+  "model": "portfolio.portfolio",
+  "pk": 2,
+  "fields": {
+    "title": "Pre-Wedding",
+    "description": "Shoot By Amardip Kumar",
+    "city": "Bettiah, Pipra Chowk Water Park",
+    "heading": "Sunset Romance",
+    "date": "2026-08-01",
+    "image1": "photos/portfolio/w1.webp",
+    "image2": "photos/portfolio/w2.webp",
+    "image3": "photos/portfolio/w3.png",
+    "created_at": "2026-08-10T10:37:10.032Z"
+  }
+},
+{
+  "model": "portfolio.portfolio",
+  "pk": 3,
+  "fields": {
+    "title": "Engagement",
+    "description": "Shoot By Sunil Kumar",
+    "city": "Areraj",
+    "heading": "Moonlit Promise",
+    "date": "2026-08-02",
+    "image1": "photos/portfolio/e1.webp",
+    "image2": "photos/portfolio/e2.webp",
+    "image3": "photos/portfolio/e3.png",
+    "created_at": "2026-08-10T10:42:12.045Z"
+  }
+},
+{
+  "model": "portfolio.portfolio",
+  "pk": 4,
+  "fields": {
+    "title": "Corporate",
+    "description": "Shoot By Vinod Kumar",
+    "city": "Bettiah",
+    "heading": "Brand Premiere",
+    "date": "2026-08-10",
+    "image1": "photos/portfolio/c1.webp",
+    "image2": "photos/portfolio/c2.webp",
+    "image3": "photos/portfolio/c3.jpg",
+    "created_at": "2026-08-10T10:48:23.578Z"
+  }
+},
+{
+  "model": "portfolio.portfolio",
+  "pk": 5,
+  "fields": {
+    "title": "Fashion",
+    "description": "Shoot By Amardip Kumar",
+    "city": "Motihari",
+    "heading": "Runway Luxe",
+    "date": "2026-08-10",
+    "image1": "photos/portfolio/f2.webp",
+    "image2": "",
+    "image3": "",
+    "created_at": "2026-08-10T10:55:53.368Z"
+  }
+},
+{
+  "model": "portfolio.portfolio",
+  "pk": 6,
+  "fields": {
+    "title": "Product Shoot",
+    "description": "Shoot By Amardip Kumar",
+    "city": "Pipra Chowk",
+    "heading": "Luxury Edit",
+    "date": "2026-08-10",
+    "image1": "photos/portfolio/t1.webp",
+    "image2": "",
+    "image3": "",
+    "created_at": "2026-08-10T10:59:31.389Z"
+  }
+},
+{
+  "model": "package.package",
+  "pk": 2,
+  "fields": {
+    "title": "Luxury",
+    "price1": "20999.00",
+    "price2": "15999.00",
+    "t1": "(2) Photographer",
+    "t2": "(1) Videographer",
+    "t3": "(1) Cinematographer",
+    "t4": "(1) Drone",
+    "t5": "200 Edits Photo",
+    "t6": "Edits Video",
+    "t7": null,
+    "created_at": "2026-08-10T16:44:48.273Z"
+  }
+},
+{
+  "model": "package.package",
+  "pk": 3,
+  "fields": {
+    "title": "Premium",
+    "price1": "12999.00",
+    "price2": "10999.00",
+    "t1": "(1) Photographer",
+    "t2": "(1) Videographer",
+    "t3": "(1) Cinematographer",
+    "t4": "Drone Coverage",
+    "t5": "Edits Video",
+    "t6": "150 Edits Photo",
+    "t7": null,
+    "created_at": "2026-08-10T16:46:09.320Z"
+  }
+},
+{
+  "model": "package.package",
+  "pk": 4,
+  "fields": {
+    "title": "Basic",
+    "price1": "9999.00",
+    "price2": "7999.00",
+    "t1": "(1) Photographers",
+    "t2": "(1) Videographers",
+    "t3": "10 Edits Photo",
+    "t4": "Edits Video",
+    "t5": null,
+    "t6": null,
+    "t7": null,
+    "created_at": "2026-08-10T16:47:06.257Z"
+  }
+},
+{
+  "model": "package.package",
+  "pk": 5,
+  "fields": {
+    "title": "Luxury",
+    "price1": "10999.00",
+    "price2": "8999.00",
+    "t1": "(2) Photographer",
+    "t2": "(1) Reel Man",
+    "t3": "10-12 Edits Reel",
+    "t4": "20 Edit Photo",
+    "t5": "Drone Shoot",
+    "t6": null,
+    "t7": null,
+    "created_at": "2026-08-10T17:25:57.611Z"
+  }
+},
+{
+  "model": "package.package",
+  "pk": 6,
+  "fields": {
+    "title": "Premium",
+    "price1": "8999.00",
+    "price2": "5999.00",
+    "t1": "(1) Photographers",
+    "t2": "(1) Reel Man",
+    "t3": "20 Edit Photo",
+    "t4": "6-7 Edit Reel",
+    "t5": null,
+    "t6": null,
+    "t7": null,
+    "created_at": "2026-08-10T17:37:55.326Z"
+  }
+},
+{
+  "model": "package.package",
+  "pk": 7,
+  "fields": {
+    "title": "Basic",
+    "price1": "5999.00",
+    "price2": "2999.00",
+    "t1": "(1) Photographers",
+    "t2": "(1) Reel Man",
+    "t3": "10 Edits Photo",
+    "t4": "3-4 Reels Edit",
+    "t5": null,
+    "t6": null,
+    "t7": null,
+    "created_at": "2026-08-10T17:41:15.923Z"
+  }
+},
+{
+  "model": "package.package",
+  "pk": 8,
+  "fields": {
+    "title": "Luxury",
+    "price1": "22999.00",
+    "price2": "17999.00",
+    "t1": "(2) Photographer",
+    "t2": "(1) Cinematographer",
+    "t3": "(1) Reel Man",
+    "t4": "200 Edits Photo",
+    "t5": "Edit Video",
+    "t6": null,
+    "t7": null,
+    "created_at": "2026-08-19T17:22:11.532Z"
+  }
+},
+{
+  "model": "package.package",
+  "pk": 9,
+  "fields": {
+    "title": "Premium",
+    "price1": "15999.00",
+    "price2": "12999.00",
+    "t1": "(1) Photographer",
+    "t2": "(1) Cinematographer",
+    "t3": "150 Edits Photo",
+    "t4": "Edits Video",
+    "t5": null,
+    "t6": null,
+    "t7": null,
+    "created_at": "2026-08-19T17:23:39.585Z"
+  }
+},
+{
+  "model": "package.package",
+  "pk": 10,
+  "fields": {
+    "title": "Basic",
+    "price1": "10999.00",
+    "price2": "7999.00",
+    "t1": "(1) Photographer",
+    "t2": "(1) Videographer",
+    "t3": "Edits Phto",
+    "t4": "100 edits Video",
+    "t5": null,
+    "t6": null,
+    "t7": null,
+    "created_at": "2026-08-19T17:24:29.312Z"
+  }
+},
+{
+  "model": "package.package",
+  "pk": 11,
+  "fields": {
+    "title": "Luxury",
+    "price1": "35999.00",
+    "price2": "29999.00",
+    "t1": "(2) Photographer",
+    "t2": "(1) Videographer",
+    "t3": "(1) Cinematrographer",
+    "t4": "(1) Reel Man",
+    "t5": "200 Edits Photo",
+    "t6": "Edits Simple nad Cinem. Video",
+    "t7": "Drone Shoot",
+    "created_at": "2026-08-19T17:25:00.402Z"
+  }
+},
+{
+  "model": "package.package",
+  "pk": 12,
+  "fields": {
+    "title": "Primium",
+    "price1": "17999.00",
+    "price2": "15999.00",
+    "t1": "(2) Photographer",
+    "t2": "(1) Videographer",
+    "t3": "(1) Cinematrographer",
+    "t4": "Drone",
+    "t5": "Edit both Simple and Cinematrigrapher",
+    "t6": "150 Edits Photo",
+    "t7": null,
+    "created_at": "2026-08-19T17:28:54.953Z"
+  }
+},
+{
+  "model": "package.package",
+  "pk": 13,
+  "fields": {
+    "title": "Basic",
+    "price1": "10999.00",
+    "price2": "8999.00",
+    "t1": "(1) Photographer",
+    "t2": "(1) Videographer",
+    "t3": "100 Edits Photo",
+    "t4": "Edited Video",
+    "t5": null,
+    "t6": null,
+    "t7": null,
+    "created_at": "2026-08-19T17:29:15.853Z"
+  }
+},
+{
+  "model": "package.package",
+  "pk": 14,
+  "fields": {
+    "title": "Luxury",
+    "price1": "49999.00",
+    "price2": "45999.00",
+    "t1": "(2) Photographer & Candid Photographer",
+    "t2": "(1) Cinematrographer",
+    "t3": "(1) Reel Shooter",
+    "t4": "(1) Drone Man",
+    "t5": "200 Edits Photo",
+    "t6": "Digital Store",
+    "t7": "(5-6) Professional Team",
+    "created_at": "2026-08-19T17:32:16.169Z"
+  }
+},
+{
+  "model": "package.package",
+  "pk": 15,
+  "fields": {
+    "title": "Premium",
+    "price1": "25999.00",
+    "price2": "19999.00",
+    "t1": "(2) Phtographer",
+    "t2": "(1) Cinematrographer",
+    "t3": "Drone",
+    "t4": "150 Edit photo",
+    "t5": "Edits Video",
+    "t6": null,
+    "t7": null,
+    "created_at": "2026-08-19T17:32:55.868Z"
+  }
+},
+{
+  "model": "package.package",
+  "pk": 16,
+  "fields": {
+    "title": "Basic",
+    "price1": "15999.00",
+    "price2": "12999.00",
+    "t1": "(1) Photograper",
+    "t2": "(1) Videographer",
+    "t3": "100 Edits Photo",
+    "t4": "Drone",
+    "t5": "Digital Store Album (Scanner)",
+    "t6": "Edits Video 1.30 to 2 hour",
+    "t7": null,
+    "created_at": "2026-08-19T17:33:34.679Z"
+  }
+},
+{
+  "model": "gallery.gallery",
+  "pk": 1,
+  "fields": {
+    "title": "Wedding",
+    "image": "photos/gallery/p16.webp",
+    "created_at": "2026-08-11T11:51:45.764Z"
+  }
+},
+{
+  "model": "gallery.gallery",
+  "pk": 2,
+  "fields": {
+    "title": "Pre-Wedding",
+    "image": "photos/gallery/w2.webp",
+    "created_at": "2026-08-11T11:52:02.880Z"
+  }
+},
+{
+  "model": "gallery.gallery",
+  "pk": 3,
+  "fields": {
+    "title": "Wedding",
+    "image": "photos/gallery/p19.webp",
+    "created_at": "2026-08-11T11:52:23.262Z"
+  }
+},
+{
+  "model": "gallery.gallery",
+  "pk": 4,
+  "fields": {
+    "title": "Faishon",
+    "image": "photos/gallery/t1.webp",
+    "created_at": "2026-08-11T11:53:09.738Z"
+  }
+},
+{
+  "model": "gallery.gallery",
+  "pk": 5,
+  "fields": {
+    "title": "Wedding",
+    "image": "photos/gallery/p17.webp",
+    "created_at": "2026-08-11T11:53:24.085Z"
+  }
+},
+{
+  "model": "gallery.gallery",
+  "pk": 6,
+  "fields": {
+    "title": "Product",
+    "image": "photos/gallery/9.webp",
+    "created_at": "2026-08-11T12:57:57.922Z"
+  }
+},
+{
+  "model": "gallery.gallery",
+  "pk": 7,
+  "fields": {
+    "title": "Pre-Wedding",
+    "image": "photos/gallery/p23.webp",
+    "created_at": "2026-08-11T12:58:19.522Z"
+  }
+},
+{
+  "model": "video.video",
+  "pk": 2,
+  "fields": {
+    "title": "Wedding",
+    "video_file": "videos/videoplayback.mp4",
+    "created_at": "2026-08-11T15:12:25.593Z"
+  }
+},
+{
+  "model": "video.video",
+  "pk": 3,
+  "fields": {
+    "title": "Extra",
+    "video_file": "videos/DSC_5730.MOV",
+    "created_at": "2026-08-11T16:25:45.940Z"
+  }
+},
+{
+  "model": "contact.contact",
+  "pk": 1,
+  "fields": {
+    "name": "Amardip Kumar",
+    "phone": "8804880179",
+    "email": "akpandit1211@gmail.com",
+    "city": "pipra ",
+    "event": "Wedding",
+    "event_date": "2026-10-07",
+    "message": "ewqruifsdf",
+    "created_at": "2026-08-30T08:52:42.560Z"
+  }
+},
+{
+  "model": "contact.contact",
+  "pk": 8,
+  "fields": {
+    "name": "Sunil Kumar",
+    "phone": "7255885533",
+    "email": "sunil@gmail.com",
+    "city": "Motihari",
+    "event": "Corporate Event",
+    "event_date": "2026-11-07",
+    "message": "sd",
+    "created_at": "2026-08-30T10:10:48.147Z"
+  }
+},
+{
+  "model": "contact.contact",
+  "pk": 9,
+  "fields": {
+    "name": "Sunil Kumar",
+    "phone": "7255885533",
+    "email": "sunil@gmail.com",
+    "city": "Motihari",
+    "event": "Corporate Event",
+    "event_date": "2026-11-07",
+    "message": "sd",
+    "created_at": "2026-08-30T10:12:31.399Z"
+  }
+},
+{
+  "model": "contact.contact",
+  "pk": 10,
+  "fields": {
+    "name": "Sunil Kumar",
+    "phone": "7255885533",
+    "email": "sunil@gmail.com",
+    "city": "Motihari",
+    "event": "Corporate Event",
+    "event_date": "2026-11-07",
+    "message": "sd",
+    "created_at": "2026-08-30T10:13:41.807Z"
+  }
+},
+{
+  "model": "contact.contact",
+  "pk": 11,
+  "fields": {
+    "name": "amar",
+    "phone": "8804880179",
+    "email": "aa@gmail.com",
+    "city": "Areraj",
+    "event": "Corporate Event",
+    "event_date": "2026-09-02",
+    "message": "asda",
+    "created_at": "2026-08-30T10:14:13.577Z"
+  }
+},
+{
+  "model": "contact.contact",
+  "pk": 12,
+  "fields": {
+    "name": "amar",
+    "phone": "8804880179",
+    "email": "aa@gmail.com",
+    "city": "Areraj",
+    "event": "Corporate Event",
+    "event_date": "2026-09-02",
+    "message": "asda",
+    "created_at": "2026-08-30T10:18:19.538Z"
+  }
+},
+{
+  "model": "contact.contact",
+  "pk": 13,
+  "fields": {
+    "name": "amar",
+    "phone": "8804880179",
+    "email": "aa@gmail.com",
+    "city": "Areraj",
+    "event": "Corporate Event",
+    "event_date": "2026-09-02",
+    "message": "asda",
+    "created_at": "2026-08-30T10:19:05.551Z"
+  }
+},
+{
+  "model": "contact.contact",
+  "pk": 14,
+  "fields": {
+    "name": "asa",
+    "phone": "7502585745",
+    "email": "safas@gmail.com",
+    "city": "Patna",
+    "event": "Corporate Event",
+    "event_date": "2026-09-05",
+    "message": "asdas",
+    "created_at": "2026-08-30T10:19:46.572Z"
+  }
+},
+{
+  "model": "album.album",
+  "pk": 1,
+  "fields": {
+    "title": "Wedding",
+    "created_at": "2026-09-04T15:28:52.115Z",
+    "expires_at": "2026-11-03T15:26:48Z",
+    "is_active": true,
+    "allowed_users": []
+  }
+},
+{
+  "model": "album.albumpage",
+  "pk": 1,
+  "fields": {
+    "album": 1,
+    "page_number": 1,
+    "image": "albums/1_1.webp"
+  }
+},
+{
+  "model": "album.albumpage",
+  "pk": 2,
+  "fields": {
+    "album": 1,
+    "page_number": 2,
+    "image": "albums/1_2.webp"
+  }
+},
+{
+  "model": "album.albumpage",
+  "pk": 3,
+  "fields": {
+    "album": 1,
+    "page_number": 3,
+    "image": "albums/1_3.webp"
+  }
+},
+{
+  "model": "album.albumpage",
+  "pk": 4,
+  "fields": {
+    "album": 1,
+    "page_number": 4,
+    "image": "albums/1_4.webp"
+  }
+},
+{
+  "model": "album.albumpage",
+  "pk": 5,
+  "fields": {
+    "album": 1,
+    "page_number": 5,
+    "image": "albums/1_5.webp"
+  }
+},
+{
+  "model": "album.albumpage",
+  "pk": 6,
+  "fields": {
+    "album": 1,
+    "page_number": 6,
+    "image": "albums/1_6.webp"
+  }
+},
+{
+  "model": "payments.booking",
+  "pk": 1,
+  "fields": {
+    "booking_id": "BR22-2026-0001",
+    "booking_type": "service",
+    "selected_item": "Pre-Wedding Shoot",
+    "full_name": "Amar Kumar",
+    "email": "akpandit1211@gmail.com",
+    "phone": "7520254879",
+    "bride_name": "goddy",
+    "groom_name": "Roshan",
+    "event_date": "2026-10-07",
+    "event_location": "Bettiah",
+    "city": "Bettiah",
+    "state": "Bettiah",
+    "note": "NOt",
+    "total_price": "15999.00",
+    "advance_price": "3899.70",
+    "payment_method": null,
+    "payment_status": "Pending",
+    "confirmation_email_sent": false,
+    "payment_screenshot": "",
+    "razorpay_order_id": "order_TfC2ruuFOrm3I2",
+    "razorpay_payment_id": "",
+    "razorpay_signature": "",
+    "user": [
+      "akpandit1211@gmail.com"
+    ],
+    "created_at": "2026-09-22T19:11:14.896Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-08-09T13:41:35.852Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "1",
+    "object_repr": "Wedding Photography",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-08-09T13:42:57.178Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "2",
+    "object_repr": "Wedding Videography",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-08-09T13:44:11.557Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "3",
+    "object_repr": "Pre-Wedding Shoot",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-08-09T13:45:01.651Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "4",
+    "object_repr": "Engagement",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-08-09T13:45:31.695Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "5",
+    "object_repr": "Birthday",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-08-09T13:46:05.285Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "6",
+    "object_repr": "Maternity",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-08-09T13:46:36.542Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "7",
+    "object_repr": "Baby Shoot",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-08-09T13:47:10.028Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "8",
+    "object_repr": "Corporate Event",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-08-09T13:47:42.900Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "9",
+    "object_repr": "Product Photography",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-08-09T18:13:22.998Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "10",
+    "object_repr": "DLSR Rent",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-08-10T10:28:48.136Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "portfolio"
+    ],
+    "object_id": "1",
+    "object_repr": "Wedding",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-08-10T10:37:10.037Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "portfolio"
+    ],
+    "object_id": "2",
+    "object_repr": "Pre-Wedding",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-08-10T10:42:12.049Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "portfolio"
+    ],
+    "object_id": "3",
+    "object_repr": "Engagement",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-08-10T10:48:23.581Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "portfolio"
+    ],
+    "object_id": "4",
+    "object_repr": "Corporate",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-08-10T10:55:53.372Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "portfolio"
+    ],
+    "object_id": "5",
+    "object_repr": "Fashion",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-08-10T10:59:31.395Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "portfolio"
+    ],
+    "object_id": "6",
+    "object_repr": "Product Shoot",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-08-10T16:42:19.192Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "1",
+    "object_repr": "abbba",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-08-10T16:42:40.460Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "1",
+    "object_repr": "abbba",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-08-10T16:44:48.276Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "2",
+    "object_repr": "Basic",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-08-10T16:46:09.323Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "3",
+    "object_repr": "Premium",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-08-10T16:47:06.260Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "4",
+    "object_repr": "Luxury",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-08-10T17:25:57.614Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "5",
+    "object_repr": "Basic",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-08-10T17:29:03.263Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "2",
+    "object_repr": "Basic",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-08-10T17:30:41.063Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "4",
+    "object_repr": "Luxury",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T4\", \"T5\", \"T6\", \"T7\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-08-10T17:31:25.288Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "3",
+    "object_repr": "Premium",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-08-10T17:33:34.889Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "3",
+    "object_repr": "Luxury",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T5\", \"T7\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-08-10T17:34:20.540Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "4",
+    "object_repr": "Premium",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-08-10T17:35:16.555Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "5",
+    "object_repr": "Basic",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T4\", \"T5\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-08-10T17:36:02.762Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "2",
+    "object_repr": "Basic",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T1\", \"T3\", \"T5\", \"T6\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-08-10T17:37:55.329Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "6",
+    "object_repr": "Premium",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-08-10T17:41:15.925Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "7",
+    "object_repr": "Luxury",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-08-11T11:51:45.767Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "gallery",
+      "gallery"
+    ],
+    "object_id": "1",
+    "object_repr": "Wedding",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-08-11T11:52:02.882Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "gallery",
+      "gallery"
+    ],
+    "object_id": "2",
+    "object_repr": "Pre-Wedding",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-08-11T11:52:23.265Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "gallery",
+      "gallery"
+    ],
+    "object_id": "3",
+    "object_repr": "Wedding",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-08-11T11:53:09.741Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "gallery",
+      "gallery"
+    ],
+    "object_id": "4",
+    "object_repr": "Faishon",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-08-11T11:53:24.088Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "gallery",
+      "gallery"
+    ],
+    "object_id": "5",
+    "object_repr": "Wedding",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-08-11T12:57:57.925Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "gallery",
+      "gallery"
+    ],
+    "object_id": "6",
+    "object_repr": "Product",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-08-11T12:58:19.525Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "gallery",
+      "gallery"
+    ],
+    "object_id": "7",
+    "object_repr": "Pre-Wedding",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-08-11T14:06:14.034Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "video",
+      "video"
+    ],
+    "object_id": "1",
+    "object_repr": "Drone",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-08-11T15:12:25.599Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "video",
+      "video"
+    ],
+    "object_id": "2",
+    "object_repr": "Wedding",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-08-11T16:23:48.770Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "video",
+      "video"
+    ],
+    "object_id": "2",
+    "object_repr": "Wedding",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-08-11T16:24:27.227Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "video",
+      "video"
+    ],
+    "object_id": "1",
+    "object_repr": "Drone",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-08-11T16:25:45.942Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "video",
+      "video"
+    ],
+    "object_id": "3",
+    "object_repr": "Extra",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-08-13T18:07:25.075Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package_details",
+      "package_details"
+    ],
+    "object_id": "1",
+    "object_repr": "ABOUT THIS PACKAGE\r\n──────────────────────────────────────────────────────────────\r\nA complete photography and cinematic videography package\r\ndesigned to capture every important moment of your wedding",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-08-13T18:11:19.638Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package_details",
+      "package_details"
+    ],
+    "object_id": "2",
+    "object_repr": "Royal Wedding Premium Package",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-08-13T18:13:58.143Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package_details",
+      "package_details"
+    ],
+    "object_id": "3",
+    "object_repr": "Pre-Wedding Premium Package",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-08-17T15:59:48.670Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "1",
+    "object_repr": "Service Overview",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-08-18T07:54:17.057Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "1",
+    "object_repr": "Service Overview",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Cover\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-08-18T07:55:43.903Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "1",
+    "object_repr": "Service Overview",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Cover\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-08-18T08:07:09.556Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "1",
+    "object_repr": "Service Overview",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photographer\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-08-18T08:22:45.380Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "1",
+    "object_repr": "Service Overview",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photographer\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-08-18T12:22:55.781Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "2",
+    "object_repr": "What We Cover",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-08-18T12:27:18.266Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "2",
+    "object_repr": "What We Cover",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Cover\", \"Videographer\", \"Deliverables\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-08-18T12:29:22.807Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "1",
+    "object_repr": "Wedding Photography",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-08-18T12:30:19.405Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "2",
+    "object_repr": "Wedding Videography",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-08-18T12:30:37.312Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "9",
+    "object_repr": "Product Photography",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-08-18T12:31:02.767Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "3",
+    "object_repr": "Pre-Wedding Shoot",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-08-18T12:31:21.782Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "6",
+    "object_repr": "Maternity",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-08-18T12:31:57.539Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "4",
+    "object_repr": "Engagement",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-08-18T12:32:28.206Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "8",
+    "object_repr": "Corporate Event",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-08-18T12:32:52.271Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "5",
+    "object_repr": "Birthday",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-08-18T12:33:12.482Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "7",
+    "object_repr": "Baby Shoot",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-08-18T12:39:22.945Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "3",
+    "object_repr": "Service Overview",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-08-18T12:46:34.346Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "3",
+    "object_repr": "Pre-Wedding Photography & Cinematic Videography Service Overview",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"About\", \"Cover\", \"Photographer\", \"Videographer\", \"Drone\", \"Deliverables\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-08-18T12:48:03.132Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "3",
+    "object_repr": "Pre-Wedding Photography & Cinematic Videography Service Overview",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image1\", \"Image2\", \"Image3\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2026-08-18T12:55:23.101Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "4",
+    "object_repr": "Summary",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2026-08-18T13:00:50.783Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "5",
+    "object_repr": "Birthday Photography & Videography",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2026-08-18T13:04:13.878Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "6",
+    "object_repr": "Maternity Photography & Videography",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2026-08-18T13:04:26.102Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "5",
+    "object_repr": "Birthday Photography & Videography",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Drone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2026-08-18T13:04:38.738Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "3",
+    "object_repr": "Pre-Wedding Photography & Cinematic Videography Service Overview",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Drone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2026-08-18T13:04:53.876Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "1",
+    "object_repr": "Service Overview",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Drone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2026-08-18T13:05:05.793Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "4",
+    "object_repr": "Summary",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Drone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2026-08-18T13:05:16.316Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "2",
+    "object_repr": "What We Cover",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2026-08-18T13:06:11.503Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "5",
+    "object_repr": "Birthday Photography & Videography",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Drone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2026-08-18T13:06:19.448Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "6",
+    "object_repr": "Maternity Photography & Videography",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Drone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2026-08-18T13:06:37.689Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "3",
+    "object_repr": "Pre-Wedding Photography & Cinematic Videography Service Overview",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Drone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2026-08-18T13:06:54.905Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "1",
+    "object_repr": "Service Overview",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Drone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2026-08-18T13:07:03.642Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "2",
+    "object_repr": "What We Cover",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2026-08-18T13:09:33.427Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "4",
+    "object_repr": "Summary",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Drone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2026-08-18T13:13:44.923Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "7",
+    "object_repr": "Baby Shoot Photography & Videography",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2026-08-18T13:16:32.358Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "8",
+    "object_repr": "Corporate Event Photography & Videography",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2026-08-18T13:21:35.582Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "9",
+    "object_repr": "Product Photography & Videography",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2026-08-18T13:22:43.330Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services_details"
+    ],
+    "object_id": "9",
+    "object_repr": "Product Photography & Videography",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Drone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2026-08-18T13:24:50.397Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "10",
+    "object_repr": "DLSR Rent",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2026-08-18T13:26:48.672Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "11",
+    "object_repr": "M3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2026-08-18T13:33:10.962Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "11",
+    "object_repr": "M3",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2026-08-18T13:38:22.346Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "services",
+      "services"
+    ],
+    "object_id": "12",
+    "object_repr": "LCD 55 Inch",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2026-08-19T17:22:11.536Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "8",
+    "object_repr": "Basic",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2026-08-19T17:23:39.588Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "9",
+    "object_repr": "Premium",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2026-08-19T17:24:29.315Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "10",
+    "object_repr": "Luxury",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2026-08-19T17:25:00.405Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "11",
+    "object_repr": "Basic",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2026-08-19T17:28:54.956Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "12",
+    "object_repr": "Primium",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2026-08-19T17:29:15.856Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "13",
+    "object_repr": "Basic",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2026-08-19T17:31:49.411Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "13",
+    "object_repr": "Luxury",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2026-08-19T17:32:16.172Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "14",
+    "object_repr": "Basic",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2026-08-19T17:32:55.872Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "15",
+    "object_repr": "Premium",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2026-08-19T17:33:34.682Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "16",
+    "object_repr": "Laxury",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2026-08-19T17:34:47.436Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "16",
+    "object_repr": "Basic",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Price1\", \"Price2\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2026-08-19T17:39:56.882Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "16",
+    "object_repr": "Basic",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T4\", \"T5\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2026-08-26T16:51:54.344Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "14",
+    "object_repr": "Luxury",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T4\", \"T5\", \"T6\", \"T7\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2026-08-26T16:54:46.173Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "15",
+    "object_repr": "Premium",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T4\", \"T5\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2026-08-26T16:55:57.044Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "16",
+    "object_repr": "Basic",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T1\", \"T3\", \"T4\", \"T6\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2026-08-26T16:58:09.649Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "13",
+    "object_repr": "Basic",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T4\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2026-08-26T17:01:15.949Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "12",
+    "object_repr": "Primium",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T4\", \"T5\", \"T6\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2026-08-26T17:03:30.276Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "11",
+    "object_repr": "Luxury",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T4\", \"T5\", \"T6\", \"T7\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2026-08-26T17:05:41.651Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "10",
+    "object_repr": "Basic",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T4\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2026-08-26T17:07:20.557Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "9",
+    "object_repr": "Premium",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T4\", \"T5\", \"T6\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2026-08-26T17:09:36.544Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "8",
+    "object_repr": "Basic",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T4\", \"T5\", \"T6\", \"T7\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2026-08-26T17:10:57.171Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "10",
+    "object_repr": "Basic",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T2\", \"T3\", \"T4\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2026-08-26T17:11:58.095Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "9",
+    "object_repr": "Premium",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T2\", \"T3\", \"T4\", \"T5\", \"T6\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2026-08-26T17:13:06.444Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "8",
+    "object_repr": "Luxury",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Price1\", \"Price2\", \"T2\", \"T3\", \"T4\", \"T5\", \"T6\", \"T7\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2026-08-26T17:14:35.991Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "7",
+    "object_repr": "Luxury",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T3\", \"T4\", \"T5\", \"T6\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2026-08-26T17:15:09.136Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "7",
+    "object_repr": "Basic",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2026-08-26T17:16:39.681Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "6",
+    "object_repr": "Premium",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T4\", \"T5\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2026-08-26T17:18:38.104Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "5",
+    "object_repr": "Basic",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T4\", \"T5\", \"T6\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2026-08-26T17:21:11.275Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "10",
+    "object_repr": "Basic",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T2\", \"T3\", \"T4\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2026-08-26T17:22:28.956Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "9",
+    "object_repr": "Premium",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T2\", \"T3\", \"T4\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2026-08-26T17:23:36.276Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "8",
+    "object_repr": "Luxury",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T2\", \"T3\", \"T4\", \"T5\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2026-08-26T17:25:06.912Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "7",
+    "object_repr": "Basic",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T4\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2026-08-26T17:26:41.348Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "6",
+    "object_repr": "Premium",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price1\", \"Price2\", \"T2\", \"T3\", \"T4\", \"T5\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2026-08-26T17:27:53.685Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "5",
+    "object_repr": "Luxury",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Price1\", \"Price2\", \"T2\", \"T3\", \"T4\", \"T5\", \"T6\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2026-08-26T17:29:07.380Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "4",
+    "object_repr": "Basic",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T4\", \"T5\", \"T6\", \"T7\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2026-08-26T17:30:46.205Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "3",
+    "object_repr": "Premium",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T5\", \"T6\", \"T7\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2026-08-26T17:32:20.715Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "package",
+      "package"
+    ],
+    "object_id": "2",
+    "object_repr": "Luxury",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Price1\", \"Price2\", \"T1\", \"T2\", \"T3\", \"T4\", \"T5\", \"T6\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2026-08-26T17:34:55.856Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "portfolio"
+    ],
+    "object_id": "5",
+    "object_repr": "Fashion",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2026-08-26T17:35:06.040Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "portfolio",
+      "portfolio"
+    ],
+    "object_id": "4",
+    "object_repr": "Corporate",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2026-08-30T10:08:09.378Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "contact",
+      "contact"
+    ],
+    "object_id": "7",
+    "object_repr": "asa - Baby Shoot",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2026-08-30T10:08:09.378Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "contact",
+      "contact"
+    ],
+    "object_id": "6",
+    "object_repr": "asa - Baby Shoot",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2026-08-30T10:08:09.378Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "contact",
+      "contact"
+    ],
+    "object_id": "5",
+    "object_repr": "asa - Baby Shoot",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2026-08-30T10:08:09.378Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "contact",
+      "contact"
+    ],
+    "object_id": "4",
+    "object_repr": "asa - Baby Shoot",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2026-08-30T10:08:09.378Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "contact",
+      "contact"
+    ],
+    "object_id": "3",
+    "object_repr": "pooja Kumari - Janue",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2026-08-30T10:08:09.378Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "contact",
+      "contact"
+    ],
+    "object_id": "2",
+    "object_repr": "Ashok Kumar - Birthday",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2026-08-30T17:34:24.351Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "3",
+    "object_repr": "akpandit1211@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2026-08-30T17:37:47.861Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "4",
+    "object_repr": "akpandit1211@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2026-08-30T17:40:10.834Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "5",
+    "object_repr": "akpandit@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2026-08-30T17:56:16.516Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "6",
+    "object_repr": "akpandit1211@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2026-08-30T18:03:55.835Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "7",
+    "object_repr": "akpandit1211@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2026-08-30T18:09:22.206Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "3",
+    "object_repr": "akpandit1211@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2026-08-30T18:18:12.766Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "6",
+    "object_repr": "ammmm@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2026-08-30T18:18:18.138Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "5",
+    "object_repr": "ashok@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2026-08-30T18:18:22.244Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "4",
+    "object_repr": "akpandit1211@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 142,
+  "fields": {
+    "action_time": "2026-08-31T06:56:08.412Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "19",
+    "object_repr": "test21@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 143,
+  "fields": {
+    "action_time": "2026-08-31T06:56:08.412Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "18",
+    "object_repr": "amardipkumar@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2026-08-31T06:56:08.412Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "17",
+    "object_repr": "test14@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2026-08-31T06:56:08.412Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "16",
+    "object_repr": "test13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 146,
+  "fields": {
+    "action_time": "2026-08-31T06:56:08.413Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "15",
+    "object_repr": "test12@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 147,
+  "fields": {
+    "action_time": "2026-08-31T06:56:08.413Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "14",
+    "object_repr": "test10@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 148,
+  "fields": {
+    "action_time": "2026-08-31T06:56:08.413Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "13",
+    "object_repr": "test8@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 149,
+  "fields": {
+    "action_time": "2026-08-31T06:56:08.413Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "12",
+    "object_repr": "test7@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 150,
+  "fields": {
+    "action_time": "2026-08-31T06:56:08.413Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "11",
+    "object_repr": "test6@gmai.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 151,
+  "fields": {
+    "action_time": "2026-08-31T06:56:08.413Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "10",
+    "object_repr": "test5@gmai.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 152,
+  "fields": {
+    "action_time": "2026-08-31T06:56:08.413Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "9",
+    "object_repr": "tetst@gmai.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 153,
+  "fields": {
+    "action_time": "2026-08-31T06:56:08.413Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "8",
+    "object_repr": "test2@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 154,
+  "fields": {
+    "action_time": "2026-08-31T06:56:08.413Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "7",
+    "object_repr": "test@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 155,
+  "fields": {
+    "action_time": "2026-08-31T07:43:30.368Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "2",
+    "object_repr": "test@example.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\", \"Is admin\", \"Is staff\", \"Is active\", \"Is superuser\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 156,
+  "fields": {
+    "action_time": "2026-08-31T07:43:44.270Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "2",
+    "object_repr": "test@example.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 157,
+  "fields": {
+    "action_time": "2026-08-31T19:38:41.127Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "32",
+    "object_repr": "amaraaa11a@gmail.cpm",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 158,
+  "fields": {
+    "action_time": "2026-08-31T19:38:41.127Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "31",
+    "object_repr": "amaraaa1a@gmail.cpm",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 159,
+  "fields": {
+    "action_time": "2026-08-31T19:38:41.127Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "30",
+    "object_repr": "amaraaaa@gmail.cpm",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 160,
+  "fields": {
+    "action_time": "2026-08-31T19:38:41.127Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "29",
+    "object_repr": "amaraa@gmail.cpm",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 161,
+  "fields": {
+    "action_time": "2026-08-31T19:38:41.127Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "28",
+    "object_repr": "test31@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 162,
+  "fields": {
+    "action_time": "2026-08-31T19:38:41.128Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "27",
+    "object_repr": "test30@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 163,
+  "fields": {
+    "action_time": "2026-08-31T19:38:41.128Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "26",
+    "object_repr": "test28@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 164,
+  "fields": {
+    "action_time": "2026-08-31T19:38:41.128Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "25",
+    "object_repr": "test27@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 165,
+  "fields": {
+    "action_time": "2026-08-31T19:38:41.128Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "24",
+    "object_repr": "test26@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 166,
+  "fields": {
+    "action_time": "2026-08-31T19:38:41.128Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "23",
+    "object_repr": "text25@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 167,
+  "fields": {
+    "action_time": "2026-08-31T19:38:41.128Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "22",
+    "object_repr": "tets23@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 168,
+  "fields": {
+    "action_time": "2026-08-31T19:38:41.128Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "21",
+    "object_repr": "aasars@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 169,
+  "fields": {
+    "action_time": "2026-08-31T19:38:41.128Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "20",
+    "object_repr": "aasas@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 170,
+  "fields": {
+    "action_time": "2026-08-31T20:00:51.184Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "35",
+    "object_repr": "amar@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 171,
+  "fields": {
+    "action_time": "2026-08-31T20:00:51.185Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "34",
+    "object_repr": "amardipkumarpr172@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 172,
+  "fields": {
+    "action_time": "2026-08-31T20:00:51.185Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "33",
+    "object_repr": "akpandit1211@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 173,
+  "fields": {
+    "action_time": "2026-09-01T18:48:24.140Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "36",
+    "object_repr": "akpandit1211@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 174,
+  "fields": {
+    "action_time": "2026-09-02T17:19:50.064Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "37",
+    "object_repr": "amardipkumarpr172@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 175,
+  "fields": {
+    "action_time": "2026-09-02T17:27:36.536Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "39",
+    "object_repr": "amardipkumarpr172@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 176,
+  "fields": {
+    "action_time": "2026-09-02T17:31:46.996Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "40",
+    "object_repr": "amardipkumarpr172@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 177,
+  "fields": {
+    "action_time": "2026-09-02T17:52:58.496Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "41",
+    "object_repr": "amardipkumarpr172@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 178,
+  "fields": {
+    "action_time": "2026-09-02T18:01:35.841Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "42",
+    "object_repr": "amardipkumarpr172@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 179,
+  "fields": {
+    "action_time": "2026-09-02T18:07:53.032Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "43",
+    "object_repr": "amardipkumarpr172@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 180,
+  "fields": {
+    "action_time": "2026-09-02T18:10:01.941Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "38",
+    "object_repr": "akpandit1211@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 181,
+  "fields": {
+    "action_time": "2026-09-03T16:55:36.297Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "reviews",
+      "review"
+    ],
+    "object_id": "1",
+    "object_repr": "Sunil - 4⭐",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 182,
+  "fields": {
+    "action_time": "2026-09-03T17:01:26.327Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "45",
+    "object_repr": "akpandit1211@gmail.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 183,
+  "fields": {
+    "action_time": "2026-09-03T17:02:14.067Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "45",
+    "object_repr": "akpandit1211@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 184,
+  "fields": {
+    "action_time": "2026-09-03T17:05:16.761Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "46",
+    "object_repr": "akpandit1211@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 185,
+  "fields": {
+    "action_time": "2026-09-03T17:09:42.032Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "47",
+    "object_repr": "akpandit1211@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 186,
+  "fields": {
+    "action_time": "2026-09-03T17:13:56.401Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "reviews",
+      "review"
+    ],
+    "object_id": "2",
+    "object_repr": "Sunil - 4⭐",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is approved\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 187,
+  "fields": {
+    "action_time": "2026-09-04T09:13:04.288Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "reviews",
+      "review"
+    ],
+    "object_id": "1",
+    "object_repr": "Sunil - 4⭐",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 188,
+  "fields": {
+    "action_time": "2026-09-04T09:13:13.625Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "44",
+    "object_repr": "amardipkumarpr172@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 189,
+  "fields": {
+    "action_time": "2026-09-04T09:16:08.602Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "reviews",
+      "review"
+    ],
+    "object_id": "3",
+    "object_repr": "Amardip - 5⭐",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is approved\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 190,
+  "fields": {
+    "action_time": "2026-09-04T15:28:52.464Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "album",
+      "album"
+    ],
+    "object_id": "1",
+    "object_repr": "Wedding",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"album page\", \"object\": \"Wedding - Page 1\"}}, {\"added\": {\"name\": \"album page\", \"object\": \"Wedding - Page 2\"}}, {\"added\": {\"name\": \"album page\", \"object\": \"Wedding - Page 3\"}}, {\"added\": {\"name\": \"album page\", \"object\": \"Wedding - Page 4\"}}, {\"added\": {\"name\": \"album page\", \"object\": \"Wedding - Page 5\"}}, {\"added\": {\"name\": \"album page\", \"object\": \"Wedding - Page 6\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 191,
+  "fields": {
+    "action_time": "2026-09-08T08:08:28.658Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "7",
+    "object_repr": "BR22-2026-0007 | Amardip Kumar",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 192,
+  "fields": {
+    "action_time": "2026-09-08T08:09:39.977Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "7",
+    "object_repr": "BR22-2026-0007 | Amardip Kumar",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Payment status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 193,
+  "fields": {
+    "action_time": "2026-09-08T10:17:07.825Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "16",
+    "object_repr": "BR22-2026-0016 | Amardip Kumar",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Payment status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 194,
+  "fields": {
+    "action_time": "2026-09-08T10:18:29.757Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "15",
+    "object_repr": "BR22-2026-0015 | Amardip Kumar",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 195,
+  "fields": {
+    "action_time": "2026-09-08T10:21:43.155Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "16",
+    "object_repr": "BR22-2026-0016 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 196,
+  "fields": {
+    "action_time": "2026-09-08T10:21:43.155Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "15",
+    "object_repr": "BR22-2026-0015 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 197,
+  "fields": {
+    "action_time": "2026-09-08T10:21:43.155Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "14",
+    "object_repr": "BR22-2026-0014 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 198,
+  "fields": {
+    "action_time": "2026-09-08T10:21:43.155Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "13",
+    "object_repr": "BR22-2026-0013 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 199,
+  "fields": {
+    "action_time": "2026-09-08T10:21:43.155Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "12",
+    "object_repr": "BR22-2026-0012 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 200,
+  "fields": {
+    "action_time": "2026-09-08T10:21:43.155Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "11",
+    "object_repr": "BR22-2026-0011 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 201,
+  "fields": {
+    "action_time": "2026-09-08T10:21:43.155Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "10",
+    "object_repr": "BR22-2026-0010 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 202,
+  "fields": {
+    "action_time": "2026-09-08T10:21:43.156Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "9",
+    "object_repr": "BR22-2026-0009 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 203,
+  "fields": {
+    "action_time": "2026-09-08T10:21:43.156Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "8",
+    "object_repr": "BR22-2026-0008 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 204,
+  "fields": {
+    "action_time": "2026-09-08T10:21:43.156Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "7",
+    "object_repr": "BR22-2026-0007 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 205,
+  "fields": {
+    "action_time": "2026-09-08T10:21:43.156Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "6",
+    "object_repr": "BR22-2026-0006 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 206,
+  "fields": {
+    "action_time": "2026-09-08T10:21:43.156Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "5",
+    "object_repr": "BR22-2026-0005 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 207,
+  "fields": {
+    "action_time": "2026-09-08T10:21:43.156Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "4",
+    "object_repr": "BR22-2026-0004 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 208,
+  "fields": {
+    "action_time": "2026-09-08T10:21:43.156Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "3",
+    "object_repr": "BR22-2026-0003 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 209,
+  "fields": {
+    "action_time": "2026-09-08T10:21:43.156Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "2",
+    "object_repr": "BR22-2026-0002 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 210,
+  "fields": {
+    "action_time": "2026-09-08T10:21:43.156Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "1",
+    "object_repr": " | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 211,
+  "fields": {
+    "action_time": "2026-09-08T10:40:47.037Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "17",
+    "object_repr": "BR22-2026-0001 | Amardip Kumar",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Payment status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 212,
+  "fields": {
+    "action_time": "2026-09-08T12:42:43.813Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "48",
+    "object_repr": "akpandit1211@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 213,
+  "fields": {
+    "action_time": "2026-09-08T12:46:28.678Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "50",
+    "object_repr": "akpandit1211@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 214,
+  "fields": {
+    "action_time": "2026-09-08T12:49:33.488Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "album",
+      "album"
+    ],
+    "object_id": "1",
+    "object_repr": "Wedding",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Allowed users\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 215,
+  "fields": {
+    "action_time": "2026-09-08T12:49:44.105Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "album",
+      "album"
+    ],
+    "object_id": "1",
+    "object_repr": "Wedding",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Allowed users\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 216,
+  "fields": {
+    "action_time": "2026-09-08T12:50:01.466Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "album",
+      "album"
+    ],
+    "object_id": "1",
+    "object_repr": "Wedding",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Allowed users\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 217,
+  "fields": {
+    "action_time": "2026-09-08T12:50:32.882Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "19",
+    "object_repr": "BR22-2026-0019 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 218,
+  "fields": {
+    "action_time": "2026-09-08T12:50:32.882Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "18",
+    "object_repr": "BR22-2026-0018 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 219,
+  "fields": {
+    "action_time": "2026-09-08T12:50:32.882Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "17",
+    "object_repr": "BR22-2026-0001 | Amardip Kumar",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 220,
+  "fields": {
+    "action_time": "2026-09-08T12:59:22.864Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "payments",
+      "booking"
+    ],
+    "object_id": "20",
+    "object_repr": "BR22-2026-0001 | sunil mukhiya",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Payment status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 221,
+  "fields": {
+    "action_time": "2026-09-08T13:45:30.054Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "51",
+    "object_repr": "akpandit1211@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 222,
+  "fields": {
+    "action_time": "2026-09-17T18:00:20.597Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "55",
+    "object_repr": "akpandit1211@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 223,
+  "fields": {
+    "action_time": "2026-09-17T18:02:31.969Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "accounts",
+      "account"
+    ],
+    "object_id": "49",
+    "object_repr": "amardipkumarpr172@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 224,
+  "fields": {
+    "action_time": "2026-09-21T16:06:46.808Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "gallery",
+      "gallery"
+    ],
+    "object_id": "8",
+    "object_repr": "test",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 225,
+  "fields": {
+    "action_time": "2026-09-22T07:30:49.173Z",
+    "user": [
+      "br22films@gmail.com"
+    ],
+    "content_type": [
+      "gallery",
+      "gallery"
+    ],
+    "object_id": "8",
+    "object_repr": "test",
+    "action_flag": 3,
+    "change_message": ""
+  }
+}
+]
