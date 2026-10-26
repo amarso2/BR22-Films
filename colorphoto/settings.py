@@ -169,12 +169,16 @@ STORAGES = {
 }
 
 # Media files
-if DEBUG:
+
+if os.name == "nt":
+    # Local Windows computer
     MEDIA_ROOT = r"D:\BR22_MEDIA"
 else:
+    # Render Linux server
     MEDIA_ROOT = "/opt/render/project/src/media"
 
 MEDIA_URL = config("MEDIA_URL", default="/media/")
+
 
 
 from django.contrib.messages import constants as messages

@@ -81,7 +81,10 @@ def media_download(request):
         if allowed:
             break
 
-    if not allowed or not default_storage.exists(name):
-        raise Http404("File not found in hosted storage")
+    if not allowed:
+        raise Http404("File path not found in database")
+
+    if not default_storage.exists(name):
+        raise Http404("File missing from Render storage")
 
     return FileResponse(default_storage.open(name, "rb"))
