@@ -17,36 +17,25 @@ def media_changes(request):
     seen = set()
 
     for model in apps.get_models():
-        try:
-            for obj in model.objects.all().iterator():
-                for field in model._meta.get_fields():
-                    if not isinstance(field, (FileField, ImageField)):
+        for field in model._meta.fields:
+            if not isinstance(field, (FileField, ImageField)):
+                continue
+
+            try:
+                for obj in model.objects.exclude(
+                    **{f"{field.name}": ""}
+                ).iterator():
+                    f = getattr(obj, field.name, None)
+
+                    if not f or not f.name or f.name in seen:
                         continue
 
-                    try:
-                        f = getattr(obj, field.name, None)
-
-                        if not f or not getattr(f, "name", ""):
-                            continue
-
-                        name = f.name
-
-                        if name in seen:
-                            continue
-
-                        if not f.storage.exists(name):
-                            continue
-
-                        seen.add(name)
-                        files.append({
-                            "path": name,
-                            "url": f.storage.url(name),
-                        })
-
-                    except Exception:
-                        continue
-
-        except Exception:
-            continue
+                    seen.add(f.name)
+                    files.append({
+                        "path": f.name,
+                        "url": f.storage.url(f.name),
+                    })
+            except Exception:
+                continue
 
     return JsonResponse(files, safe=False)
